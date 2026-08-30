@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fukuoka Builders' Coliving | Sep 30 – Oct 14, 2026 | Colive Fukuoka</title>
+<meta name="description" content="A Japan Tourism Agency official pilot. 15 days for 50 global builders across Fukuoka City, Yame, Koga and Buzen. Co-create with local communities, pay in USDC/USDT via stablecoin rails, and take home a working relationship with regional Japan. Applications close Sep 15.">
+<meta name="keywords" content="digital nomad Japan, Web3 Japan, coliving Fukuoka, stablecoin payment Japan, USDC Japan, builders residency, Colive Fukuoka, Japan Tourism Agency pilot, Kyushu coliving">
+<link rel="canonical" href="https://builders.colivefukuoka.com/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Colive Fukuoka">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Fukuoka Builders' Coliving | Sep 30 – Oct 14, 2026">
+<meta property="og:description" content="A Japan Tourism Agency official pilot: 15 days across Fukuoka City, Yame, Koga and Buzen for global builders. Live onchain payments, real regional co-creation. Applications close Sep 15.">
+<meta property="og:image" content="https://builders.colivefukuoka.com/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://builders.colivefukuoka.com/">
+
+<!-- Twitter card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Fukuoka Builders' Coliving | Sep 30 – Oct 14, 2026">
+<meta name="twitter:description" content="Japan Tourism Agency official pilot for 50 global builders. Fukuoka City + Yame, Koga, Buzen. Pay in USDC/USDT. Applications close Sep 15.">
+<meta name="twitter:image" content="https://builders.colivefukuoka.com/og-image.jpg">
+
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Fukuoka Builders' Coliving",
+  "description": "A Japan Tourism Agency official pilot program. 15 days across Fukuoka City, Yame, Koga and Buzen for global builders to co-create with local communities and test real-world stablecoin payments.",
+  "startDate": "2026-09-30",
+  "endDate": "2026-10-14",
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+  "location": [
+    {"@type": "Place", "name": "Fukuoka City", "address": {"@type": "PostalAddress", "addressRegion": "Fukuoka", "addressCountry": "JP"}},
+    {"@type": "Place", "name": "Yame", "address": {"@type": "PostalAddress", "addressRegion": "Fukuoka", "addressCountry": "JP"}},
+    {"@type": "Place", "name": "Koga", "address": {"@type": "PostalAddress", "addressRegion": "Fukuoka", "addressCountry": "JP"}},
+    {"@type": "Place", "name": "Buzen", "address": {"@type": "PostalAddress", "addressRegion": "Fukuoka", "addressCountry": "JP"}}
+  ],
+  "image": "https://builders.colivefukuoka.com/og-image.jpg",
+  "organizer": {"@type": "Organization", "name": "Colive Fukuoka Secretariat", "url": "https://www.colivefukuoka.com", "email": "info@colivefukuoka.com"},
+  "offers": {
+    "@type": "Offer",
+    "price": "170000",
+    "priceCurrency": "JPY",
+    "availability": "https://schema.org/LimitedAvailability",
+    "validThrough": "2026-09-15",
+    "url": "https://builders.colivefukuoka.com/"
+  }
+}
+</script>
+
+<style>
+:root{
+  --indigo:#1F296A; --deep:#0C1230; --mid:#141B45;
+  --blue:#0069A0; --cyan:#2FA8E0;
+  --orange:#EB6100; --orange-soft:#FF8A3D;
+  --ink:#EAEEF8; --dim:#8B93B8;
+  --line:rgba(139,147,184,.22);
+  --mono:'IBM Plex Mono','Noto Sans JP',monospace;
+  --sans:'Inter','Noto Sans JP',sans-serif;
+  --disp:'Bebas Neue','Noto Sans JP',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scrollbar-gutter:stable}
+body{background:var(--deep);color:var(--ink);font-family:var(--sans);overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.mono{font-family:var(--mono)}
+.wrap{position:relative;z-index:1;max-width:1160px;margin:0 auto;padding:0 24px}
+
+/* ambient grid + glow */
+.grid-bg{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.5;
+  background-image:linear-gradient(rgba(139,147,184,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(139,147,184,.07) 1px,transparent 1px);
+  background-size:48px 48px}
+.glow{position:fixed;pointer-events:none;z-index:0;border-radius:50%;filter:blur(120px);opacity:.35}
+.glow.a{width:560px;height:560px;background:#1F296A;top:-180px;right:-120px}
+.glow.b{width:420px;height:420px;background:#5a2a00;bottom:-160px;left:-120px;opacity:.22}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:80;background:rgba(12,18,48,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{max-width:1160px;margin:0 auto;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-family:var(--disp);font-size:21px;letter-spacing:.06em;text-decoration:none;white-space:nowrap}
+.logo .fk{color:var(--orange)}
+.nav-links{display:flex;gap:22px;align-items:center}
+.nav-links button,.nav-links a.plain{background:none;border:none;cursor:pointer;color:var(--dim);text-decoration:none;font-family:var(--mono);font-size:11.5px;letter-spacing:.09em;text-transform:uppercase;padding:4px 0;transition:color .15s}
+.nav-links button:hover,.nav-links a.plain:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--orange);color:#fff;text-decoration:none;font-weight:700;padding:12px 26px;border-radius:6px;font-size:14px;letter-spacing:.02em;border:1px solid var(--orange);cursor:pointer;transition:.15s;font-family:var(--sans)}
+.btn:hover{background:var(--orange-soft);transform:translateY(-1px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--ink);background:rgba(255,255,255,.04)}
+.btn.sm{padding:9px 18px;font-size:13px}
+
+/* hero */
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;position:relative;padding:110px 0 40px}
+.hero-bgimg{position:absolute;inset:0;z-index:0;background:url('hero-yame.jpg') center 60%/cover no-repeat}
+.hero-bgimg::after{content:'';position:absolute;inset:0;background:linear-gradient(93deg,rgba(7,10,22,.72) 8%,rgba(7,10,22,.34) 46%,rgba(7,10,22,0) 66%),linear-gradient(180deg,rgba(7,10,22,.5) 0%,rgba(7,10,22,0) 18%,rgba(7,10,22,0) 62%,rgba(12,18,48,.94) 96%)}
+.hero .wrap{position:relative;z-index:2}
+.badge-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.badge{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:7px 14px;border-radius:999px;border:1px solid var(--line);color:var(--dim);background:rgba(12,18,48,.5)}
+.badge.hot{border-color:var(--orange);color:var(--orange-soft)}
+.badge.blue{border-color:var(--blue);color:var(--cyan)}
+.badge.gift{border-color:#FF004F;color:#FF6E96;background:rgba(255,0,79,.08)}
+h1{font-family:var(--disp);font-size:clamp(64px,11vw,150px);line-height:.9;letter-spacing:.01em;text-transform:uppercase;text-shadow:0 2px 24px rgba(7,10,22,.75),0 1px 3px rgba(7,10,22,.6)}
+h1 .outline{color:transparent;-webkit-text-stroke:2px var(--ink);text-shadow:none}
+.catch{font-family:var(--disp);font-size:clamp(24px,3.4vw,40px);letter-spacing:.04em;text-transform:uppercase;margin-top:20px;text-shadow:0 2px 18px rgba(6,10,30,.6)}
+.catch .g{color:var(--orange-soft)}
+.catch .r{color:#7BE3A2}
+.fudo{display:flex;align-items:center;gap:14px;margin:14px 0 8px}
+.fudo-kanji{font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:30px;color:var(--orange-soft)}
+.fudo-sub{font-family:var(--mono);font-size:11px;letter-spacing:.3em;color:var(--dim);text-transform:uppercase}
+.hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:34px;align-items:end;margin-top:22px}
+.terminal{background:rgba(6,10,30,.9);border:1px solid var(--line);border-radius:10px;padding:20px 22px;font-family:var(--mono);font-size:13.5px;line-height:2;color:var(--dim);box-shadow:0 20px 60px rgba(0,0,0,.4)}
+.terminal .p{color:var(--orange-soft)}
+.terminal .gt{color:var(--cyan)}
+.terminal .hi{color:#6BE38A}
+.cursor{display:inline-block;width:8px;height:15px;background:var(--cyan);margin-left:6px;vertical-align:middle;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero-ctas{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:22px}
+.hero-ctas .note{font-family:var(--mono);font-size:11.5px;color:var(--dim)}
+.deadline-card{border:1px solid var(--line);border-radius:12px;padding:22px 24px;background:rgba(10,14,36,.82);backdrop-filter:blur(4px);text-align:center}
+.deadline-card .lab{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:8px}
+.deadline-card .date{font-family:var(--disp);font-size:56px;line-height:1;color:var(--orange-soft)}
+.deadline-card .count{font-family:var(--mono);font-size:12px;color:var(--cyan);margin-top:10px;letter-spacing:.06em}
+.scroll-hint{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);animation:float 2.4s ease-in-out infinite;z-index:2}
+@keyframes float{50%{transform:translate(-50%,7px)}}
+
+/* marquee */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;background:rgba(20,27,69,.45);position:relative;z-index:1}
+.marquee-track{display:flex;gap:34px;white-space:nowrap;padding:13px 0;animation:mq 30s linear infinite;font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.marquee-track .dot{color:var(--orange)}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* launcher */
+.launcher{padding:90px 0 100px;position:relative;z-index:1}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--orange-soft);margin-bottom:14px}
+.launcher h2{font-family:var(--disp);font-size:clamp(38px,5.4vw,64px);letter-spacing:.02em;text-transform:uppercase;margin-bottom:8px}
+.launcher .sub{color:var(--dim);font-size:15.5px;max-width:640px;line-height:1.7;margin-bottom:42px}
+.mod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.mod{position:relative;border:1px solid var(--line);border-radius:14px;background:rgba(20,27,69,.5);padding:26px 24px 22px;cursor:pointer;text-align:left;color:var(--ink);font-family:var(--sans);overflow:hidden;transition:transform .18s,border-color .18s,box-shadow .18s;min-height:190px;display:flex;flex-direction:column;justify-content:space-between}
+.mod:hover{transform:translateY(-4px);border-color:var(--cyan);box-shadow:0 18px 50px rgba(0,0,0,.45)}
+.mod .idx{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--dim)}
+.mod .name{font-family:var(--disp);font-size:33px;letter-spacing:.03em;margin:10px 0 6px;text-transform:uppercase}
+.mod .desc{color:var(--dim);font-size:13.5px;line-height:1.65}
+.mod .go{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;color:var(--cyan);margin-top:16px}
+.mod::after{content:'';position:absolute;inset:0;background:radial-gradient(400px 160px at 20% 0%,rgba(47,168,224,.12),transparent 60%);opacity:0;transition:opacity .2s}
+.mod:hover::after{opacity:1}
+.mod.apply{background:linear-gradient(140deg,rgba(235,97,0,.22),rgba(20,27,69,.5) 55%);border-color:rgba(235,97,0,.55)}
+.mod.apply .go{color:var(--orange-soft)}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin:52px 0 0}
+.stat{border:1px solid var(--line);border-radius:12px;padding:18px 14px;text-align:center;background:rgba(12,18,48,.5)}
+.stat .num{font-family:var(--disp);font-size:38px;color:var(--cyan);line-height:1}
+.stat .lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-top:7px}
+
+/* panels */
+.panel{position:fixed;inset:0;z-index:90;background:rgba(6,10,30,.78);display:block;visibility:hidden;opacity:0;overflow-y:auto;overscroll-behavior:contain;transition:opacity .26s ease,visibility 0s linear .26s}
+.panel.open{visibility:visible;opacity:1;transition:opacity .26s ease}
+.panel-card{max-width:1060px;margin:56px auto 80px;background:linear-gradient(180deg,#10173d,#0C1230);border:1px solid var(--line);border-radius:18px;overflow:hidden;transform:translateY(22px) scale(.985);opacity:0;transition:transform .34s cubic-bezier(.22,.9,.24,1),opacity .28s ease;box-shadow:0 40px 120px rgba(0,0,0,.6);will-change:transform,opacity}
+.panel.open .panel-card{transform:none;opacity:1}
+.panel.swap-out .panel-card{transform:translateY(-10px) scale(.99);opacity:0;transition:transform .18s ease-in,opacity .16s ease-in}
+.panel-top{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 26px;background:rgba(12,18,48,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.panel-top .mlab{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan)}
+.panel-nav{display:flex;gap:8px;align-items:center}
+.pbtn{background:none;border:1px solid var(--line);border-radius:8px;color:var(--dim);font-family:var(--mono);font-size:12px;padding:7px 13px;cursor:pointer;transition:.15s}
+.pbtn:hover{color:var(--ink);border-color:var(--ink)}
+.panel-body{padding:40px 46px 56px}
+.panel-body .kicker{margin-bottom:10px}
+.panel-body h3.big{font-family:var(--disp);font-size:clamp(34px,4.6vw,54px);letter-spacing:.02em;text-transform:uppercase;margin-bottom:16px}
+.lede{color:var(--dim);font-size:15.5px;line-height:1.8;max-width:760px}
+.lede b{color:var(--ink)}
+
+/* shared content styles */
+.tl{margin-top:34px;display:grid;gap:12px}
+.trow{display:grid;grid-template-columns:150px 1fr;gap:20px;border:1px solid var(--line);border-radius:12px;padding:18px 22px;background:rgba(20,27,69,.4)}
+.trow .d{font-family:var(--mono);font-size:12.5px;color:var(--orange-soft);letter-spacing:.06em;padding-top:3px}
+.trow h4{font-size:16.5px;margin-bottom:6px}
+.trow p{color:var(--dim);font-size:14px;line-height:1.7}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);border-radius:999px;padding:5px 11px;color:var(--dim)}
+.video-slot{position:relative;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#080d26;aspect-ratio:16/9;margin:26px 0 8px;display:flex;align-items:center;justify-content:center}
+.video-slot .play{width:76px;height:76px;border-radius:50%;border:2px solid var(--orange);display:flex;align-items:center;justify-content:center;color:var(--orange);font-size:26px;padding-left:5px;background:rgba(235,97,0,.12)}
+.video-slot .vlab{position:absolute;left:22px;bottom:18px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
+.video-slot iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.pcap{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.pcap img{width:100%;height:220px;object-fit:cover}
+.pcap .cap{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 10px;background:linear-gradient(transparent,rgba(6,10,30,.9));font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--ink)}
+.strip3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+
+/* cities */
+.hub-hero{display:grid;grid-template-columns:1.1fr 1fr;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-top:30px;background:rgba(20,27,69,.4)}
+.hub-hero img{width:100%;height:100%;min-height:280px;object-fit:cover}
+.hub-hero .body{padding:28px 30px}
+.lab-sm{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);margin-bottom:8px}
+.hub-hero h4,.track h4{font-family:var(--disp);font-size:34px;letter-spacing:.03em;text-transform:uppercase}
+.subline{color:var(--orange-soft);font-size:13.5px;margin:4px 0 12px;font-weight:600}
+.desc{color:var(--dim);font-size:14px;line-height:1.75}
+.blist{margin-top:14px;display:grid;gap:7px}
+.bi{display:flex;gap:10px;font-size:13.5px;color:var(--dim);line-height:1.6}
+.bi .arrow{color:var(--orange)}
+.tracks{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.track{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:rgba(20,27,69,.4);display:flex;flex-direction:column}
+.track>img{height:170px;width:100%;object-fit:cover}
+.track .body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1}
+.itin{margin-top:16px;border-top:1px dashed var(--line);padding-top:14px;display:grid;gap:8px}
+.itin .row{display:grid;grid-template-columns:64px 1fr;gap:10px;font-size:12.5px;line-height:1.6}
+.itin .dd{font-family:var(--mono);color:var(--cyan)}
+.itin .tt{color:var(--dim)}
+.itin-note{font-family:var(--mono);font-size:10.5px;color:var(--dim);margin-top:12px;letter-spacing:.04em}
+
+/* stablecoin */
+.stable-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:38px;align-items:start;margin-top:26px}
+.steps{margin-top:26px;display:grid;gap:12px}
+.step{display:flex;gap:16px;border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:rgba(20,27,69,.4)}
+.step .n{font-family:var(--disp);font-size:26px;color:var(--orange-soft);line-height:1}
+.step .t{color:var(--dim);font-size:14px;line-height:1.65}
+.szbox{border:1px solid rgba(255,0,79,.45);border-radius:14px;padding:30px 28px;background:linear-gradient(165deg,rgba(255,0,79,.10),rgba(6,10,30,.75) 55%);text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px}
+.szlogo{height:56px;width:auto}
+.szline{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.szgift{border:1px dashed rgba(255,0,79,.55);border-radius:12px;padding:18px 22px;width:100%}
+.szgift .gl1{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#FF6E96}
+.szgift .gl2{font-family:var(--disp);font-size:52px;line-height:1.05;color:#fff}
+.szgift .gl3{font-size:12.5px;color:var(--dim);line-height:1.6;margin-top:6px}
+
+/* co-create */
+.scards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:30px}
+.scard{border:1px solid var(--line);border-radius:12px;padding:20px 18px;background:rgba(20,27,69,.4)}
+.scard .n{font-family:var(--disp);font-size:26px;color:var(--cyan)}
+.scard h5{font-size:15px;margin:8px 0 8px}
+.scard p{color:var(--dim);font-size:13px;line-height:1.65}
+.quote{margin-top:28px;border:1px solid var(--line);border-left:3px solid var(--orange);border-radius:10px;padding:20px 24px;font-family:var(--mono);font-size:14px;line-height:1.8;color:var(--ink);background:rgba(6,10,30,.6)}
+.quote .k{color:var(--orange-soft)}
+
+/* pricing */
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:30px}
+.price-card{border:1px solid rgba(235,97,0,.5);border-radius:16px;padding:30px;background:linear-gradient(160deg,rgba(235,97,0,.12),rgba(20,27,69,.5) 55%)}
+.amt{font-family:var(--disp);font-size:56px;line-height:1}
+.amt .tax{font-family:var(--mono);font-size:12px;color:var(--dim);margin-left:10px;letter-spacing:.08em}
+.approx{font-family:var(--mono);font-size:12px;color:var(--dim);margin:8px 0 20px}
+.checklist{display:grid;gap:11px;margin-bottom:24px}
+.ci{display:flex;gap:11px;font-size:14px;color:var(--dim);line-height:1.65}
+.ci b{color:var(--ink)}
+.ci .check{color:#6BE38A;font-weight:700}
+.fine{font-family:var(--mono);font-size:11px;color:var(--dim);margin-top:12px;line-height:1.7}
+.fit-item{border:1px solid var(--line);border-radius:12px;padding:20px 22px;background:rgba(20,27,69,.4);margin-bottom:14px}
+.fit-item h5{font-size:15px;margin-bottom:7px}
+.fit-item p{color:var(--dim);font-size:13.5px;line-height:1.7}
+.bring{border:1px dashed var(--line);border-radius:12px;padding:18px 22px;font-size:13.5px;color:var(--dim);line-height:1.8}
+.cancel{margin-top:30px;border:1px solid var(--line);border-radius:12px;padding:22px 26px;background:rgba(6,10,30,.5)}
+
+/* official */
+.official{border:1px solid var(--line);border-radius:14px;margin-top:36px;padding:26px 28px;background:rgba(6,10,30,.55)}
+.off-head{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.off-jta{font-family:'Noto Sans JP',sans-serif;font-weight:700;font-size:20px;color:var(--ink)}
+.off-jta em{font-family:var(--mono);font-style:normal;font-size:11px;color:var(--dim);letter-spacing:.14em;text-transform:uppercase;margin-left:10px}
+.off-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 22px}
+.off-item{display:grid;grid-template-columns:120px 1fr;gap:12px;border-top:1px dashed var(--line);padding-top:10px}
+.off-item .ol{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--cyan);padding-top:3px}
+.off-item .ov{font-size:13px;color:var(--dim);line-height:1.65}
+.off-item .ov b{color:var(--ink)}
+@media(max-width:960px){.off-grid{grid-template-columns:1fr}}
+
+/* guests */
+.guests{border:1px solid var(--line);border-radius:14px;margin-top:34px;padding:24px 28px;background:rgba(20,27,69,.4);display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.guests .gl{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange-soft)}
+.guests .gt2{font-size:14px;color:var(--dim)}
+
+/* final + footer */
+.final{padding:110px 0;text-align:center;position:relative;z-index:1}
+.final h2{font-family:var(--disp);font-size:clamp(46px,7.5vw,96px);line-height:.95;text-transform:uppercase;margin-bottom:18px}
+.final .sub{font-family:var(--mono);font-size:12.5px;letter-spacing:.1em;color:var(--dim);text-transform:uppercase;margin-bottom:30px}
+footer{border-top:1px solid var(--line);padding:34px 0 44px;position:relative;z-index:1}
+footer .l1{font-size:13px;color:var(--dim)}
+footer .l2{font-family:var(--mono);font-size:12px;color:var(--dim);margin-top:8px}
+footer a{color:var(--cyan);text-decoration:none}
+
+/* responsive */
+@media(max-width:960px){
+  .mod-grid{grid-template-columns:repeat(2,1fr)}
+  .stats{grid-template-columns:repeat(3,1fr)}
+  .hero-grid{grid-template-columns:1fr}
+  .deadline-card{max-width:340px}
+  .tracks{grid-template-columns:1fr}
+  .hub-hero{grid-template-columns:1fr}
+  .stable-grid{grid-template-columns:1fr}
+  .scards{grid-template-columns:repeat(2,1fr)}
+  .price-grid{grid-template-columns:1fr}
+  .strip3{grid-template-columns:1fr}
+  .panel-card{margin:0;border-radius:0;min-height:100svh}
+  .panel-body{padding:28px 22px 60px}
+}
+@media(max-width:600px){
+  .nav-links button,.nav-links a.plain{display:none}
+  .mod-grid{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .trow{grid-template-columns:1fr;gap:6px}
+  .scards{grid-template-columns:1fr}
+  h1{font-size:clamp(56px,17vw,86px)}
+}
+@media(prefers-reduced-motion:reduce){
+  .marquee-track,.scroll-hint,.cursor{animation:none}
+  .panel-card{animation-duration:0s}
+}
+</style>
+</head>
+<body>
+<div class="grid-bg" aria-hidden="true"></div>
+<div class="glow a" aria-hidden="true"></div>
+<div class="glow b" aria-hidden="true"></div>
+
+<nav aria-label="Main">
+  <div class="nav-in">
+    <a class="logo" href="#top"><img src="clf-logo.png" alt="Colive Fukuoka — Nomads Meet Japan" style="height:40px;width:auto;display:block"></a>
+    <div class="nav-links">
+      <button data-open="program">Program</button>
+      <button data-open="cities">Cities</button>
+      <button data-open="stablecoin">Stablecoin</button>
+      <button data-open="cocreate">Co-create</button>
+      <button data-open="pricing">Pricing</button>
+      <a class="btn sm" href="https://forms.gle/dgarMGdLXGFriPE67" target="_blank" rel="noopener">Apply →</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-bgimg" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="badge-row">
+      <span class="badge hot">Japan Tourism Agency official pilot</span>
+      <span class="badge blue">1 of 4 selected nationwide</span>
+      <span class="badge">Sep 30 – Oct 14, 2026</span>
+      <span class="badge gift">¥5,000 SuzuPay points gift</span>
+    </div>
+    <h1>Fukuoka<br>Builders'<br><span class="outline">Coliving</span></h1>
+    <p class="catch">Where <span class="g">global</span> mindsets meet <span class="r">regional</span> roots</p>
+    <div class="fudo" aria-hidden="true">
+      <span class="fudo-kanji">風土</span>
+      <span class="fudo-sub">FŪDO — wind meets soil</span>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <div class="terminal" aria-hidden="true">
+          <div><span class="p">$</span> ./join --city fukuoka --nights 14</div>
+          <div><span class="gt">&gt;</span> loading: 1 startup city + 3 regional frontiers…</div>
+          <div><span class="gt">&gt;</span> payments: USDC/USDT via SuzuPay … <span class="hi">OK</span></div>
+          <div><span class="gt">&gt;</span> regional stay subsidy: <span class="hi">100%</span> (JTA pilot)</div>
+          <div><span class="gt">&gt;</span> sign-up gift: <span class="hi">¥5,000</span> SuzuPay points</div>
+          <div><span class="gt">&gt;</span> status: 50 builders wanted<span class="cursor"></span></div>
+        </div>
+        <div class="hero-ctas">
+          <a class="btn" href="https://forms.gle/dgarMGdLXGFriPE67" target="_blank" rel="noopener">Save your spot →</a>
+          <button class="btn ghost" data-open="program">Explore the program</button>
+          <span class="note">~50 seats. Closes when filled.</span>
+        </div>
+      </div>
+      <div class="deadline-card">
+        <div class="lab">Applications close</div>
+        <div class="date">Sep 15</div>
+        <div class="count" id="countdown" aria-live="off"></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true">▼ select a module</div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Build in Japan</span><span class="dot">◆</span>
+    <span>Matcha-thon</span><span class="dot">◆</span>
+    <span>USDC accepted here</span><span class="dot">◆</span>
+    <span>Yatai nights</span><span class="dot">◆</span>
+    <span>Onsen reset</span><span class="dot">◆</span>
+    <span>¥5,000 SuzuPay gift</span><span class="dot">◆</span>
+    <span>Ideas towns can use</span><span class="dot">◆</span>
+    <span>Build in Japan</span><span class="dot">◆</span>
+    <span>Matcha-thon</span><span class="dot">◆</span>
+    <span>USDC accepted here</span><span class="dot">◆</span>
+    <span>Yatai nights</span><span class="dot">◆</span>
+    <span>Onsen reset</span><span class="dot">◆</span>
+    <span>¥5,000 SuzuPay gift</span><span class="dot">◆</span>
+    <span>Ideas towns can use</span><span class="dot">◆</span>
+  </div>
+</div>
+
+<main>
+<section class="launcher" id="modules">
+  <div class="wrap">
+    <div class="kicker">// Builders OS</div>
+    <h2>Choose what you need.<br>Skip what you don't.</h2>
+    <p class="sub">Everything about the program lives in five modules. Open one, read it in two minutes, close it. No endless scroll.</p>
+    <div class="mod-grid">
+      <button class="mod" data-open="program">
+        <span><span class="idx">MODULE 01</span><span class="name" style="display:block">Program</span>
+        <span class="desc" style="display:block">15 days, two phases. City energy first, regional depth after. Meet Jacquie, your program director.</span></span>
+        <span class="go">open →</span>
+      </button>
+      <button class="mod" data-open="cities">
+        <span><span class="idx">MODULE 02</span><span class="name" style="display:block">Cities</span>
+        <span class="desc" style="display:block">Fukuoka as home base. Yame, Koga or Buzen as your 4-day frontier, with a day-by-day itinerary.</span></span>
+        <span class="go">open →</span>
+      </button>
+      <button class="mod" data-open="stablecoin">
+        <span><span class="idx">MODULE 03</span><span class="name" style="display:block">Stablecoin</span>
+        <span class="desc" style="display:block">Pay towns in USDC/USDT through SuzuPay, and start with a ¥5,000 points gift. A live trial on a scale rarely seen in Japan.</span></span>
+        <span class="go">open →</span>
+      </button>
+      <button class="mod" data-open="cocreate">
+        <span><span class="idx">MODULE 04</span><span class="name" style="display:block">Co-create</span>
+        <span class="desc" style="display:block">Dialogue with farmers, shopkeepers and craftspeople. Ideas shared back to the towns on Oct 13.</span></span>
+        <span class="go">open →</span>
+      </button>
+      <button class="mod" data-open="pricing">
+        <span><span class="idx">MODULE 05</span><span class="name" style="display:block">Pricing</span>
+        <span class="desc" style="display:block">One package, ¥170,000 tax included. 14 nights, full pass, regional stay subsidized to zero.</span></span>
+        <span class="go">open →</span>
+      </button>
+      <a class="mod apply" href="https://forms.gle/dgarMGdLXGFriPE67" target="_blank" rel="noopener" style="text-decoration:none">
+        <span><span class="idx">MODULE 06</span><span class="name" style="display:block">Apply</span>
+        <span class="desc" style="display:block">Applications close Sep 15. Around 50 seats, first come, first reviewed.</span></span>
+        <span class="go">launch form ↗</span>
+      </a>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="num">15</div><div class="lab">Days / 14 nights</div></div>
+      <div class="stat"><div class="num">4</div><div class="lab">Cities, one program</div></div>
+      <div class="stat"><div class="num">50</div><div class="lab">Global builders</div></div>
+      <div class="stat"><div class="num">¥0</div><div class="lab">Regional stay (subsidized)</div></div>
+      <div class="stat"><div class="num">¥5K</div><div class="lab">SuzuPay points bonus</div></div>
+    </div>
+    <div class="official">
+      <div class="off-head">
+        <span class="kicker" style="margin:0">// Who is behind this</span>
+        <span class="off-jta">観光庁 <em>Japan Tourism Agency</em></span>
+      </div>
+      <div class="off-grid">
+        <div class="off-item"><div class="ol">Selected by</div><div class="ov"><b>Japan Tourism Agency</b> (Government of Japan) — one of 4 pilot projects adopted nationwide in 2026</div></div>
+        <div class="off-item"><div class="ol">Applicant body</div><div class="ov"><b>Fukuoka Convention &amp; Visitors Bureau</b></div></div>
+        <div class="off-item"><div class="ol">Operated by</div><div class="ov"><b>YouTopia Inc.</b> (project owner) with <b>Colive Fukuoka / yugyo inc.</b> (program)</div></div>
+        <div class="off-item"><div class="ol">Travel product</div><div class="ov"><b>IWA Tour</b>, licensed travel agency (No. 1051)</div></div>
+        <div class="off-item"><div class="ol">Payments</div><div class="ov"><b>SuzuPay</b> — QR stablecoin payment app (USDC/USDT)</div></div>
+      </div>
+    </div>
+    <div class="strip3" style="margin-top:34px">
+      <div class="pcap"><img src="strip-torii.jpg" alt="Builders walking through vermilion torii gates" loading="lazy"><div class="cap">Shrine walk</div></div>
+      <div class="pcap"><img src="strip-matcha.jpg" alt="Hand-whisking matcha in Yame" loading="lazy"><div class="cap">Matcha, Yame</div></div>
+      <div class="pcap"><img src="strip-kimono.jpg" alt="Kagura performer in traditional costume" loading="lazy"><div class="cap">Kagura night, Buzen</div></div>
+    </div>
+    <div class="guests">
+      <div>
+        <div class="gl">Special guests</div>
+        <div class="gt2">Names from the global Web3 and digital nomad community will be announced here as they confirm. Watch this space.</div>
+      </div>
+      <a class="btn ghost sm" href="https://forms.gle/dgarMGdLXGFriPE67" target="_blank" rel="noopener">Get in before they do →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PANEL: PROGRAM ============ -->
+<section class="panel" id="panel-program" role="dialog" aria-modal="true" aria-labelledby="ttl-program">
+  <div class="panel-card">
+    <div class="panel-top">
+      <span class="mlab">MODULE 01 / 05 — PROGRAM</span>
+      <div class="panel-nav">
+        <button class="pbtn" data-prev>← prev</button>
+        <button class="pbtn" data-next>next →</button>
+        <button class="pbtn" data-close aria-label="Close">✕ close</button>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="kicker">// What is this</div>
+      <h3 class="big" id="ttl-program">Wind meets soil.</h3>
+      <p class="lede">
+        Rooted in the Japanese concept of <b>Fūdo</b> （風土）, where the <b>wind</b> of global builders meets
+        the <b>soil</b> of regional tradition. Selected as an official pilot by the <b>Japan Tourism Agency</b>, this is
+        a live sandbox: test real-world Web3 payment rails and sit down with local leaders facing real
+        transitions, like matcha farmers riding a global boom. Not a conference add-on. Not tourism. A pilot
+        for the next model of location-independent living.
+      </p>
+
+      <div class="video-slot" id="film">
+        <!-- Jacquie intro video: when the URL is ready, replace the two placeholder lines below with:
+             <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Meet Jacquie Wortley, Program Director" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+        <div class="play" aria-hidden="true">▶</div>
+        <div class="vlab">Meet your Program Director — Jacquie Wortley · film coming soon</div>
+      </div>
+      <p class="lede" style="font-size:13.5px">Jacquie has designed builder programs and community residencies around the world. During your two weeks she runs the Engineering Cafe workshops and shares what global builder communities have learned about working with places like Fukuoka.</p>
+
+      <div class="tl">
+        <div class="trow"><div class="d">Sep 30</div><div>
+          <h4>Check-in — Fukuoka City</h4>
+          <p>Arrive at Hakata Place, meet your cohort, and roll straight into the Colive Fukuoka opening reception. The October Program starts around you from day one.</p>
+          <div class="tags"><span class="tag">Hakata Place</span><span class="tag">Opening reception</span></div>
+        </div></div>
+        <div class="trow"><div class="d">Oct 1</div><div>
+          <h4>Meet your regions — lunch &amp; Destination Pitch</h4>
+          <p>Lunch with the community managers from Yame, Koga and Buzen, then the Destination Pitch: each region makes its case, you start choosing your frontier.</p>
+          <div class="tags"><span class="tag">Community managers</span><span class="tag">Destination Pitch</span></div>
+        </div></div>
+        <div class="trow"><div class="d">Oct 2 AM</div><div>
+          <h4>Builders special session — Premium Lounge</h4>
+          <p>A dedicated session at the coworking lounge on the stablecoin pilot: how SuzuPay works, how your spending feeds the trial, and what Japan wants to learn from it.</p>
+          <div class="tags"><span class="tag">Stablecoin pilot briefing</span><span class="tag">English session</span></div>
+        </div></div>
+        <div class="trow"><div class="d">Sep 30 – Oct 11</div><div>
+          <h4>Phase 1 — the startup base</h4>
+          <p>11 nights in Fukuoka City with full access to the October Program: Ikigai Summit, Co-creator's Week, Ramen Tech Startup Conference, daily meetups and yatai stools shared with local founders.</p>
+          <div class="tags"><span class="tag">Ikigai Summit</span><span class="tag">Ramen Tech</span><span class="tag">Daily meetups</span></div>
+        </div></div>
+        <div class="trow"><div class="d">Oct 5 – 8</div><div>
+          <h4>Engineering Cafe — workshops &amp; office hours</h4>
+          <p>Jacquie leads research and design workshops built on her global community experience. Office hours with mentors across Web3, AI and design (Oct 5 is excursion day, workshops run around it).</p>
+          <div class="tags"><span class="tag">Engineering Cafe</span><span class="tag">Office Hours</span></div>
+        </div></div>
+        <div class="trow"><div class="d">Oct 11 – 14</div><div>
+          <h4>Phase 2 — your regional frontier</h4>
+          <p>Choose Yame, Koga or Buzen. Three nights, fully subsidized under the JTA pilot. Walk the fields and shopping streets, talk with the people who run them, and shape ideas together. On Oct 13 you share those ideas back with the community.</p>
+          <div class="tags"><span class="tag">3 nights free</span><span class="tag">Community manager on the ground</span><span class="tag">Oct 13 idea sharing</span></div>
+        </div></div>
+      </div>
+
+      <div class="strip3">
+        <div class="pcap"><img src="feature-colive-night.jpg" alt="Colive Fukuoka builders gathered at an evening lounge session" loading="lazy"><div class="cap">Colive Fukuoka night — Fukuoka</div></div>
+        <div class="pcap"><img src="feature-ramen-tech.jpg" alt="A speaker pitching on stage at the Ramen Tech open pitch stage" loading="lazy"><div class="cap">Ramen Tech open pitch — Fukuoka</div></div>
+        <div class="pcap"><img src="feature-yatai-night.jpg" alt="Builders sitting at a yatai food stall at night" loading="lazy"><div class="cap">Yatai night — Fukuoka</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PANEL: CITIES ============ -->
+<section class="panel" id="panel-cities" role="dialog" aria-modal="true" aria-labelledby="ttl-cities">
+  <div class="panel-card">
+    <div class="panel-top">
+      <span class="mlab">MODULE 02 / 05 — CITIES</span>
+      <div class="panel-nav">
+        <button class="pbtn" data-prev>← prev</button>
+        <button class="pbtn" data-next>next →</button>
+        <button class="pbtn" data-close aria-label="Close">✕ close</button>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="kicker">// Choose your frontier</div>
+      <h3 class="big" id="ttl-cities">One base. Three frontiers.</h3>
+      <p class="lede">Fukuoka City is home for 11 nights. For the final stretch, Oct 11 to 14, you pick one region and go deep: four days, three nights, stay covered by the pilot.</p>
+
+      <div class="hub-hero">
+        <img src="hub-fukuoka.jpg" alt="Panel discussion at a Colive Fukuoka event" loading="lazy">
+        <div class="body">
+          <div class="lab-sm">Home base — Sep 30 to Oct 11</div>
+          <h4>Fukuoka</h4>
+          <div class="subline">Japan's startup capital, tradition intact</div>
+          <p class="desc">A world-class startup ecosystem with a historic soul. Your co-creation hub for 11 nights, with the full October Program as your playground and stablecoin-friendly shops opening across the city.</p>
+          <div class="blist">
+            <div class="bi"><span class="arrow">▸</span> Stay: Hakata Place</div>
+            <div class="bi"><span class="arrow">▸</span> Conference days, meetups, morning runs, yatai nights</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tracks">
+        <div class="track">
+          <img src="track-yame.jpg" alt="Terraced tea fields in Yame" loading="lazy">
+          <div class="body">
+            <div class="lab-sm">Track 01</div>
+            <h4>Yame</h4>
+            <div class="subline">Matcha &amp; artisan heritage</div>
+            <p class="desc">One of the world's most respected matcha regions, mid-transformation as global demand booms. Tea farmers, indigo dyers, washi makers and lantern craftsmen still work within a few kilometers of each other. You work from a renovated schoolhouse in the middle of it.</p>
+            <div class="blist">
+              <div class="bi"><span class="arrow">▸</span> Stay: Yame Green Hotel</div>
+              <div class="bi"><span class="arrow">▸</span> Former Kawasaki Elementary as workspace</div>
+              <div class="bi"><span class="arrow">▸</span> Tea fields, craft studios, akiya streetscapes</div>
+            </div>
+            <div class="itin">
+              <div class="row"><span class="dd">Oct 11</span><span class="tt">Travel from Fukuoka, settle in, evening with your community manager</span></div>
+              <div class="row"><span class="dd">Oct 12</span><span class="tt">Field day: tea farms, matcha processing, craft studios. Listen first, ask everything</span></div>
+              <div class="row"><span class="dd">Oct 13</span><span class="tt">Community day at the old schoolhouse: a keynote on Yame tea and craft, then open dialogue where you share the ideas your visit sparked</span></div>
+              <div class="row"><span class="dd">Oct 14</span><span class="tt">Slow morning, farewells, return to Fukuoka</span></div>
+            </div>
+            <div class="itin-note">Itinerary may be fine-tuned with local partners.</div>
+          </div>
+        </div>
+        <div class="track">
+          <img src="track-koga.jpg" alt="Retro shopping street in Koga" loading="lazy">
+          <div class="body">
+            <div class="lab-sm">Track 02</div>
+            <h4>Koga</h4>
+            <div class="subline">Retro streets &amp; community revival</div>
+            <p class="desc">A mountain-to-sea town 30 minutes from Fukuoka, with retro shopping streets, family-run food factories and a community hub run by people who refuse to let the town fade. The most hands-on track: shopkeepers know you're coming.</p>
+            <div class="blist">
+              <div class="bi"><span class="arrow">▸</span> Stay: Yakuouji Onsen "Onioso" ryokan</div>
+              <div class="bi"><span class="arrow">▸</span> Lulululu community hub, bar-hopping tours</div>
+              <div class="bi"><span class="arrow">▸</span> Food factory visits, stablecoin shopping street</div>
+            </div>
+            <div class="itin">
+              <div class="row"><span class="dd">Oct 11</span><span class="tt">Travel from Fukuoka, onsen ryokan check-in, town orientation</span></div>
+              <div class="row"><span class="dd">Oct 12</span><span class="tt">Shopping street day: visit the shops one by one, talk with owners and residents, pay in stablecoin where the trial is live</span></div>
+              <div class="row"><span class="dd">Oct 13</span><span class="tt">Community dialogue with local leaders, joined by the mayor of Koga. Share what you saw and the ideas it raised</span></div>
+              <div class="row"><span class="dd">Oct 14</span><span class="tt">Slow morning, farewells, return to Fukuoka</span></div>
+            </div>
+            <div class="itin-note">Itinerary may be fine-tuned with local partners.</div>
+          </div>
+        </div>
+        <div class="track">
+          <img src="track-buzen.jpg" alt="Traditional Kagura dancers performing at night in Buzen" loading="lazy">
+          <div class="body">
+            <div class="lab-sm">Track 03</div>
+            <h4>Buzen</h4>
+            <div class="subline">Sacred nature &amp; deep focus</div>
+            <p class="desc">Framed by Mt. Kubote, a historic center of mountain asceticism. This is the retreat track: kagura ritual dance, forest walks, a riverside tent sauna, and long unhurried conversations with the people who chose this life. Come as you are, leave clearer.</p>
+            <div class="blist">
+              <div class="bi"><span class="arrow">▸</span> Stay: HOTEL R9 The Yard Buzen</div>
+              <div class="bi"><span class="arrow">▸</span> Coworking "ZigZag"</div>
+              <div class="bi"><span class="arrow">▸</span> Kagura night, tent sauna &amp; BBQ, Mt. Kubote</div>
+            </div>
+            <div class="itin">
+              <div class="row"><span class="dd">Oct 11</span><span class="tt">Travel from Fukuoka, check in, evening by the river</span></div>
+              <div class="row"><span class="dd">Oct 12</span><span class="tt">Nature immersion: Mt. Kubote trails, forest therapy, sauna. Feel the place before you think about it</span></div>
+              <div class="row"><span class="dd">Oct 13</span><span class="tt">Kagura and community gathering: dialogue with residents and the movers behind Buzen's revival, sharing the ideas your stay surfaced</span></div>
+              <div class="row"><span class="dd">Oct 14</span><span class="tt">Slow morning, farewells, return to Fukuoka</span></div>
+            </div>
+            <div class="itin-note">Itinerary may be fine-tuned with local partners.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PANEL: STABLECOIN ============ -->
+<section class="panel" id="panel-stablecoin" role="dialog" aria-modal="true" aria-labelledby="ttl-stable">
+  <div class="panel-card">
+    <div class="panel-top">
+      <span class="mlab">MODULE 03 / 05 — STABLECOIN</span>
+      <div class="panel-nav">
+        <button class="pbtn" data-prev>← prev</button>
+        <button class="pbtn" data-next>next →</button>
+        <button class="pbtn" data-close aria-label="Close">✕ close</button>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="kicker">// Stablecoin pilot</div>
+      <h3 class="big" id="ttl-stable">Pay the town in USDC.<br><span style="font-size:.55em;color:#FF6E96">Powered by SuzuPay</span></h3>
+      <div class="stable-grid">
+        <div>
+          <p class="lede">
+            Shops, cafes and pubs across the four hubs accept <b>QR-code stablecoin payments (USDC / USDT)</b>, a multi-region
+            trial on a scale rarely seen in Japan. It runs on <b>SuzuPay</b>, which converts your stablecoins into local spending
+            points, so a matcha latte in Yame or a round at a Koga izakaya settles as easily as anywhere onchain. You don't
+            even need to hold stablecoins to join: register with SuzuPay and your bonus points spend like yen.
+          </p>
+          <div class="steps">
+            <div class="step"><div class="n">01</div><div class="t">Scan a QR code, pay in USDC/USDT. No FX hurdles, no cash-out friction</div></div>
+            <div class="step"><div class="n">02</div><div class="t">Participants receive ¥5,000 in SuzuPay points to spend locally</div></div>
+            <div class="step"><div class="n">03</div><div class="t">An online orientation before the program walks you through setup and registration</div></div>
+            <div class="step"><div class="n">04</div><div class="t">Your usage shapes how Japan builds borderless payment infrastructure</div></div>
+          </div>
+        </div>
+        <div class="szbox">
+          <img src="suzupay-logo.png" alt="SuzuPay" class="szlogo">
+          <div class="szline">QR stablecoin payments · USDC / USDT</div>
+          <div class="szgift">
+            <div class="gl1">Sign-up gift</div>
+            <div class="gl2">¥5,000</div>
+            <div class="gl3">in SuzuPay points, for every Builder — spend it at local shops across the four hubs</div>
+          </div>
+          <a class="btn ghost sm" href="https://suzupay.com" target="_blank" rel="noopener">About SuzuPay ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PANEL: CO-CREATE ============ -->
+<section class="panel" id="panel-cocreate" role="dialog" aria-modal="true" aria-labelledby="ttl-cocreate">
+  <div class="panel-card">
+    <div class="panel-top">
+      <span class="mlab">MODULE 04 / 05 — CO-CREATE</span>
+      <div class="panel-nav">
+        <button class="pbtn" data-prev>← prev</button>
+        <button class="pbtn" data-next>next →</button>
+        <button class="pbtn" data-close aria-label="Close">✕ close</button>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="kicker">// The co-creation arc</div>
+      <h3 class="big" id="ttl-cocreate">Ideas the towns can use.</h3>
+      <div class="sprint-top" style="display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:start">
+        <p class="lede">
+          This is not a hackathon and nobody expects a finished product. The regions asked for something rarer:
+          <b>outside eyes and honest conversation</b>. You research on foot, with interpreters where needed. You sit
+          with farmers, shopkeepers and craftspeople. Then on <b>Oct 13</b> each group shares the ideas that surfaced,
+          in an open dialogue with the community. What resonates keeps moving after you leave, and the connection
+          you build is yours to keep.
+        </p>
+        <img src="sprint-workshop.jpg" alt="Builders gathered around a craft workshop demonstration" loading="lazy" style="border-radius:12px;border:1px solid var(--line)">
+      </div>
+      <div class="scards">
+        <div class="scard"><div class="n">01</div><h5>Immerse</h5><p>Field visits in your region: tea farms, shopping streets, sacred mountains. Guided by community managers who live there.</p></div>
+        <div class="scard"><div class="n">02</div><h5>Listen</h5><p>Structured dialogue with local leaders and residents. Interpreters on hand, curiosity required.</p></div>
+        <div class="scard"><div class="n">03</div><h5>Ideate</h5><p>Engineering Cafe workshops (Oct 5–8) with Jacquie and office-hour mentors help you turn observations into ideas worth sharing.</p></div>
+        <div class="scard"><div class="n">04</div><h5>Share — Oct 13</h5><p>Open idea session with the community in your region. Direct feedback, real relationships, no slideware required.</p></div>
+      </div>
+      <div class="quote"><span class="k">Q_001 &gt;&gt;</span> "How might Yame's tea farmers thrive in the global matcha boom, without losing the craft?" Questions like this one start the conversation. Where it goes depends on who shows up.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PANEL: PRICING ============ -->
+<section class="panel" id="panel-pricing" role="dialog" aria-modal="true" aria-labelledby="ttl-pricing">
+  <div class="panel-card">
+    <div class="panel-top">
+      <span class="mlab">MODULE 05 / 05 — PRICING</span>
+      <div class="panel-nav">
+        <button class="pbtn" data-prev>← prev</button>
+        <button class="pbtn" data-next>next →</button>
+        <button class="pbtn" data-close aria-label="Close">✕ close</button>
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="kicker">// Pricing and fit</div>
+      <h3 class="big" id="ttl-pricing">One package. Everything in.</h3>
+      <div class="price-grid">
+        <div class="price-card">
+          <div class="amt">¥170,000<span class="tax">Tax incl.</span></div>
+          <div class="approx">approx. €920 — actual charge depends on FX at payment</div>
+          <div class="checklist">
+            <div class="ci"><span class="check">✓</span><span><b>14 nights</b> — 11 in Fukuoka City (Hakata Place) + 3 in your regional hub, fully subsidized by the JTA pilot</span></div>
+            <div class="ci"><span class="check">✓</span><span><b>Colive Fukuoka 2026 Standard Pass</b> — Ramen Tech, Ikigai Summit, opening party, daily meetups</span></div>
+            <div class="ci"><span class="check">✓</span><span>On-the-ground <b>community managers</b> in every hub</span></div>
+            <div class="ci"><span class="check">✓</span><span>Curated workshops &amp; local network introductions</span></div>
+            <div class="ci"><span class="check">✓</span><span><b>¥5,000 SuzuPay points sign-up gift</b> for local spending</span></div>
+          </div>
+          <a class="btn" href="https://forms.gle/dgarMGdLXGFriPE67" target="_blank" rel="noopener">Apply — closes Sep 15</a>
+          <div class="fine">Application window: Aug 8 – Sep 15 · ~50 seats · first come, first reviewed · Purchased as a travel product of IWA Tour (registered travel agency)</div>
+        </div>
+        <div>
+          <div class="fit-item">
+            <h5>Builders with something to contribute</h5>
+            <p>Founders, engineers, designers, strategists and creators who want intentional time in regional Japan, engaging directly with local leaders and bringing fresh eyes to communities mid-transition.</p>
+          </div>
+          <div class="fit-item">
+            <h5>Active stablecoin users</h5>
+            <p>You hold and use USDC/USDT. This pilot measures whether Web3 rails can drive regional economies, so priority goes to participants ready to pay onchain on the ground.</p>
+          </div>
+          <div class="fit-item">
+            <h5>Feedback collaborators</h5>
+            <p>Surveys and interviews are part of the deal. Your input directly shapes Japan's infrastructure for global digital nomads.</p>
+          </div>
+          <div class="bring">
+            You bring: your project, your edge, a generous mindset.<br>
+            You leave: regional insight, a network across four cities, and a stake in Japan's borderless future.
+          </div>
+        </div>
+      </div>
+      <div class="cancel">
+        <div class="kicker">Cancellation policy</div>
+        <div class="blist">
+          <div class="bi"><span class="arrow">▸</span> Until JST 4:59pm, Friday Sep 25 — Free of charge</div>
+          <div class="bi"><span class="arrow">▸</span> JST 5:00pm Fri Sep 25 → JST 4:59pm Mon Sep 28 — 20%</div>
+          <div class="bi"><span class="arrow">▸</span> After JST 5:00pm, Monday Sep 28 — 100%</div>
+        </div>
+        <div class="fine" style="margin-top:12px">*The travel agency will refund the amount after deducting the cancellation fee.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="final">
+  <div class="wrap">
+    <h2>Build where<br>it matters.</h2>
+    <div class="sub">fukuoka → yame / koga / buzen · sep 30 – oct 14 · applications close sep 15</div>
+    <a class="btn" href="https://forms.gle/dgarMGdLXGFriPE67" target="_blank" rel="noopener">Save your spot →</a>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="clf-logo.png" alt="Colive Fukuoka" style="height:44px;width:auto;margin-bottom:14px">
+    <div class="l1">© 2026 Colive Fukuoka · An official pilot of the Japan Tourism Agency (観光庁), applied through the Fukuoka Convention &amp; Visitors Bureau · Operated by YouTopia Inc. and yugyo inc. · Travel product by IWA Tour · Payments by SuzuPay</div>
+    <div class="l2">Colive Fukuoka Secretariat · <a href="mailto:info@colivefukuoka.com">info@colivefukuoka.com</a> · <a href="https://www.colivefukuoka.com">colivefukuoka.com</a></div>
+    <div class="l2" style="margin-top:6px;font-size:11px">Hero photo: Yame tea plantation by kanegen, CC BY 2.0, via Wikimedia Commons</div>
+  </div>
+</footer>
+
+<noscript>
+<style>.panel{position:static;display:block;background:none;backdrop-filter:none}.panel-card{margin:20px auto;transform:none;opacity:1;animation:none}.panel-nav{display:none}</style>
+</noscript>
+
+<script>
+(function(){
+  var order=['program','cities','stablecoin','cocreate','pricing'];
+  var current=null, busy=false;
+  function el(id){return document.getElementById('panel-'+id)}
+  function lock(on){
+    document.documentElement.style.overflow=on?'hidden':'';
+  }
+  function show(id){
+    current=id;
+    var p=el(id);
+    p.scrollTop=0;
+    p.classList.remove('swap-out');
+    // force reflow so the transition always plays
+    void p.offsetWidth;
+    p.classList.add('open');
+    if(history.replaceState)history.replaceState(null,'','#'+id);
+  }
+  function open(id){
+    if(!el(id)||busy)return;
+    lock(true);
+    if(current&&current!==id){
+      var prev=el(current);
+      busy=true;
+      prev.classList.add('swap-out');
+      setTimeout(function(){
+        prev.classList.remove('open','swap-out');
+        show(id);
+        busy=false;
+      },170);
+    }else{
+      show(id);
+    }
+  }
+  function close(){
+    if(!current)return;
+    var p=el(current);
+    current=null;
+    p.classList.remove('open');
+    lock(false);
+    if(history.replaceState)history.replaceState(null,'','#modules');
+  }
+  function step(dir){
+    if(!current||busy)return;
+    var i=(order.indexOf(current)+dir+order.length)%order.length;
+    open(order[i]);
+  }
+  document.querySelectorAll('[data-open]').forEach(function(b){
+    b.addEventListener('click',function(){open(b.getAttribute('data-open'))});
+  });
+  document.querySelectorAll('[data-close]').forEach(function(b){b.addEventListener('click',close)});
+  document.querySelectorAll('[data-prev]').forEach(function(b){b.addEventListener('click',function(){step(-1)})});
+  document.querySelectorAll('[data-next]').forEach(function(b){b.addEventListener('click',function(){step(1)})});
+  document.querySelectorAll('.panel').forEach(function(p){
+    p.addEventListener('click',function(e){if(e.target===p)close()});
+  });
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape')close();
+    if(current&&e.key==='ArrowRight')step(1);
+    if(current&&e.key==='ArrowLeft')step(-1);
+  });
+  var h=location.hash.replace('#','');
+  if(order.indexOf(h)>=0)open(h);
+
+  // countdown to application close (JST end of Sep 15)
+  var cd=document.getElementById('countdown');
+  if(cd){
+    var end=new Date('2026-09-15T23:59:59+09:00').getTime();
+    function tick(){
+      var ms=end-Date.now();
+      if(ms<=0){cd.textContent='applications closing';return}
+      var d=Math.floor(ms/86400000),hh=Math.floor(ms%86400000/3600000),mm=Math.floor(ms%3600000/60000);
+      cd.textContent='T-minus '+d+'d '+hh+'h '+mm+'m';
+      setTimeout(tick,30000);
+    }
+    tick();
+  }
+
+})();
+</script>
+</body>
+</html>
