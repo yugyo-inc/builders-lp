@@ -211,6 +211,11 @@ h1 .outline{color:transparent;-webkit-text-stroke:2px var(--ink);text-shadow:non
 .city-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
 .city-links a{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--cyan);border-radius:999px;padding:6px 15px;color:var(--cyan);text-decoration:none;transition:.15s}
 .city-links a:hover{background:var(--cyan);color:#08122a}
+.trow .thumb{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:8px;margin-bottom:14px;border:1px solid var(--line)}
+.card-cta{margin-top:14px}
+.card-cta a{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;background:var(--orange);border:1px solid var(--orange);border-radius:999px;padding:8px 17px;color:#fff;text-decoration:none;transition:.15s;display:inline-block}
+.card-cta a:hover{background:var(--orange-soft);border-color:var(--orange-soft)}
+.trow .warn{display:block;font-family:var(--mono);font-size:11px;color:var(--dim);line-height:1.6;margin-top:14px;padding-top:12px;border-top:1px solid var(--line)}
 .video-slot{position:relative;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#080d26;aspect-ratio:16/9;margin:26px 0 8px;display:flex;align-items:center;justify-content:center}
 .video-slot .play{width:76px;height:76px;border-radius:50%;border:2px solid var(--orange);display:flex;align-items:center;justify-content:center;color:var(--orange);font-size:26px;padding-left:5px;background:rgba(235,97,0,.12)}
 .video-slot .vlab{position:absolute;left:22px;bottom:18px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--dim)}
@@ -525,25 +530,6 @@ footer a{color:var(--cyan);text-decoration:none}
         for the next model of location-independent living.
       </p>
 
-      <div class="kicker" style="margin:26px 0 14px">Meet your program directors</div>
-      <div class="directors">
-        <div class="director-card">
-          <img src="director-jacquie.jpg" alt="Jacquie Wortley, Program Director">
-          <div class="dinfo">
-            <h5>Jacquie Wortley</h5>
-            <div class="drole">Program Director</div>
-            <p>Jacquie brings a decade of UX and product research to questions of sustainable innovation, work she's now applying to the collaboration with rural tea farmers. She believes the best-designed systems regenerate the places they touch rather than extract from them.</p>
-          </div>
-        </div>
-        <div class="director-card">
-          <img src="director-ryu.jpg" alt="Ryu, Program Director">
-          <div class="dinfo">
-            <h5>Ryu</h5>
-            <div class="drole">Program Director</div>
-            <p>Co-founder of 369meteor. Co-organizer of Zō Village, a Fracton Ventures member, and a Network School residential. Combining insights from global experimental communities with grassroots execution.</p>
-          </div>
-        </div>
-      </div>
       <div class="kicker" style="margin:26px 0 14px">Your schedule at a glance</div>
       <div class="tl-hint">Sep 30 – Oct 2 is the core — everything after is yours to shape <span class="arrow">→</span> scroll for the full run</div>
 
@@ -552,12 +538,22 @@ footer a{color:var(--cyan);text-decoration:none}
         <div class="trow overview"><div class="d">Sep 30 – Oct 14</div><div>
           <h4>The whole arc</h4>
           <p>11 nights in Fukuoka City with full access to <a class="tl-link" href="https://www.colivefukuoka.com/2026" target="_blank" rel="noopener">Colive Fukuoka 2026</a>, then 3 nights deep in one region. Sep 30 – Oct 2 is fixed and shared by the whole cohort; everything from Oct 6 on is flexible, so you can shape it around your own work.</p>
-          <div class="tags"><span class="tag">Ikigai Summit</span><span class="tag">Ramen Tech</span><span class="tag">Daily meetups</span></div>
+          <div class="tags">
+            <span class="tag">Opening &amp; Closing Parties (w/ meals)</span>
+            <span class="tag">World Nomad Conference</span>
+            <span class="tag">Ikigai Academy (lunch buffet)</span>
+            <span class="tag">Synapse Festival</span>
+            <span class="tag">Daily meetups, activities &amp; workshops</span>
+            <span class="tag">Official gift</span>
+          </div>
+          <div class="warn">⚠️ Excludes: accommodation, meals outside the above, excursions, Premium Lounge access, Premium Coworking Pass.</div>
         </div></div>
         <div class="trow"><div class="d">Sep 30</div><div>
           <h4>Your stay starts — Check-in &amp; Opening Party</h4>
-          <p>Arrive at Hakata Place and meet your cohort. That evening, the <a class="tl-link" href="https://community.colivefukuoka.com/opening-party" target="_blank" rel="noopener">Colive Fukuoka Opening Party</a> kicks the whole month off, open dialogue with the full community from hour one.</p>
-          <div class="tags"><span class="tag">Hakata Place</span><span class="tag">Opening Party</span></div>
+          <p>Arrive at Hakata Place and meet your cohort. That evening, the Colive Fukuoka Opening Party kicks the whole month off, open dialogue with the full community from hour one.</p>
+          <img class="thumb" src="event-opening-party.jpg" alt="Colive Fukuoka Opening Party, Sep 30 at The Seaside Deck, Fukuoka" loading="lazy">
+          <div class="tags"><span class="tag">Hakata Place</span><span class="tag">18:00–21:00</span><span class="tag">The Seaside Deck</span></div>
+          <div class="card-cta"><a href="https://community.colivefukuoka.com/opening-party" target="_blank" rel="noopener">See the Opening Party →</a></div>
         </div></div>
         <div class="trow"><div class="d">Oct 1</div><div>
           <h4>Ikigai Academy — lunch &amp; Destination Pitch</h4>
@@ -566,30 +562,41 @@ footer a{color:var(--cyan);text-decoration:none}
         </div></div>
         <div class="trow"><div class="d">Oct 1</div><div>
           <h4>Ikigai Academy — Directors meet the regions</h4>
-          <p>Straight after lunch, Jacquie and Ryu sit down in the open with the regional teams — a public dialogue on <a class="tl-link" href="https://community.colivefukuoka.com/where-can-we-build-something-that-m" target="_blank" rel="noopener">where we can build something that matters</a>, wherever the program takes you next.</p>
-          <div class="tags"><span class="tag">Open session</span><span class="tag">Jacquie &amp; Ryu</span></div>
+          <p>Straight after lunch, Jacquie and Ryu sit down in the open with the regional teams — a public dialogue on where we can build something that matters, wherever the program takes you next.</p>
+          <img class="thumb" src="event-directors-dialogue.jpg" alt="Where can we build something that matters? — Jacquie Wortley, Ryu Fujii and local community leaders, Oct 1, Ballroom A" loading="lazy">
+          <div class="tags"><span class="tag">Open session</span><span class="tag">Jacquie &amp; Ryu</span><span class="tag">14:00–14:45</span><span class="tag">Ballroom A</span></div>
+          <div class="card-cta"><a href="https://community.colivefukuoka.com/where-can-we-build-something-that-m" target="_blank" rel="noopener">See the session →</a></div>
         </div></div>
         <div class="trow"><div class="d">Oct 2 AM</div><div>
           <h4>SuzuPay workshop — inside Ikigai Academy</h4>
           <p>A hands-on workshop within the Ikigai Academy on the stablecoin pilot: how SuzuPay works, how your spending feeds the trial, and what Japan wants to learn from it.</p>
           <div class="tags"><span class="tag">Stablecoin briefing</span><span class="tag">English session</span></div>
         </div></div>
-        <div class="trow"><div class="d">Oct 6 AM<span class="pri-tag flex">Flexible</span></div><div>
+        <div class="trow"><div class="d">Oct 3 – 9</div><div>
+          <h4>Open days — yours to fill</h4>
+          <p>With the core program done, this stretch is wide open: Ramen Tech collabs, coworking days at CIC and around the city, community-run meetups and workshops, all posted as they're confirmed. Drop in on whatever fits your week.</p>
+          <img class="thumb" src="event-open-days.jpg" alt="Community meetups in Fukuoka, Oct 3–9" loading="lazy">
+          <div class="tags"><span class="tag">Ramen Tech</span><span class="tag">Coworking</span><span class="tag">Community meetups &amp; workshops</span></div>
+          <div class="card-cta"><a href="https://community.colivefukuoka.com/" target="_blank" rel="noopener">Browse what's on →</a></div>
+        </div></div>
+        <div class="trow"><div class="d">Oct 6 AM</div><div>
           <h4>Mastermind session</h4>
           <p>A small-group mastermind: bring what you're building, trade honest feedback with fellow Builders and mentors, leave with a clearer next step.</p>
           <div class="tags"><span class="tag">Small group</span><span class="tag">Peer feedback</span></div>
         </div></div>
-        <div class="trow"><div class="d">Oct 8<span class="d-note">13:30–16:30</span><span class="pri-tag flex">Flexible</span></div><div>
+        <div class="trow"><div class="d">Oct 8<span class="d-note">13:30–16:30</span></div><div>
           <h4>Build With, Not For: Community Design Across Cultures</h4>
           <p>Hosted by Jacquie &amp; Ryu. Global Builders and local founders and neighbors (Ramen Tech included) meet in the open to build toward ideas that create real, lasting value for the region. <b>Culture &amp; Community</b> gives you the context first — how East and West build community differently, and what rebuilding it looks like in Japan. <b>Ideas Worth Building</b> follows: design thinking and AI, moving from assumption to evidence through real 1:1 interviews with the people you'll be working alongside.</p>
           <div class="tags"><span class="tag">Culture &amp; Community</span><span class="tag">Ideas Worth Building</span><span class="tag">Jacquie &amp; Ryu</span></div>
         </div></div>
-        <div class="trow"><div class="d">Oct 9<span class="pri-tag flex">Flexible</span></div><div>
-          <h4>Colive Fukuoka Closing</h4>
+        <div class="trow"><div class="d">Oct 9</div><div>
+          <h4>Colive Fukuoka Closing Party</h4>
           <p>The official close of this year's Colive Fukuoka — one last open gathering with the whole community before Phase 2 begins.</p>
-          <div class="tags"><span class="tag">Closing gathering</span></div>
+          <img class="thumb" src="event-closing-party.jpg" alt="Colive Fukuoka Closing Party, Oct 9 at Fukuoka Daimyo Garden City Park" loading="lazy">
+          <div class="tags"><span class="tag">Closing gathering</span><span class="tag">19:00–21:00</span><span class="tag">Daimyo Garden City Park</span></div>
+          <div class="card-cta"><a href="https://community.colivefukuoka.com/closing-ceremony1009" target="_blank" rel="noopener">See the Closing Party →</a></div>
         </div></div>
-        <div class="trow"><div class="d">Oct 11 – 14<span class="pri-tag flex">Flexible</span></div><div>
+        <div class="trow"><div class="d">Oct 11 – 14</div><div>
           <h4>Phase 2 — 4 days in your chosen town</h4>
           <p>Choose Yame, Koga or Buzen. Three nights, fully subsidized under the JTA pilot. Walk the fields and shopping streets, talk openly with the people who run them, and shape ideas together. On Oct 13 you share those ideas back with the community.</p>
           <div class="tags"><span class="tag">3 nights free</span><span class="tag">Community manager on the ground</span><span class="tag">Oct 13 idea sharing</span></div>
@@ -848,6 +855,32 @@ footer a{color:var(--cyan);text-decoration:none}
           <div class="bi"><span class="arrow">▸</span> After JST 5:00pm, Monday Sep 28 — 100%</div>
         </div>
         <div class="fine" style="margin-top:12px">*The travel agency will refund the amount after deducting the cancellation fee.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="launcher" id="directors">
+  <div class="wrap">
+    <div class="kicker">Who's guiding this</div>
+    <h2>Meet your program directors.</h2>
+    <div class="sub">Jacquie and Ryu are on the ground for all of it — from the Sep 30 Opening Party to the Oct 9 Closing, plus the open dialogues in between.</div>
+    <div class="directors" style="margin-top:0">
+      <div class="director-card">
+        <img src="director-jacquie.jpg" alt="Jacquie Wortley, Program Director">
+        <div class="dinfo">
+          <h5>Jacquie Wortley</h5>
+          <div class="drole">Program Director</div>
+          <p>Jacquie brings a decade of UX and product research to questions of sustainable innovation, work she's now applying to the collaboration with rural tea farmers. She believes the best-designed systems regenerate the places they touch rather than extract from them.</p>
+        </div>
+      </div>
+      <div class="director-card">
+        <img src="director-ryu.jpg" alt="Ryu, Program Director">
+        <div class="dinfo">
+          <h5>Ryu</h5>
+          <div class="drole">Program Director</div>
+          <p>Co-founder of 369meteor. Co-organizer of Zō Village, a Fracton Ventures member, and a Network School residential. Combining insights from global experimental communities with grassroots execution.</p>
+        </div>
       </div>
     </div>
   </div>
