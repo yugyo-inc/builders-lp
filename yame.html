@@ -2,422 +2,342 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yame Retreat Guidebook | Fukuoka Builders' Coliving</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yame Guidebook | Fukuoka Builders' Coliving</title>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y4DMBN1YF5"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Y4DMBN1YF5');</script>
-<meta name="description" content="Yame retreat, Oct 11 to 14, 2026: maps, the four-day schedule, where to eat, SuzuPay, and a guide to every place we visit.">
+<meta name="description" content="Yame Guidebook, Oct 11 to 14, 2026: the four-day schedule, an interactive map, where to eat, paying with SuzuPay, and a guide to every place we visit.">
 <link rel="canonical" href="https://builders.colivefukuoka.com/yame">
 <link rel="alternate" hreflang="en" href="https://builders.colivefukuoka.com/yame">
 <link rel="alternate" hreflang="ja" href="https://builders.colivefukuoka.com/yame-ja">
-<meta property="og:title" content="Yame Retreat Guidebook">
+<meta property="og:title" content="Yame Guidebook">
 <meta property="og:description" content="Oct 11 to 14, 2026 · Fukuoka Builders' Coliving · An official pilot of the Japan Tourism Agency">
 <meta property="og:image" content="https://builders.colivefukuoka.com/yame-images/g/09a839e093.jpg">
+<meta name="theme-color" content="#16194a">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <style>
-:root{--ink:#16194a;--indigo:#2F3AA8;--orange:#F26B1D;--teal:#12857a;--muted:#5d6280;--line:#dfe2ee;--soft:#f4f6fb;--red:#c0392b}
+:root{--ink:#16194a;--indigo:#2F3AA8;--orange:#F26B1D;--teal:#12857a;--pink:#EE3F5C;--muted:#5d6280;--line:#e3e1d8;--bg:#faf8f3;--soft:#f3f1ea;--card:#fff}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{background:#fff}
-body{font-family:'Inter','Noto Sans JP',sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
-@page{size:A4;margin:0}
-.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;background:#fff}
-.bebas{font-family:'Bebas Neue','Inter',sans-serif;letter-spacing:.02em}
-
-body{font-family:'Inter','Noto Sans JP',sans-serif}
-.page{padding:10mm 12mm 0}
-.ph{display:grid;grid-template-columns:16mm 1fr 30mm;align-items:center;border-bottom:2px solid var(--ink);padding-bottom:2mm;margin-bottom:3mm}
-.pn{font-size:30pt;color:var(--indigo);line-height:1}
-.pk{font-size:6.8pt;font-weight:700;letter-spacing:.16em;color:var(--orange)}
-.ph h2{font-size:16pt;font-weight:700;line-height:1.2}
-.lg{height:13mm;justify-self:end}
-.body{font-size:8.2pt;line-height:1.6}
-.pf{position:absolute;left:12mm;right:12mm;bottom:6mm;display:flex;justify-content:space-between;font-size:6.4pt;color:var(--muted);border-top:1px solid var(--line);padding-top:1.4mm}
-p{margin-bottom:1.6mm} ul,ol{padding-left:4.2mm;margin-bottom:1.6mm} li{margin-bottom:.6mm}
-.lb{font-size:7.4pt;font-weight:700;color:var(--indigo);letter-spacing:.04em;margin:2mm 0 .8mm;border-left:2.5px solid var(--indigo);padding-left:1.6mm}
+html{scroll-behavior:smooth;scroll-padding-top:112px;-webkit-text-size-adjust:100%}
+body{font-family:'Inter','Noto Sans JP',system-ui,sans-serif;background:var(--bg);color:var(--ink);font-size:16px;line-height:1.7}
+html[lang=ja] body{font-family:'Noto Sans JP','Inter',sans-serif;line-height:1.8}
+img{max-width:100%;display:block}
+a{color:var(--indigo)}
+button{font:inherit;cursor:pointer}
+.bebas{font-family:'Bebas Neue','Noto Sans JP',sans-serif;font-weight:400;letter-spacing:.02em}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+/* header */
+.top{position:sticky;top:0;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.tb{max-width:1100px;margin:0 auto;padding:8px 20px;display:flex;align-items:center;gap:14px}
+.tb .lg{height:36px;flex:none}
+.tb .ttl{font-family:'Bebas Neue','Noto Sans JP';font-size:22px;letter-spacing:.04em;flex:1;white-space:nowrap}
+html[lang=ja] .tb .ttl{font-weight:700;font-size:17px}
+.lang{flex:none;font-size:13px;font-weight:700;text-decoration:none;color:#fff;background:var(--indigo);padding:6px 14px;border-radius:20px}
+.navr{border-top:1px solid var(--line)}
+.navr nav{max-width:1100px;margin:0 auto;padding:0 12px;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.navr nav::-webkit-scrollbar{display:none}
+.navr a{flex:none;text-decoration:none;color:var(--ink);font-size:14px;font-weight:600;padding:10px 12px;border-bottom:3px solid transparent}
+.navr a.act{color:var(--orange);border-color:var(--orange)}
+/* hero */
+.hero{position:relative;height:min(72vh,620px);min-height:420px;overflow:hidden;background:#0b0e2a}
+.hero>img{width:100%;height:100%;object-fit:cover}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,10,35,.1) 30%,rgba(8,10,35,.82))}
+.hx{position:absolute;left:0;right:0;bottom:0;z-index:2;color:#fff;padding-bottom:36px}
+.hx .k{font-size:12px;font-weight:700;letter-spacing:.18em;color:#ffb27a}
+.hx h1{font-family:'Bebas Neue','Noto Sans JP';font-weight:400;font-size:clamp(56px,11vw,120px);line-height:.9;margin:8px 0 12px}
+html[lang=ja] .hx h1{font-family:'Noto Sans JP';font-weight:700;font-size:clamp(38px,7vw,72px);line-height:1.15}
+.hx p{max-width:620px;font-size:17px;opacity:.95}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.wbtn{display:inline-block;background:var(--orange);color:#fff!important;text-decoration:none;font-weight:700;font-size:15px;padding:12px 20px;border-radius:28px;border:0}
+.wbtn.ghost{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.7)}
+.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:-28px;position:relative;z-index:3}
+.qc{background:#fff;border-radius:16px;padding:14px 16px;text-decoration:none;color:var(--ink);box-shadow:0 6px 20px rgba(22,25,74,.10)}
+.qc small{display:block;font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--orange)}
+.qc b{display:block;font-size:17px;line-height:1.3;margin:2px 0}
+.qc span{font-size:13px;color:var(--muted)}
+/* sections */
+.wsec{padding:64px 0 24px}
+.wh{margin-bottom:22px}
+.wk{font-size:12px;font-weight:700;letter-spacing:.18em;color:var(--orange)}
+.wh h2{font-size:clamp(28px,4vw,40px);line-height:1.2;margin-top:4px}
+.h3{font-size:24px;margin:44px 0 16px;line-height:1.35}
+.lb{font-weight:700;color:var(--indigo);border-left:3px solid var(--indigo);padding-left:10px;margin:24px 0 8px;font-size:16px;line-height:1.4}
 .lb.why{color:var(--teal);border-color:var(--teal)}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:6mm}
-.hero{position:relative;height:84mm;border-radius:2mm;overflow:hidden}
-.hero img{width:100%;height:100%;object-fit:cover}
-.hero .cap{position:absolute;right:2mm;bottom:1.5mm;font-size:6pt;color:#fff;text-shadow:0 0 3px #000}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin:3mm 0 1mm}
-.stats>div{background:var(--soft);border-radius:1.6mm;padding:2mm 3mm}
-.num{font-size:22pt;line-height:1;color:var(--indigo)}
-.lab{font-size:7pt;color:var(--muted)}
-ol.num{font-family:inherit;font-size:8.2pt;color:var(--ink);line-height:1.6}
-.src{font-size:6.4pt;color:var(--muted);margin-top:2mm}
-.mission{background:var(--ink);color:#fff;border-radius:2.5mm;padding:5mm 6mm;margin-bottom:2mm}
-.mk{font-size:7pt;font-weight:700;letter-spacing:.2em;color:var(--orange)}
-.mt{font-size:15pt;font-weight:700;line-height:1.45;margin:1mm 0}
-.me{font-size:8.4pt;opacity:.85}
-.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6mm}
-.flow>div{background:var(--soft);border-radius:1.6mm;padding:1.6mm;text-align:center;font-size:7pt;line-height:1.35}
-.flow b{display:block;font-size:10pt;color:var(--orange)}
-table.goal{width:100%;border-collapse:collapse;font-size:7.4pt;line-height:1.45}
-table.goal th{text-align:left;font-size:6.6pt;color:var(--muted);border-bottom:1.5px solid var(--ink);padding:1mm}
-table.goal td{border-bottom:1px solid var(--line);padding:1.2mm 1mm;vertical-align:top}
-table.goal td:first-child{font-family:'Bebas Neue';font-size:11pt;color:var(--orange);width:8mm}
-table.goal td:last-child{color:var(--muted);width:30mm}
-.qbig{margin-top:3mm;border:1.5px solid var(--orange);border-radius:2mm;padding:3mm 4mm;font-size:10pt;font-weight:700;line-height:1.5}
-.qbig span{display:block;font-size:6.8pt;letter-spacing:.16em;color:var(--orange)}
-.sched{display:grid;grid-template-columns:1fr 1fr;gap:3mm 5mm}
-.dcol table{width:100%;border-collapse:collapse;font-size:7.4pt;line-height:1.45}
-.dcol td{border-bottom:1px solid var(--line);padding:.8mm 1mm;vertical-align:top}
-.dcol td.tt{font-weight:700;width:12mm;white-space:nowrap}
-.dh{font-family:'Bebas Neue','Noto Sans JP';font-size:13pt;color:var(--indigo);border-bottom:1.5px solid var(--ink);margin-bottom:.6mm}
-.o{display:inline-block;color:#fff;background:var(--orange);border-radius:.8mm;padding:0 1mm;margin-right:1mm;font-size:7pt}
-.site{border:1px solid var(--line);border-radius:2.5mm;padding:3mm 4mm;margin-bottom:3.5mm;break-inside:avoid}
-.sh{display:flex;align-items:baseline;gap:2.5mm;flex-wrap:wrap;margin-bottom:2mm}
-.tag{font-size:6.4pt;font-weight:700;letter-spacing:.12em;color:#fff;padding:.6mm 1.8mm;border-radius:1mm}
-.tag.a{background:var(--indigo)} .tag.b{background:var(--orange)} .tag.c{background:var(--teal)}
-.sh h3{font-size:13pt;font-weight:700}
-.sh .en{font-size:7.4pt;color:var(--muted)}
-.sg{display:grid;grid-template-columns:1fr 52mm;gap:3mm}
-.photos{display:grid;gap:1.6mm;height:56mm}
-.photos.n1{grid-template-columns:1fr} .photos.n2{grid-template-columns:1fr 1fr} .photos.n3{grid-template-columns:1fr 1fr 1fr}
-.photos img{width:100%;height:56mm;object-fit:cover;border-radius:1.4mm}
-.info{background:var(--soft);border-radius:1.6mm;padding:2mm 2.6mm;font-size:7.2pt;line-height:1.45}
-.info b{display:block;font-size:6.2pt;letter-spacing:.1em;color:var(--muted);margin-top:.8mm}
-.info b:first-child{margin-top:0}
-.sc{display:grid;grid-template-columns:1.15fr 1fr;gap:5mm;font-size:7.8pt;line-height:1.55}
-.q{margin-top:2mm;background:#fff7f1;border-left:2.5px solid var(--orange);padding:1.6mm 2.4mm;font-weight:700;font-size:8pt}
-.q span{display:block;font-size:6.2pt;letter-spacing:.14em;color:var(--orange)}
-.gaps{display:grid;grid-template-columns:repeat(5,1fr);gap:2mm}
-.gaps>div{background:var(--soft);border-radius:1.6mm;padding:2mm;font-size:8pt;line-height:1.45}
-.gaps b{display:block;color:var(--orange);font-size:9pt}
-
-body{font-family:'Inter','Noto Sans JP',sans-serif}
-.ph h2{font-size:16pt}
-.photos{height:50mm} .photos img{height:50mm}
-.sc{font-size:7.9pt;line-height:1.55}
-.info{font-size:7.6pt}
-.duo{display:grid;grid-template-columns:1.2fr 1fr;gap:2.5mm;height:66mm}
-.ph1{position:relative;border-radius:2mm;overflow:hidden}
-.ph1 img{width:100%;height:100%;object-fit:cover}
-.cap{position:absolute;left:2.4mm;bottom:1.6mm;font-size:6.4pt;color:#fff;text-shadow:0 0 3px #000}
-.small{font-size:7.4pt;color:var(--muted)}
-/* map */
-.map{position:relative;border-radius:2mm;overflow:hidden;border:1px solid var(--line);aspect-ratio:2156/1254}
-.map img{width:100%;height:100%;display:block}
-.pin{position:absolute;transform:translate(-50%,-100%);}
-.pin span{display:flex;align-items:center;justify-content:center;width:7.5mm;height:7.5mm;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--teal);box-shadow:0 1px 3px rgba(0,0,0,.35)}
-.pin span{font-family:'Bebas Neue';font-size:13pt;color:#fff}
-.pin.a span{background:var(--indigo)} .pin.b span{background:var(--orange)}
-.pin span b{display:block;transform:rotate(45deg);font-weight:400}
-.mlab{position:absolute;font-size:7pt;letter-spacing:.14em;color:#6b7280;text-transform:uppercase;font-weight:600}
-.scale{position:absolute;right:3mm;top:8mm;font-size:6.5pt;color:#444}
-.scale i{display:block;width:27.0mm;height:1.6mm;border:1px solid #444;border-top:0;margin-bottom:.6mm}
-.north{position:absolute;right:3mm;top:2mm;font-size:8pt;font-weight:700;color:#444}
-.attr{position:absolute;left:2mm;bottom:1mm;font-size:5.5pt;color:#666}
-.legend2{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6mm 3mm;margin:3mm 0}
-.li{display:flex;gap:2mm;align-items:center;font-size:8pt;line-height:1.3}
-.li small{display:block;color:var(--muted);font-size:6.8pt}
-.pn2{flex:none;display:flex;align-items:center;justify-content:center;width:6mm;height:6mm;border-radius:50%;background:var(--teal);color:#fff;font-family:'Bebas Neue';font-size:11pt}
-.pn2.a{background:var(--indigo)} .pn2.b{background:var(--orange)}
-.pmap table.goal td:last-child{width:auto;color:var(--ink)}
-.pmap .body{font-size:8.6pt}
-/* calendar */
-.callg{display:flex;gap:4mm;align-items:center;font-size:7.6pt;margin-bottom:2mm;flex-wrap:wrap}
-.callg .note{color:var(--muted)}
-.sw{display:inline-block;width:3.5mm;height:3.5mm;border-radius:1mm;vertical-align:-.6mm;margin-right:1.2mm}
-.sw.all{background:#e3f3f0;border:1.5px solid var(--teal)} .sw.a{background:#eef0fd;border:1.5px solid var(--indigo)} .sw.b{background:#fff1e7;border:1.5px solid var(--orange)}
-.cal{display:grid;grid-template-columns:11mm 1fr;height:212mm}
-.hours{position:relative;margin-top:9mm}
-.hr{position:absolute;left:0;right:0;font-size:6.6pt;color:var(--muted);transform:translateY(-50%)}
-.grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:2mm}
-.grid>.hr{display:none}
-.dcol2{display:flex;flex-direction:column}
-.dhd{height:9mm;display:flex;flex-direction:column;justify-content:center;font-size:7pt;color:var(--muted);border-bottom:1.5px solid var(--ink)}
-.dhd .bebas{font-size:13pt;color:var(--indigo);line-height:1}
-.track{position:relative;flex:1}
-.gl{position:absolute;left:0;right:0;border-top:1px solid #e6e9f2}
-.ev{position:absolute;border-radius:1.4mm;padding:.8mm 1.4mm;overflow:hidden;font-size:6.9pt;line-height:1.25;border-left:2.4px solid}
-.ev.all{background:#e3f3f0;border-color:var(--teal)}
-.ev.a{background:#eef0fd;border-color:var(--indigo)}
-.ev.b{background:#fff1e7;border-color:var(--orange)}
-.ev .et{font-weight:700}
-.ev .es{color:#4b5068;font-size:6.3pt}
-.calnote{font-size:7.4pt;color:var(--muted);margin-top:2mm}
-.pinfo .body{font-size:8.7pt;line-height:1.6}
-.pinfo table.goal{font-size:8.2pt}
-.pinfo table.goal td:last-child{width:auto;color:var(--ink)}
-.pinfo table.goal td:nth-child(2){width:34%}
-.pinfo table.goal td:first-child{width:9mm}
-/* kawasaki */
-.kw{display:grid;grid-template-columns:1.55fr 1fr;gap:3mm;margin-bottom:2mm}
-.kph{position:relative;border-radius:2mm;overflow:hidden;height:78mm}
-.kph img{width:100%;height:100%;object-fit:cover}
-.info.big{font-size:8.2pt}
-.pkw .body{font-size:8.4pt;line-height:1.6}
-.themes{display:grid;grid-template-columns:1fr 1fr;gap:1.8mm}
-.themes>div{background:var(--soft);border-radius:1.6mm;padding:1.8mm 2.2mm;font-size:7.5pt;line-height:1.4}
-.themes b{display:block;color:var(--orange);font-size:8pt}
-/* base */
-.night{position:relative;border-radius:2mm;overflow:hidden;height:78mm;margin-bottom:3mm}
-.night img{width:100%;height:100%;object-fit:cover}
-.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm}
-.bx img{width:100%;height:34mm;object-fit:cover;border-radius:1.6mm}
-.bx h4{font-size:9.4pt;margin:1.6mm 0 .6mm}
-.bx p{font-size:8pt;line-height:1.55}
-.pbase .body{font-size:8.6pt;line-height:1.6}
-
-/* getting there */
-.gt{display:grid;grid-template-columns:1.3fr 1fr;gap:5mm;align-items:start}
-.rmap{position:relative;border-radius:2mm;overflow:hidden;border:1px solid var(--line);aspect-ratio:830/977}
-.rmap img{width:100%;height:100%;display:block}
-.rmap svg{position:absolute;inset:0;width:100%;height:100%}
-.rp{position:absolute;transform:translate(-50%,-50%);display:flex;align-items:center;gap:1mm;white-space:nowrap}
-.rp i{width:3.2mm;height:3.2mm;border-radius:50%;background:var(--indigo);border:.6mm solid #fff;box-shadow:0 0 2px rgba(0,0,0,.5);flex:none}
-.rp span{font-size:7pt;font-weight:700;background:rgba(255,255,255,.9);padding:.3mm 1.2mm;border-radius:1mm;line-height:1.2}
-.rp.big i{width:4.6mm;height:4.6mm}
-.rp.yb i{background:var(--orange)}
-.rp.yb{flex-direction:row-reverse;transform:translate(calc(-100% + 2.3mm),-50%)}
-.rp.yb span{text-align:right}
-.rp.big span{font-size:8pt}
-.rp{transform:translate(-1.6mm,-50%)}
-.dist{position:absolute;font-family:'Bebas Neue','Noto Sans JP';font-size:15pt;color:var(--orange);background:#fff;padding:.4mm 2mm;border-radius:1.2mm;border:1.4px solid var(--orange);transform:translateY(-50%)}
-.gfacts{display:flex;flex-direction:column;gap:2.4mm}
-.gtx{margin-top:3mm}
-.gph{position:relative;margin-top:3mm;border-radius:2mm;overflow:hidden;height:66mm}
-.gph img{width:100%;height:100%;object-fit:cover}
-.cap2{position:absolute;left:2.4mm;bottom:1.6mm;font-size:6.6pt;color:#fff;text-shadow:0 0 3px #000}
-.gf{background:var(--soft);border-radius:2mm;padding:3mm 3.4mm;border-left:3px solid var(--orange)}
-.gn{font-size:22pt;line-height:1;color:var(--indigo)}
-.gfl{font-size:8.4pt;line-height:1.5;margin-top:1mm}
-.pgt .body{font-size:8.6pt;line-height:1.6}
-.ic{position:absolute;transform:translate(-50%,-50%);font-size:6.4pt;font-weight:700;color:#fff;background:#2e7d32;padding:.3mm 1mm;border-radius:.8mm}
-/* itinerary inside guidebook */
-.itin .cap{position:static;font-size:5.9pt;font-weight:700;letter-spacing:.06em;color:var(--muted);text-shadow:none}
-.itin .dh{font-family:inherit;font-size:inherit;color:inherit;border:0;margin:0}
-.pitin .ph{margin-bottom:1mm}
-
-.legend{display:flex;gap:4mm;font-size:6.8pt;color:var(--muted);margin:2mm 0 1.6mm}
-.legend i{display:inline-block;width:3mm;height:3mm;border-radius:1px;vertical-align:-0.5mm;margin-right:1mm}
-.day{display:grid;grid-template-columns:23mm 1fr;border-bottom:1px solid var(--line);padding:1.3mm 0}
-.dh .dn{font-size:20pt;line-height:.9;color:var(--indigo)}
-.dh .dd{font-size:7.4pt;font-weight:700}
-.dh .dt{font-size:6.8pt;color:var(--muted);line-height:1.25;margin-top:.6mm;padding-right:2mm}
-.r{display:grid;grid-template-columns:9.5mm 1fr;font-size:7.25pt;line-height:1.28;padding:.25mm 0}
+p+p{margin-top:10px}
+ul,ol{padding-left:22px}
+li{margin:4px 0}
+.small{font-size:13px;color:var(--muted);margin-top:12px}
+.src{font-size:12px;color:var(--muted);margin-top:18px}
+.center{text-align:center;margin:24px 0 8px}
+.lead,.lead2{font-size:17px;margin-bottom:18px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px 40px}
+/* photo blocks */
+.cap{position:absolute;left:12px;bottom:10px;font-size:13px;color:#fff;text-shadow:0 0 6px rgba(0,0,0,.8)}
+.duo{display:grid;grid-template-columns:1.25fr 1fr;gap:12px;margin-bottom:16px}
+.ph1,.kph,.night{position:relative;border-radius:16px;overflow:hidden}
+.ph1{aspect-ratio:4/3}.ph1 img,.kph img,.night img{width:100%;height:100%;object-fit:cover}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:8px}
+.stats>div{background:#fff;border-radius:14px;padding:16px}
+.stats .num{font-family:'Bebas Neue';font-size:42px;line-height:1;color:var(--indigo)}
+.stats .lab{font-size:13px;color:var(--muted);line-height:1.45;margin-top:4px}
+.mission{background:var(--ink);color:#fff;border-radius:18px;padding:28px 30px;margin-bottom:8px}
+.mk{font-size:12px;font-weight:700;letter-spacing:.2em;color:var(--orange)}
+.mt{font-size:clamp(20px,2.6vw,26px);font-weight:700;line-height:1.45;margin-top:6px}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.flow>div{background:#fff;border-radius:12px;padding:12px;text-align:center;font-size:13px;line-height:1.45}
+.flow b{display:block;color:var(--orange);font-size:18px}
+table.goal{width:100%;border-collapse:collapse;font-size:15px}
+.goal th{font-size:12px;color:var(--muted);text-align:left;padding:6px 8px;border-bottom:2px solid var(--ink)}
+.goal td{padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.goal td:first-child{font-family:'Bebas Neue';color:var(--orange);font-size:20px;width:40px}
+.qbig{border:2px solid var(--orange);border-radius:16px;padding:20px 22px;font-weight:700;font-size:18px;margin-top:22px;background:#fff}
+.qbig span,.q span{display:block;font-size:11px;letter-spacing:.16em;color:var(--orange);margin-bottom:6px}
+.q{background:#fff3ea;border-left:4px solid var(--orange);padding:14px 16px;border-radius:0 12px 12px 0;font-weight:700;margin-top:14px}
+/* schedule */
+.dtabs{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-bottom:16px;position:sticky;top:96px;z-index:5;background:var(--bg);padding:8px 0}
+.dtab{flex:none;border:1.5px solid var(--line);background:#fff;border-radius:24px;padding:8px 16px;font-weight:700;font-size:14px;color:var(--ink)}
+.dtab.is-on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.itin .legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--muted);margin-bottom:10px}
+.itin .legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.day{display:none;background:#fff;border-radius:20px;padding:22px 24px;box-shadow:0 4px 18px rgba(22,25,74,.06)}
+.day.is-on{display:block}
+.dh{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 14px;margin-bottom:6px}
+.dn{font-size:40px;line-height:1;color:var(--indigo)}
+.dd{font-weight:700;font-size:16px}.dt{color:var(--muted);font-size:15px}
+.all{border-left:3px solid var(--teal);padding:4px 0 4px 16px;margin:16px 0}
+.al{font-size:12px;letter-spacing:.14em;color:var(--teal);font-weight:700;margin-bottom:4px}
+.r{display:grid;grid-template-columns:60px 1fr;gap:6px;padding:5px 0;font-size:15.5px;line-height:1.55}
 .r .t{font-weight:700;font-variant-numeric:tabular-nums}
-.all{border-left:2.5px solid var(--teal);padding:.6mm 0 .6mm 2.2mm;margin:.8mm 0}
-.al{font-size:6.2pt;font-weight:700;letter-spacing:.12em;color:var(--teal);margin-bottom:.3mm}
-.choose{margin:1mm 0}
-.cl{font-size:6.4pt;font-weight:700;letter-spacing:.14em;color:#fff;margin-bottom:.8mm}
-.cl span{background:var(--orange);padding:.5mm 1.8mm;border-radius:1mm}
-.pair{display:grid;grid-template-columns:1fr 7mm 1fr;align-items:stretch}
-.or{align-self:center;text-align:center;font-family:'Bebas Neue';font-size:11pt;color:var(--orange)}
-.opt{border:1.4px solid var(--line);border-radius:2mm;padding:1.4mm 2mm 1.2mm;background:#fff}
-.opt.a{border-color:#9aa2e6;background:#f5f6fe}
-.opt.b{border-color:#f5b48c;background:#fff7f1}
-.oh{display:flex;justify-content:space-between;align-items:center}
-.on{font-family:'Bebas Neue','Noto Sans JP';font-size:12pt;line-height:1;color:var(--indigo)}
+.choose{margin:18px 0}
+.cl span{display:inline-block;background:var(--orange);color:#fff;font-size:12px;font-weight:700;letter-spacing:.12em;padding:4px 12px;border-radius:6px}
+.pair{display:grid;grid-template-columns:1fr 44px 1fr;align-items:stretch;margin-top:10px}
+.or{align-self:center;text-align:center;font-family:'Bebas Neue';font-size:22px;color:var(--orange)}
+.opt{border:1.5px solid var(--line);border-radius:16px;padding:14px 16px}
+.opt.a{border-color:#9aa2e6;background:#f5f6fe}.opt.b{border-color:#f5b48c;background:#fff7f1}
+.oh{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.on{font-family:'Bebas Neue','Noto Sans JP';font-size:24px;line-height:1;color:var(--indigo)}
+html[lang=ja] .on{font-weight:700;font-size:18px}
 .opt.b .on{color:var(--orange)}
-.cap{font-size:5.9pt;font-weight:700;letter-spacing:.06em;color:var(--muted)}
-.ot{font-size:8.2pt;font-weight:700;margin-top:.4mm}
-.os{font-size:6.6pt;color:var(--muted);margin-bottom:.6mm;line-height:1.25}
-
-/* food */
-.fmap{position:relative;border-radius:2mm;overflow:hidden;border:1px solid var(--line);aspect-ratio:2452/2006}
-.fmap img{width:100%;height:100%;display:block}
-.fd{position:absolute;transform:translate(-50%,-50%);width:4.6mm;height:4.6mm;border-radius:50%;color:#fff;font-size:6.6pt;font-weight:700;display:flex;align-items:center;justify-content:center;border:.45mm solid #fff;box-shadow:0 0 2px rgba(0,0,0,.45)}
-.fsvg{position:absolute;inset:0;width:100%;height:100%}
-.fl{position:absolute;transform:translate(-50%,-50%);width:4.6mm;height:4.6mm;border-radius:1mm;background:var(--ink);color:#fff;font-size:7pt;font-weight:700;display:flex;align-items:center;justify-content:center;border:.45mm solid #fff;box-shadow:0 0 2px rgba(0,0,0,.45)}
-.fl2{display:inline-flex;width:4mm;height:4mm;border-radius:.8mm;background:var(--ink);color:#fff;font-size:6.6pt;align-items:center;justify-content:center;margin-right:1.2mm;vertical-align:.1mm}
-.fm{position:absolute;transform:translate(-1.8mm,-50%);display:flex;align-items:center;gap:.8mm}
-.fm i{width:3.6mm;height:3.6mm;background:var(--ink);border:.5mm solid #fff;transform:rotate(45deg);box-shadow:0 0 2px rgba(0,0,0,.5)}
-.fm span{font-size:6.8pt;font-weight:700;color:var(--ink);background:rgba(255,255,255,.92);padding:.2mm 1mm;border-radius:.8mm;white-space:nowrap}
-.catleg{display:flex;flex-wrap:wrap;gap:1.6mm 5mm;font-size:8pt;margin:2.6mm 0}
-.catleg i{display:inline-block;width:3.4mm;height:3.4mm;border-radius:50%;vertical-align:-.6mm;margin-right:1.2mm}
-.fbot{display:grid;grid-template-columns:1fr 34mm;gap:5mm;align-items:start}
-.qr{text-align:center;font-size:6.8pt;color:var(--muted);line-height:1.3}
-.qr img{width:30mm;height:30mm;display:block;margin:0 auto 1mm}
-.qr.sm img{width:22mm;height:22mm}
-.pfood .body{font-size:8.6pt;line-height:1.6}
-.flist{columns:2;column-gap:6mm}
-.fc{break-inside:avoid;margin-bottom:3mm}
-.fh{font-size:8.6pt;font-weight:700;border-bottom:1.6px solid;padding-bottom:.8mm;margin-bottom:1mm}
-.fr{display:grid;grid-template-columns:6mm 1fr auto;gap:1.6mm;align-items:center;padding:.9mm 0;border-bottom:1px solid var(--line)}
-.fn{width:5mm;height:5mm;border-radius:50%;color:#fff;font-size:6.8pt;font-weight:700;display:flex;align-items:center;justify-content:center}
-.fr b{font-size:8.2pt;display:block;line-height:1.25}
-.fr small{font-size:6.8pt;color:var(--muted);display:block;line-height:1.3}
-.fr em{font-style:normal;font-size:7.4pt;font-weight:700;color:#b7791f;white-space:nowrap}
-.fr em s{text-decoration:none;color:var(--muted);font-weight:400}
+.opt .cap{position:static;font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--muted);text-shadow:none}
+.ot{font-weight:700;font-size:18px;margin-top:4px;line-height:1.35}
+.os{color:var(--muted);font-size:14px;margin-bottom:6px;line-height:1.5}
+/* map */
+.chips,.fchips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.chip,.fchip{border:1.5px solid var(--line);background:#fff;border-radius:22px;padding:7px 14px;font-size:14px;font-weight:600;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
+.chip.is-on,.fchip.is-on{border-color:var(--ink);color:var(--ink);background:#fff}
+.chip:not(.is-on){opacity:.55}
+.fchip i,.dot{display:inline-block;width:12px;height:12px;border-radius:50%}
+.dot.c{background:var(--teal)}.dot.k{background:var(--ink);border-radius:3px}.dot.p{background:var(--pink)}.dot.o{background:var(--orange)}
+.mapbox{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 4px 18px rgba(22,25,74,.10);background:#e8e6df}
+#mainmap{height:min(68vh,620px);min-height:380px}
+#regionmap{height:520px}
+.tapcover{display:none;position:absolute;inset:auto 12px 12px auto;z-index:500;background:rgba(22,25,74,.86);color:#fff;border:0;border-radius:20px;padding:8px 14px;font-size:13px;font-weight:600}
+.touch .tapcover{display:block}
+.touch .mapbox.live .tapcover{display:none}
+.pin2{display:flex;align-items:center;justify-content:center;border-radius:50%;color:#fff;font-weight:700;font-size:13px;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.45)}
+.pin2.sq{border-radius:6px;background:var(--ink)}
+.pin2.c{background:var(--teal)}.pin2.a{background:var(--indigo)}.pin2.b{background:var(--orange)}.pin2.p{background:var(--pink);font-size:12px}
+.leaflet-popup-content{font-family:inherit;font-size:14px;line-height:1.5;margin:12px 14px}
+.leaflet-popup-content b{display:block;font-size:15px}
+.leaflet-popup-content small{color:var(--muted)}
+.leaflet-popup-content a{display:inline-block;margin-top:6px;font-weight:700}
+.rlab{background:#fff;border:1.5px solid var(--orange);color:var(--orange);font-weight:700;border-radius:8px;padding:2px 8px;font-size:14px;white-space:nowrap}
+.sitelist{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.sl{display:flex;gap:10px;align-items:center;text-align:left;background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px;color:var(--ink)}
+.sl:hover{border-color:var(--ink)}
+.sl b{display:block;font-size:14px;line-height:1.3}.sl small{display:block;font-size:12px;color:var(--muted)}
+.sn2,.en2{flex:none;width:28px;height:28px;border-radius:50%;color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center}
+.sn2.c{background:var(--teal)}.sn2.a{background:var(--indigo)}.sn2.b{background:var(--orange)}
+/* eat */
+.egrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.ecard{display:flex;gap:12px;background:#fff;border-radius:14px;padding:12px 14px;border:1px solid var(--line)}
+.ecard.hide{display:none}
+.eb{flex:1;min-width:0}
+.eb b{display:block;font-size:15px;line-height:1.35}
+.eb small{display:block;font-size:12.5px;color:var(--muted);line-height:1.4}
+.eb em{display:block;font-style:normal;font-size:13px;font-weight:700;color:#b7791f;margin-top:2px}
+.eb em s{text-decoration:none;color:var(--muted);font-weight:400}
+.ea{display:flex;gap:14px;margin-top:6px}
+.lnk{background:none;border:0;padding:0;color:var(--indigo);font-weight:600;font-size:13px;text-decoration:none}
+/* sites */
+.site{background:#fff;border-radius:20px;padding:22px;margin-bottom:20px;box-shadow:0 4px 18px rgba(22,25,74,.06)}
+.sh{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px}
+.tag{font-size:11px;font-weight:700;letter-spacing:.1em;color:#fff;padding:4px 10px;border-radius:6px;background:var(--teal)}
+.tag.a{background:var(--indigo)}.tag.b{background:var(--orange)}
+.sh h3{font-size:24px;line-height:1.3}
+.sh .en{width:100%;color:var(--muted);font-size:14px}
+.sg{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin:16px 0 4px}
+.photos{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:8px}
+.photos img{width:100%;height:260px;object-fit:cover;border-radius:12px}
+.info{background:var(--soft);border-radius:14px;padding:12px 16px;font-size:14.5px;line-height:1.5}
+.info b{display:block;font-size:11px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase;margin-top:10px}
+.info>div:first-child b{margin-top:0}
+.sc{display:grid;grid-template-columns:1.25fr 1fr;gap:6px 32px}
+.kw{display:grid;grid-template-columns:1.5fr 1fr;gap:12px;margin-bottom:8px}
+.kph{aspect-ratio:4/3}
+.info.big{font-size:15px}
+.themes{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.themes>div{background:#fff;border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.5}
+.themes b{display:block;color:var(--orange)}
 /* suzupay */
-.szhead{display:grid;grid-template-columns:52mm 1fr;gap:6mm;align-items:center;margin-bottom:3mm}
-.szlogo{width:48mm}
-.szhead p{font-size:9pt;line-height:1.6}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:2.4mm}
-.st{background:var(--soft);border-radius:2mm;padding:2.6mm 2.8mm;border-top:3px solid #EE3F5C}
-.st .sn{font-size:20pt;line-height:1;color:#EE3F5C;display:block}
-.st b{font-size:8.6pt;display:block;margin:.6mm 0}
-.st p{font-size:7.6pt;line-height:1.5}
-.szshots{display:grid;grid-template-columns:repeat(3,1fr) 1.25fr;gap:3mm;margin-top:4mm;align-items:start}
-.szshots figure{margin:0}
-.szshots img{width:100%;border-radius:1.6mm;border:1px solid #2a2a33;display:block}
-.szshots figcaption{font-size:6.8pt;color:var(--muted);margin-top:1mm;text-align:center}
-.szrules ul{font-size:7.8pt;line-height:1.55;padding-left:4mm}
-.szrules .qr{margin-top:2mm;text-align:left}
-.szrules .qr img{margin:0 0 1mm}
-.psz .body{font-size:8.4pt}
-.lead{font-size:9pt;line-height:1.6;margin-bottom:3mm}
-.shops{display:grid;grid-template-columns:1fr 1fr;gap:4mm}
-.shop{background:var(--soft);border-radius:2mm;overflow:hidden}
-.sph{display:grid;height:38mm}
-.sph.n2{grid-template-columns:1fr 1fr}
-.sph img{width:100%;height:38mm;object-fit:cover;display:block}
-.sbody{padding:2.4mm 3mm 3mm}
-.swhen{font-size:6.8pt;font-weight:700;letter-spacing:.1em;color:#EE3F5C;text-transform:uppercase}
-.shop h4{font-size:10pt;margin:.4mm 0 .8mm}
-.shop p{font-size:7.8pt;line-height:1.5}
-.sad{font-size:7.2pt;color:var(--muted);margin-top:1mm}
-/* members */
-table.ros{width:100%;border-collapse:collapse}
-.ros th{text-align:left;font-size:6.6pt;letter-spacing:.12em;color:var(--muted);border-bottom:1.5px solid var(--ink);padding:1.4mm 1.6mm}
-.ros td{font-size:8.6pt;padding:2.6mm 1.6mm;border-bottom:1px solid var(--line);vertical-align:middle;line-height:1.3}
-.ros tr:nth-child(even) td{background:#f8f9fc}
-.ros td.no{font-size:13pt;color:var(--indigo);width:9mm}
-.ros td.nm{font-weight:700;width:46mm}
-.emo{font-family:'Noto Color Emoji'}
-.rosnote{font-size:8pt;margin-top:3mm}
-
-html{scroll-behavior:smooth;scroll-padding-top:70px}
-body{background:#ece7dc;margin:0}
-.topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid #dcd6c8}
-.tb{max-width:1080px;margin:0 auto;display:flex;align-items:center;gap:18px;padding:8px 20px}
-.tb img{height:38px;flex:none}
-.chap{display:flex;gap:16px;overflow-x:auto;font-size:14px;font-weight:600;flex:1;white-space:nowrap;scrollbar-width:none}
-.chap a{text-decoration:none;color:var(--ink);padding:6px 0}
-.chap a:hover{color:var(--orange)}
-.lang{flex:none;font-size:13px;font-weight:700;text-decoration:none;color:#fff;background:var(--indigo);padding:6px 12px;border-radius:20px}
-.hero{position:relative;height:min(78vh,640px);overflow:hidden}
-.hero img{width:100%;height:100%;object-fit:cover}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,12,40,.15),rgba(10,12,40,.75))}
-.hx{position:absolute;left:0;right:0;bottom:0;z-index:2;max-width:1080px;margin:0 auto;padding:0 24px 40px;color:#fff}
-.hx .k{font-size:13px;font-weight:700;letter-spacing:.16em;color:#ffb27a}
-.hx h1{font-family:'Bebas Neue','Noto Sans JP';font-weight:400;font-size:clamp(48px,9vw,104px);line-height:.92;margin:6px 0 10px}
-.hx p{font-size:17px;max-width:620px;line-height:1.6;opacity:.95}
-.hx .btns{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
-.wbtn{display:inline-block;background:var(--orange);color:#fff !important;text-decoration:none;font-weight:700;font-size:14px;padding:10px 18px;border-radius:24px}
-.wbtn.ghost{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.6)}
-.toc{max-width:1080px;margin:-1px auto 0;padding:28px 20px 6px;display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px}
-.tc{display:grid;grid-template-columns:38px 1fr;align-items:center;column-gap:8px;background:#fff;border-radius:10px;padding:10px 12px;text-decoration:none;color:var(--ink);box-shadow:0 1px 4px rgba(22,25,74,.08)}
-.tc span{grid-row:1/3;font-size:26px;color:var(--indigo)}
-.tc b{font-size:14px;line-height:1.25}
-.tc small{font-size:11px;color:var(--muted);letter-spacing:.06em}
-main{max-width:1080px;margin:0 auto;padding:20px 12px 40px}
-.sec{background:#fffdf8;border-radius:6px;box-shadow:0 3px 18px rgba(22,25,74,.12);padding:11mm 12mm 12mm;margin:0 auto 26px;width:210mm;zoom:1.3;position:relative}
-.sec:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--orange);border-radius:6px 0 0 6px}
-.sec .ph{grid-template-columns:16mm 1fr}
-.wfoot{text-align:center;font-size:13px;color:var(--muted);padding:10px 20px 50px}
-.fmap{container-type:inline-size}
-.fd{width:2.5cqw;height:2.5cqw;font-size:1.32cqw;border-width:.25cqw}
-.fl{width:2.5cqw;height:2.5cqw;font-size:1.4cqw;border-width:.25cqw}
-.fbot .wbtn,.szrules .wbtn{margin-top:2mm}
-@media (max-width:1000px){.sec{zoom:1.15}}
-@media (max-width:860px){
- .sec{zoom:1.4;width:auto;padding:5mm 4mm 6mm;margin:0 0 16px;border-radius:0}
- main{padding:12px 0 30px}
- .two,.gt,.sg,.sc,.kw,.tri,.shops,.duo,.fbot,.szhead,.pair,.day{grid-template-columns:1fr !important}
- .stats,.steps,.legend2,.themes,.flow{grid-template-columns:1fr 1fr !important}
- .szshots{grid-template-columns:1fr 1fr 1fr !important}.szrules{grid-column:1/-1}
- .flist{columns:1}
- .or{padding:1mm 0}
- .duo{height:auto}.duo .ph1{height:46mm}
- .photos,.photos img{height:40mm}
- .kph,.night{height:52mm}
- .ph h2{font-size:13pt}
- .tb img{height:30px}.chap{font-size:13px;gap:12px}
+.szhead{display:grid;grid-template-columns:230px 1fr;gap:24px;align-items:center;margin-bottom:18px}
+.szlogo{width:210px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.st{background:#fff;border-radius:14px;padding:16px;border-top:4px solid var(--pink)}
+.st .sn{display:block;font-size:34px;line-height:1;color:var(--pink)}
+.st b{display:block;margin:6px 0 4px;font-size:16px}
+.st p{font-size:14px;line-height:1.55}
+.szshots{display:grid;grid-template-columns:repeat(3,1fr) 1.4fr;gap:14px;margin-top:18px;align-items:start}
+.szshots figure img{border-radius:12px;border:1px solid #2a2a33}
+.szshots figcaption{font-size:12.5px;color:var(--muted);text-align:center;margin-top:6px}
+.szrules ul{font-size:14.5px}
+.shops{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.shop{background:#fff;border-radius:16px;overflow:hidden}
+.sph{display:grid;height:210px}.sph.n2{grid-template-columns:1fr 1fr}
+.sph img{width:100%;height:100%;object-fit:cover}
+.sbody{padding:14px 16px 18px}
+.swhen{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--pink);text-transform:uppercase}
+.shop h4{font-size:19px;margin:2px 0 6px}
+.shop p{font-size:14.5px;line-height:1.6}
+.sad{font-size:13px;color:var(--muted);margin-top:6px}
+/* access */
+.acc{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;align-items:start}
+.gfs{display:grid;gap:10px}
+.gf2{background:#fff;border-radius:14px;padding:14px 16px;border-left:4px solid var(--orange)}
+.gn2{font-family:'Bebas Neue','Noto Sans JP';font-size:32px;line-height:1;color:var(--indigo)}
+html[lang=ja] .gn2{font-weight:700;font-size:26px}
+.gf2 p{font-size:14.5px;margin-top:4px;line-height:1.55}
+/* stay */
+.night{aspect-ratio:16/8;margin-bottom:14px}
+.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.bx img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:14px}
+.bx h4{font-size:18px;margin:10px 0 4px}.bx p{font-size:14.5px}
+footer{margin-top:56px;background:var(--ink);color:#c9cbe0;padding:28px 0 40px;font-size:13px}
+footer a{color:#fff}
+/* responsive */
+@media (max-width:900px){
+ .egrid{grid-template-columns:1fr 1fr}.sitelist{grid-template-columns:1fr 1fr}
+ .steps{grid-template-columns:1fr 1fr}
+ .szshots{grid-template-columns:repeat(3,1fr)}.szrules{grid-column:1/-1}
+}
+@media (max-width:700px){
+ html{scroll-padding-top:104px}
+ body{font-size:15.5px}
+ .tb{padding:8px 14px}.tb .lg{height:30px}.tb .ttl{font-size:19px}
+ .hero{height:62vh;min-height:380px}
  .hx p{font-size:15px}
- .pfood .body,.pmap .body{overflow-x:auto}
- .fmap{width:230%}
- .map{width:170%}
+ .quick{grid-template-columns:1fr 1fr;margin-top:-22px}
+ .wrap{padding:0 16px}
+ .wsec{padding:48px 0 12px}
+ .two,.sg,.sc,.kw,.acc,.tri,.shops,.szhead,.duo{grid-template-columns:1fr}
+ .stats,.flow,.themes{grid-template-columns:1fr 1fr}
+ .egrid,.sitelist,.steps{grid-template-columns:1fr}
+ .pair{grid-template-columns:1fr}.or{padding:6px 0}
+ .day{padding:16px 14px;border-radius:16px}
+ .r{grid-template-columns:52px 1fr;font-size:15px}
+ .dtabs{top:92px}
+ .photos{grid-auto-columns:85%;overflow-x:auto;scroll-snap-type:x mandatory}
+ .photos img{height:220px;scroll-snap-align:start}
+ .site{padding:16px;border-radius:16px}
+ .sh h3{font-size:21px}
+ #mainmap{height:62vh}#regionmap{height:380px}
+ .szlogo{width:170px}
+ .night{aspect-ratio:4/3}
+ .ph1{aspect-ratio:16/10}
 }
 </style>
 </head>
 <body>
-<header class="topbar"><div class="tb"><a href="/"><img src="yame-images/clf-logo.png" alt="Colive Fukuoka"></a><nav class="chap"><a href="#p01">Town</a><a href="#p02">Getting there</a><a href="#p03">Map</a><a href="#p05">Schedule</a><a href="#p06">Good to know</a><a href="#p07">Eat</a><a href="#p09">SuzuPay</a><a href="#p11">Sites</a><a href="#p15">School</a><a href="#p16">Stay</a></nav><a class="lang" href="/yame-ja">日本語</a></div></header>
-<div class="hero"><img src="yame-images/g/09a839e093.jpg" alt="Yame-Fukushima old town at night">
-<div class="hx"><div class="k">FUKUOKA BUILDERS' COLIVING · TRACK 01</div><h1>Yame Retreat Guidebook</h1>
-<p>Oct 11 to 14, 2026 · Yame City, Fukuoka. Maps, the four-day schedule, where to eat, how to pay with SuzuPay, and a guide to every place we visit.</p>
-<div class="btns"><a class="wbtn" href="#p05">See the schedule</a><a class="wbtn ghost" href="yame-guide/Yame_Guidebook_EN.pdf">Download the PDF</a></div></div></div>
-<div class="toc"><a class="tc" href="#p01"><span class="bebas">01</span><b>Yame, the town</b><small>WELCOME</small></a><a class="tc" href="#p02"><span class="bebas">02</span><b>From Fukuoka to Yame</b><small>GETTING THERE</small></a><a class="tc" href="#p03"><span class="bebas">03</span><b>Where we go in Yame</b><small>MAP</small></a><a class="tc" href="#p04"><span class="bebas">04</span><b>Our mission in Yame</b><small>WHY WE ARE HERE</small></a><a class="tc" href="#p05"><span class="bebas">05</span><b>Four days at a glance</b><small>SCHEDULE</small></a><a class="tc" href="#p06"><span class="bebas">06</span><b>Practical information</b><small>GOOD TO KNOW</small></a><a class="tc" href="#p07"><span class="bebas">07</span><b>Where to eat in town</b><small>EAT</small></a><a class="tc" href="#p08"><span class="bebas">08</span><b>The restaurant list</b><small>EAT</small></a><a class="tc" href="#p09"><span class="bebas">09</span><b>Paying with SuzuPay</b><small>SUZUPAY</small></a><a class="tc" href="#p10"><span class="bebas">10</span><b>Where to use SuzuPay in Yame</b><small>SUZUPAY</small></a><a class="tc" href="#p11"><span class="bebas">11</span><b>Site guide 1</b><small>VISIT SITES · DAY 1</small></a><a class="tc" href="#p12"><span class="bebas">12</span><b>Site guide 2</b><small>VISIT SITES · DAY 1 AND 2</small></a><a class="tc" href="#p13"><span class="bebas">13</span><b>Site guide 3</b><small>VISIT SITES · DAY 2</small></a><a class="tc" href="#p14"><span class="bebas">14</span><b>Site guide 4</b><small>VISIT SITES · DAY 3</small></a><a class="tc" href="#p15"><span class="bebas">15</span><b>Former Kawasaki Elementary School and the Yame Local Venture School</b><small>VISIT SITES · DAY 3 AFTERNOON</small></a><a class="tc" href="#p16"><span class="bebas">16</span><b>Where we stay, eat and spend the evenings</b><small>BASE</small></a></div>
-<main><section class="sec " id="p01"><div class="ph"><div class="pn bebas">01</div><div><div class="pk">WELCOME</div><h2>Yame, the town</h2></div></div>
-<div class="body">
-<div class="duo chk"><div class="ph1"><img src="yame-images/g/4ae53656be.jpg"><div class="cap">Tea fields of Yame</div></div>
-<div class="ph1"><img src="yame-images/g/7d64beaa80.jpg"><div class="cap">The white-walled old town of Yame-Fukushima after dark</div></div></div>
-<div class="stats chk">
-<div><div class="num bebas">60,608</div><div class="lab">Population, 2020 census</div></div>
-<div><div class="num bebas">42,366</div><div class="lab">Projected population in 2040</div></div>
-<div><div class="num bebas">482</div><div class="lab">km². Second largest city area in Fukuoka</div></div>
-<div><div class="num bebas">6</div><div class="lab">Districts: Yame, Joyo, Kurogi, Tachibana, Yabe, Hoshino</div></div></div>
-<div class="two chk"><div>
-<div class="lb">One city, six districts</div><p>Yame took in Joyo Town in 2006, then Kurogi, Tachibana, Yabe and Hoshino in 2010. From the old merchant town of Yame-Fukushima on the plain to the source of the Yabe River in the mountains, altitude, work and daily life all change. Many people feel pride in their own district first.</p>
-<div class="lb">More than a tea town</div><p>Next to Yame tea (first in Japan for gyokuro by production value), the town makes Yame lanterns (first in Japan by volume), Yame-Fukushima Buddhist altars, Yame washi paper, stone lanterns, cedar timber, Onokoyaki pottery, sake and fruit. From outside, people often see only "Yame = tea".</p>
-</div><div>
-<div class="lb">The matcha crisis: three structural problems</div><ol class="num">
-<li><b>The gains do not reach farmers.</b> Wholesalers sit in between, so many tea farmers sell at the old price while world prices rise.</li>
-<li><b>Gyokuro or matcha.</b> Moving to matcha makes economic sense, but the gyokuro tradition could be lost.</li>
-<li><b>Matcha no longer means Japan.</b> Chinese production leads the world market, and matcha lattes of unknown quality sell for more than coffee.</li></ol>
-<div class="lb">Yame 2040 Vision</div><p>Yame City is drafting a vision for 2040 together with its residents, through dialogue sessions that began in July 2026. Residents have named what they want to keep. The next question is how to keep it.</p>
-</div></div>
-<div class="src chk">Sources: Yame City Population Vision (revised March 2021), Yame City census page, Yame 2040 Vision website. The 2040 figure is a projection from 2021. Night photo: Crossroad Fukuoka.</div></div></section><section class="sec pgt" id="p02"><div class="ph"><div class="pn bebas">02</div><div><div class="pk">GETTING THERE</div><h2>From Fukuoka to Yame</h2></div></div>
-<div class="body">
-<div class="gt chk"><div><div class="rmap"><img src="yame-images/g/5ea2e4b907.jpg">
-<svg viewBox="0 0 100 100" preserveAspectRatio="none"><line x1="29.95" y1="12.58" x2="54.34" y2="80.31" stroke="#F26B1D" stroke-width="2.4" stroke-dasharray="3 2.2" vector-effect="non-scaling-stroke"/></svg>
-<div class="rp big" style="left:29.95%;top:12.58%"><i></i><span>Hakata Station</span></div><div class="rp r" style="left:44.08%;top:60.71%"><i></i><span>Kurume</span></div><div class="rp big yb" style="left:54.34%;top:80.31%"><i></i><span>Yame-Fukushima<br>(our base)</span></div><div class="dist" style="left:45.1%;top:46.4%">about 44 km</div>
-<div class="attr">Base map: GSI Japan</div></div>
-<div class="gtx"><div class="lb">City and countryside, one hour apart</div><p>Fukuoka is one of the fastest growing cities in Japan. One hour south, Yame is a city of 60,000 spread over mountains, tea fields and an old merchant town. Moving between the two is part of what we want you to feel: how close the city is, and how different daily life becomes.</p><div class="gph"><img src="yame-images/g/4c2698e8ba.jpg"><div class="cap2">Yame-Fukushima old town by day</div></div></div></div><div><div class="gfacts">
-<div class="gf"><div class="gn bebas">44 km</div><div class="gfl">South of Hakata Station in a straight line. Yame sits at the edge of the Chikugo plain, where the hills begin.</div></div>
-<div class="gf"><div class="gn bebas">About 1 hour</div><div class="gfl">By car on the Kyushu Expressway, which runs past Dazaifu, Tosu and Kurume to Yame IC.</div></div>
-<div class="gf"><div class="gn bebas">9:00 → 11:00</div><div class="gfl">Day 1: our bus leaves Fukuoka city at 9:00. The orientation in Yame starts at 11:00.</div></div>
-<div class="gf"><div class="gn bebas">13:00</div><div class="gfl">Day 4: the bus leaves Yame for Fukuoka. Drop-off points are confirmed on Day 3.</div></div>
-</div><div class="gtx"><div class="lb">Before you board on Day 1</div><ul><li>Bring everything for four nights. Your luggage stays on the bus until check-in at 17:00.</li><li>Charge your phone. You need it for SuzuPay and the Day 4 survey.</li><li>Mountain sites are cooler than Fukuoka. Bring a light jacket.</li></ul></div></div></div></div></section><section class="sec pmap" id="p03"><div class="ph"><div class="pn bebas">03</div><div><div class="pk">MAP</div><h2>Where we go in Yame</h2></div></div>
-<div class="body">
-<div class="map chk" style="aspect-ratio:2389/1323"><img src="yame-images/g/5d9293af23.jpg"><div class="pin c" style="left:21.89%;top:49.73%"><span><b>1</b></span></div><div class="pin a" style="left:23.17%;top:86.66%"><span><b>2</b></span></div><div class="pin b" style="left:48.63%;top:23.27%"><span><b>3</b></span></div><div class="pin b" style="left:15.95%;top:44.49%"><span><b>4</b></span></div><div class="pin a" style="left:24.07%;top:28.19%"><span><b>5</b></span></div><div class="pin b" style="left:89.27%;top:74.97%"><span><b>6</b></span></div><div class="pin b" style="left:66.14%;top:65.35%"><span><b>7</b></span></div><div class="pin a" style="left:26.74%;top:49.82%"><span><b>8</b></span></div><div class="pin c" style="left:35.12%;top:44.05%"><span><b>9</b></span></div>
-<div class="ic" style="left:12.98%;top:49.53%">Yame IC</div>
-<div class="north">N ↑</div>
-<div class="attr">© OpenStreetMap contributors</div></div>
-<div class="legend2 chk"><div class="li"><span class="pn2 c">1</span><div><b>Yame-Fukushima old town</b><small>Hotel, orientation, town walk, Takahashi Shoten</small></div></div><div class="li"><span class="pn2 a">2</span><div><b>Former Ouchi Residence / Odotani no Sato</b><small>Option 1 · Tachibana</small></div></div><div class="li"><span class="pn2 b">3</span><div><b>Baba Suishaba</b><small>Option 2 · Joyo</small></div></div><div class="li"><span class="pn2 b">4</span><div><b>Matsunobu Kogei</b><small>Option 2</small></div></div><div class="li"><span class="pn2 a">5</span><div><b>Aizome Kasuri Kobo</b><small>Option 3 · Hirokawa</small></div></div><div class="li"><span class="pn2 b">6</span><div><b>Chiyonoen tea fields</b><small>Option 4 · Yabe</small></div></div><div class="li"><span class="pn2 b">7</span><div><b>Chiyonoen tea house</b><small>Option 4 · Kurogi</small></div></div><div class="li"><span class="pn2 a">8</span><div><b>Shimogawa Orimono</b><small>Option 5 · Tsue</small></div></div><div class="li"><span class="pn2 c">9</span><div><b>Former Kawasaki Elementary School</b><small>Day 3 afternoon · Yamauchi</small></div></div></div>
-<div class="two chk"><div><div class="lb">Travel times from the old town</div><table class="goal">
-<tr><td>2</td><td>Former Ouchi Residence, Tachibana</td><td>About 15 min by bus</td></tr>
-<tr><td>3</td><td>Baba Suishaba, into the hills</td><td>About 30 min</td></tr>
-<tr><td>5</td><td>Aizome Kasuri Kobo, Hirokawa</td><td>About 30 min</td></tr>
-<tr><td>6</td><td>Chiyonoen tea fields, Yabe</td><td>About 60 min</td></tr>
-<tr><td>8</td><td>Shimogawa Orimono, Tsue</td><td>About 10 min</td></tr>
-<tr><td>1</td><td>Takahashi Shoten, in the old town</td><td>10 min on foot</td></tr></table></div>
-<div><div class="lb">Reading the map</div><p>Yame spreads from the flat Chikugo plain in the west into steep mountains in the east. Our base, Yame-Fukushima, sits where the plain meets the hills. Route 442 follows the Yabe River up the valley toward the tea villages; Route 3 runs south through Tachibana. Each option day takes one group into the mountains and keeps the other closer to town.</p></div></div></div></section><section class="sec " id="p04"><div class="ph"><div class="pn bebas">04</div><div><div class="pk">WHY WE ARE HERE</div><h2>Our mission in Yame</h2></div></div>
-<div class="body">
-<div class="mission chk"><div class="mk">MISSION</div>
-<div class="mt">Learn with the people of Yame, and offer an outside view they can use to decide what to keep and how.</div></div>
-<div class="two chk"><div>
-<div class="lb">How we work here</div><ul>
-<li>We are not here as tourists. This program, an official pilot of the Japan Tourism Agency, exists to bring new economic and social possibilities to the region.</li>
-<li>No product is expected. What matters is dialogue with the people of Yame and the ideas that come out of it.</li>
-<li>Ask about the problems people live with, not only the craft. Listen before you suggest.</li>
-<li>Leave relationships and ideas that continue after Oct 14.</li></ul>
-<div class="lb">How the four days work</div>
-<div class="flow"><div><b>Immerse</b>Day 1 to 2<br>Walk the sites</div><div><b>Listen</b>Day 1 to 3<br>Hear the makers</div><div><b>Ideate</b>Day 3, 14:00<br>Reflection workshop</div><div><b>Share</b>Day 3, 16:00<br>Share-back to Yame</div></div>
-</div><div>
-<div class="lb">What we aim for together</div>
-<table class="goal"><tr><th>#</th><th>Goal</th><th>Your part</th></tr>
-<tr><td>1</td><td>Understand what Yame's makers are proud of and what they struggle with</td><td>Ask, listen, take notes</td></tr>
-<tr><td>2</td><td>Connect what the two groups saw into one picture of Yame</td><td>Swap notes over dinner and in free time</td></tr>
-<tr><td>3</td><td>Turn three days of notes into ideas Yame can use</td><td>Join the Day 3 reflection workshop</td></tr>
-<tr><td>4</td><td>Share those ideas with the people who hosted us, and talk them through</td><td>Present and listen at the share-back</td></tr>
-<tr><td>5</td><td>Leave a real trace in the local economy</td><td>Use your SuzuPay points at local shops</td></tr>
-<tr><td>6</td><td>Help improve this pilot for future visitors</td><td>Complete the survey on Day 4 (about 15 min)</td></tr></table>
-<div class="lb">Why we see six worlds</div><p>Each day the group splits in two and goes to different places. Food, forest and water, color, tea, thread and fermentation, seen side by side, show how these trades grow from the same mountains and the same water.</p>
-</div></div>
-<div class="qbig chk"><span>THE BIG QUESTION</span>Yame's tea, wood, indigo, cloth, food and sake come from the same mountains and the same water. What could they become if we saw them as one system?</div></div></section><section class="sec pitin" id="p05"><div class="ph"><div class="pn bebas">05</div><div><div class="pk">SCHEDULE</div><h2>Four days at a glance</h2></div></div>
-<div class="body"><div class="itin"><div class="legend chk"><span><i style="background:var(--teal)"></i>Everyone together</span><span><i style="background:var(--orange)"></i>Choose one option each morning or afternoon. Staff will confirm groups on the bus.</span></div><section class="day chk"><div class="dh"><div class="dn bebas">DAY 1</div><div class="dd">Sun, Oct 11</div><div class="dt">Arrive and get grounded</div></div><div class="db"><div class="all"><div class="al">EVERYONE</div><div class="r"><span class="t">9:00</span><span class="x">Bus departs Fukuoka city for Yame</span></div><div class="r"><span class="t">11:00</span><span class="x"><b>Orientation</b> at Yokomachi Machiya Koryukan: open dialogue with Yame Mayor Minohara (60 min), briefing on meals and options (15 min), introduction to the venue (15 min). Food map handed out.</span></div><div class="r"><span class="t">12:30</span><span class="x"><b>Pick your afternoon</b> (Option 1 or 2). Luggage stays on the bus until 17:00.</span></div></div><div class="choose"><div class="cl"><span>CHOOSE ONE</span></div><div class="pair"><div class="opt a"><div class="oh"><span class="on">OPTION 1</span><span class="cap">MAX 6 · LUNCH INCLUDED</span></div>
+<header class="top"><div class="tb"><a href="/" aria-label="Fukuoka Builders' Coliving"><img class="lg" src="yame-images/clf-logo.png" alt="Colive Fukuoka"></a><div class="ttl">Yame Guidebook</div><a class="lang" href="/yame-ja" hreflang="ja">日本語</a></div>
+<div class="navr"><nav><a href="#schedule">Schedule</a><a href="#map">Map</a><a href="#eat">Eat</a><a href="#pay">SuzuPay</a><a href="#sites">Sites</a><a href="#info">Good to know</a><a href="#access">Access</a><a href="#town">About Yame</a><a href="#stay">Stay</a></nav></div></header>
+<div class="hero"><img src="yame-images/g/09a839e093.jpg" alt="Yame-Fukushima old town at night" fetchpriority="high">
+<div class="hx"><div class="wrap"><div class="k">FUKUOKA BUILDERS' COLIVING · OCT 11 TO 14, 2026</div><h1>Yame Guidebook</h1>
+<p>Everything for our four days in Yame: the schedule, a map you can move, where to eat, how to pay with SuzuPay, and the story of each place we visit.</p>
+<div class="btns"><a class="wbtn" href="#schedule">Today's schedule</a><a class="wbtn ghost" href="#map">Open the map</a><a class="wbtn ghost" href="yame-guide/Yame_Guidebook_EN.pdf">PDF</a></div></div></div></div>
+<div class="wrap"><div class="quick"><a class="qc" href="#schedule"><small>WHEN</small><b>Oct 11 to 14, 2026</b><span>3 nights, 4 days</span></a><a class="qc" href="#map"><small>BASE</small><b>Yame Green Hotel</b><span>Yame-Fukushima old town</span></a><a class="qc" href="#eat"><small>EAT</small><b>40 places</b><span>Most within a 15 min walk</span></a><a class="qc" href="#pay"><small>PAY</small><b>SuzuPay</b><span>4 shops on our route</span></a></div></div>
+<section class="wsec " id="schedule"><div class="wrap"><div class="wh"><div class="wk">SCHEDULE</div><h2>Four days in Yame</h2></div><div class="dtabs" role="tablist"><button class="dtab" data-d="0" role="tab">Day 1 · Sun 11</button><button class="dtab" data-d="1" role="tab">Day 2 · Mon 12</button><button class="dtab" data-d="2" role="tab">Day 3 · Tue 13</button><button class="dtab" data-d="3" role="tab">Day 4 · Wed 14</button></div><div class="itin"><div class="legend chk"><span><i style="background:var(--teal)"></i>Everyone together</span><span><i style="background:var(--orange)"></i>Choose one option each morning or afternoon. Staff will confirm groups on the bus.</span></div><section class="day chk"><div class="dh"><div class="dn bebas">DAY 1</div><div class="dd">Sun, Oct 11</div><div class="dt">Arrive and get grounded</div></div><div class="db"><div class="all"><div class="al">EVERYONE</div><div class="r"><span class="t">9:00</span><span class="x">Bus departs Fukuoka city for Yame</span></div><div class="r"><span class="t">11:00</span><span class="x"><b>Orientation</b> at Yokomachi Machiya Koryukan: open dialogue with Yame Mayor Minohara (60 min), briefing on meals and options (15 min), introduction to the venue (15 min). Food map handed out.</span></div><div class="r"><span class="t">12:30</span><span class="x"><b>Pick your afternoon</b> (Option 1 or 2). Luggage stays on the bus until 17:00.</span></div></div><div class="choose"><div class="cl"><span>CHOOSE ONE</span></div><div class="pair"><div class="opt a"><div class="oh"><span class="on">OPTION 1</span><span class="cap">MAX 6 · LUNCH INCLUDED</span></div>
 <div class="ot">Satoyama Living: Everyday Lessons</div><div class="os">Mountain food and handmade konnyaku in Tachibana</div><div class="r"><span class="t">13:00</span><span class="x">Bus to the Former Ouchi Residence</span></div><div class="r"><span class="t">13:15</span><span class="x">Satoyama lunch and a look around the house</span></div><div class="r"><span class="t">14:30</span><span class="x">Short ride to Odotani no Sato</span></div><div class="r"><span class="t">14:45</span><span class="x">Make konnyaku by hand</span></div><div class="r"><span class="t">16:15</span><span class="x">Back to Yame-Fukushima (16:30)</span></div></div><div class="or">OR</div><div class="opt b"><div class="oh"><span class="on">OPTION 2</span><span class="cap">TEAM LUNCH PROVIDED</span></div>
 <div class="ot">Baba Suishaba + Matsunobu Kogei</div><div class="os">A working waterwheel incense mill and a wooden tub maker</div><div class="r"><span class="t">13:00</span><span class="x">Team lunch in Yame-Fukushima</span></div><div class="r"><span class="t">14:00</span><span class="x">Bus to Baba Suishaba (30 min)</span></div><div class="r"><span class="t">14:30</span><span class="x">Waterwheel mill</span></div><div class="r"><span class="t">15:30</span><span class="x">Matsunobu Kogei, wooden tubs (16:00)</span></div><div class="r"><span class="t">16:45</span><span class="x">Back to Yame-Fukushima (17:00)</span></div></div></div></div><div class="all"><div class="al">EVERYONE</div><div class="r"><span class="t">17:00</span><span class="x"><b>Check in</b> at Yame Green Hotel</span></div><div class="r"><span class="t">18:00</span><span class="x"><b>Dinner</b> at Nongyo, next to the hotel. Order and pay for your own dishes.</span></div><div class="r"><span class="t">After</span><span class="x"><b>Optional second round:</b> a local karaoke bar in town</span></div></div></div></section><section class="day chk"><div class="dh"><div class="dn bebas">DAY 2</div><div class="dd">Mon, Oct 12</div><div class="dt">Indigo or tea, then the old town</div></div><div class="db"><div class="choose"><div class="cl"><span>CHOOSE ONE</span></div><div class="pair"><div class="opt a"><div class="oh"><span class="on">OPTION 3</span><span class="cap">MAX 10</span></div>
 <div class="ot">Aizome Kasuri Kobo</div><div class="os">Kurume Kasuri indigo workshop: tour and dyeing demonstration</div><div class="r"><span class="t">9:30</span><span class="x">Depart from the hotel</span></div><div class="r"><span class="t">10:00</span><span class="x">Workshop visit (90 min)</span></div><div class="r"><span class="t">12:00</span><span class="x">Back in Yame-Fukushima, lunch on your own</span></div></div><div class="or">OR</div><div class="opt b"><div class="oh"><span class="on">OPTION 4</span><span class="cap">MAX 10</span></div>
 <div class="ot">Chiyonoen Organic Tea Farm</div><div class="os">Mountain tea fields and factory in Yabe</div><div class="r"><span class="t">8:45</span><span class="x">Depart from the hotel (60 min ride)</span></div><div class="r"><span class="t">10:00</span><span class="x">Tea fields, then the tea factory</span></div><div class="r"><span class="t">11:30</span><span class="x">Lunch at the tea house (self-paid)</span></div><div class="r"><span class="t">13:30</span><span class="x">Back in Yame-Fukushima</span></div></div></div></div><div class="all"><div class="al">EVERYONE · YAME-FUKUSHIMA WALK</div><div class="r"><span class="t">13:30</span><span class="x"><b>Meet</b> at Unagi no Nedoko, former Terasaki residence (shop for souvenirs here)</span></div><div class="r"><span class="t">14:00</span><span class="x">Ogata Butsudan, Buddhist altar workshop</span></div><div class="r"><span class="t">14:30</span><span class="x">Ito Gonjiro Shoten, Yame lantern maker</span></div><div class="r"><span class="t">15:00</span><span class="x"><b>Chakabuki tea tasting and matcha</b> with Imamura-san, Yokomachi Machiya Koryukan</span></div><div class="r"><span class="t">16:30</span><span class="x">Former Yame District Office and Asahiya Saketen: talk with Re:crafted</span></div><div class="r"><span class="t">17:00</span><span class="x">Konomi Honke, a tea merchant house founded in the early 1700s</span></div><div class="r"><span class="t">17:15</span><span class="x">Free evening</span></div></div></div></section><section class="day chk"><div class="dh"><div class="dn bebas">DAY 3</div><div class="dd">Tue, Oct 13</div><div class="dt">Thread, sake and the share-back</div></div><div class="db"><div class="choose"><div class="cl"><span>CHOOSE ONE</span></div><div class="pair"><div class="opt a"><div class="oh"><span class="on">OPTION 5</span><span class="cap">ABOUT 7</span></div>
 <div class="ot">Shimogawa Orimono</div><div class="os">Open factory at the last Kurume Kasuri weaver in Yame City</div><div class="r"><span class="t">9:15</span><span class="x">Bus from the hotel (10 min)</span></div><div class="r"><span class="t">9:30</span><span class="x">Factory tour and talk with the weaver</span></div><div class="r"><span class="t">11:45</span><span class="x">Back to Yame-Fukushima</span></div></div><div class="or">OR</div><div class="opt b"><div class="oh"><span class="on">OPTION 6</span><span class="cap">ABOUT 7</span></div>
-<div class="ot">Takahashi Shoten</div><div class="os">Shigemasu sake brewery, founded 1717: tour and tasting</div><div class="r"><span class="t">9:15</span><span class="x">Walk from the hotel (10 min)</span></div><div class="r"><span class="t">9:30</span><span class="x">Brewery tour, tasting and talk</span></div><div class="r"><span class="t">11:30</span><span class="x">Walk back to Yame-Fukushima</span></div></div></div></div><div class="all"><div class="al">EVERYONE</div><div class="r"><span class="t">12:00</span><span class="x">Lunch together in Yame-Fukushima</span></div><div class="r"><span class="t">13:00</span><span class="x">Bus to the former Kawasaki Elementary School</span></div><div class="r"><span class="t">13:30</span><span class="x">Introduction to the school and its Local Venture School by Oki-san</span></div><div class="r"><span class="t">14:00</span><span class="x"><b>Reflection workshop</b>, Builders only, led by Jacquie</span></div><div class="r"><span class="t">16:00</span><span class="x"><b>Share-back to Yame</b>: City Hall staff and the local hosts</span></div><div class="r"><span class="t">17:00</span><span class="x">Dialogue with local businesses over tea and sweets</span></div><div class="r"><span class="t">18:30</span><span class="x">Bus back to Yame-Fukushima. Free evening</span></div></div></div></section><section class="day chk"><div class="dh"><div class="dn bebas">DAY 4</div><div class="dd">Wed, Oct 14</div><div class="dt">Back to Fukuoka</div></div><div class="db"><div class="all"><div class="al">EVERYONE</div><div class="r"><span class="t">10:00</span><span class="x"><b>Check out</b>, then the Japan Tourism Agency survey (about 15 min, phone needed). Free time in Yame-Fukushima.</span></div><div class="r"><span class="t">13:00</span><span class="x"><b>Bus departs for Fukuoka.</b> Drop-off points will be confirmed on Day 3.</span></div></div></div></section></div><div class="calnote chk">Times may change on the day. Please follow the staff.</div></div></section><section class="sec pinfo" id="p06"><div class="ph"><div class="pn bebas">06</div><div><div class="pk">GOOD TO KNOW</div><h2>Practical information</h2></div></div>
-<div class="body">
+<div class="ot">Takahashi Shoten</div><div class="os">Shigemasu sake brewery, founded 1717: tour and tasting</div><div class="r"><span class="t">9:15</span><span class="x">Walk from the hotel (10 min)</span></div><div class="r"><span class="t">9:30</span><span class="x">Brewery tour, tasting and talk</span></div><div class="r"><span class="t">11:30</span><span class="x">Walk back to Yame-Fukushima</span></div></div></div></div><div class="all"><div class="al">EVERYONE</div><div class="r"><span class="t">12:00</span><span class="x">Lunch together in Yame-Fukushima</span></div><div class="r"><span class="t">13:00</span><span class="x">Bus to the former Kawasaki Elementary School</span></div><div class="r"><span class="t">13:30</span><span class="x">Introduction to the school and its Local Venture School by Oki-san</span></div><div class="r"><span class="t">14:00</span><span class="x"><b>Reflection workshop</b>, Builders only, led by Jacquie</span></div><div class="r"><span class="t">16:00</span><span class="x"><b>Share-back to Yame</b>: City Hall staff and the local hosts</span></div><div class="r"><span class="t">17:00</span><span class="x">Dialogue with local businesses over tea and sweets</span></div><div class="r"><span class="t">18:30</span><span class="x">Bus back to Yame-Fukushima. Free evening</span></div></div></div></section><section class="day chk"><div class="dh"><div class="dn bebas">DAY 4</div><div class="dd">Wed, Oct 14</div><div class="dt">Back to Fukuoka</div></div><div class="db"><div class="all"><div class="al">EVERYONE</div><div class="r"><span class="t">10:00</span><span class="x"><b>Check out</b>, then the Japan Tourism Agency survey (about 15 min, phone needed). Free time in Yame-Fukushima.</span></div><div class="r"><span class="t">13:00</span><span class="x"><b>Bus departs for Fukuoka.</b> Drop-off points will be confirmed on Day 3.</span></div></div></div></section></div><p class="small">Times may change on the day. Please follow the staff.</p></div></section><section class="wsec " id="map"><div class="wrap"><div class="wh"><div class="wk">MAP</div><h2>Where we go in Yame</h2></div><div class="chips"><button class="chip is-on" data-l="sites"><i class="dot c"></i>Visit sites</button><button class="chip is-on" data-l="base"><i class="dot k"></i>Hotel and venues</button><button class="chip is-on" data-l="pay"><i class="dot p"></i>SuzuPay</button><button class="chip" data-l="eat"><i class="dot o"></i>Restaurants</button></div><div class="mapbox"><div id="mainmap"></div><button class="tapcover" type="button">Tap to move the map</button></div>
+<div class="sitelist"><button class="sl" data-site="1"><span class="sn2 c">1</span><span><b>Yame-Fukushima old town</b><small>Hotel, orientation, town walk, Takahashi Shoten</small></span></button><button class="sl" data-site="2"><span class="sn2 a">2</span><span><b>Former Ouchi Residence / Odotani no Sato</b><small>Option 1 · Tachibana</small></span></button><button class="sl" data-site="3"><span class="sn2 b">3</span><span><b>Baba Suishaba</b><small>Option 2 · Joyo</small></span></button><button class="sl" data-site="4"><span class="sn2 b">4</span><span><b>Matsunobu Kogei</b><small>Option 2</small></span></button><button class="sl" data-site="5"><span class="sn2 a">5</span><span><b>Aizome Kasuri Kobo</b><small>Option 3 · Hirokawa</small></span></button><button class="sl" data-site="6"><span class="sn2 b">6</span><span><b>Chiyonoen tea fields</b><small>Option 4 · Yabe</small></span></button><button class="sl" data-site="7"><span class="sn2 b">7</span><span><b>Chiyonoen tea house</b><small>Option 4 · Kurogi</small></span></button><button class="sl" data-site="8"><span class="sn2 a">8</span><span><b>Shimogawa Orimono</b><small>Option 5 · Tsue</small></span></button><button class="sl" data-site="9"><span class="sn2 c">9</span><span><b>Former Kawasaki Elementary School</b><small>Day 3 afternoon · Yamauchi</small></span></button></div>
+<p class="small">Pinch or use + and − to zoom. Tap a pin for directions in Google Maps.</p></div></section><section class="wsec " id="eat"><div class="wrap"><div class="wh"><div class="wk">EAT</div><h2>Where to eat in town</h2></div><p class="lead2">40 places from a Google Maps list made by Yuji Kiriake, our local coordinator. Most are within a 15 minute walk of the hotel. Small places close on set weekdays and between lunch and dinner, so check the hours before you go.</p>
+<div class="fchips"><button class="fchip is-on" data-c="all">All</button><button class="fchip" data-c="cf"><i style="background:#12857a"></i>Cafés, coffee and bread</button><button class="fchip" data-c="jp"><i style="background:#2F3AA8"></i>Japanese, sushi and seafood</button><button class="fchip" data-c="nd"><i style="background:#b7791f"></i>Udon, soba and noodles</button><button class="fchip" data-c="wd"><i style="background:#F26B1D"></i>Meat and world food</button><button class="fchip" data-c="ot"><i style="background:#7a5aa8"></i>Also on the list</button></div><div class="egrid"><div class="ecard" data-c="cf"><span class="en2" style="background:#12857a">1</span><div class="eb"><b>Café MITOTE</b><small>Café · cafe MITOTE</small><em>★4.4<s> · 104</s></em><div class="ea"><button class="lnk" data-eat="1">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=5023417519173109498" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="cf"><span class="en2" style="background:#12857a">2</span><div class="eb"><b>Rail Coffee Roasters</b><small>Coffee · レイル コーヒー ロースター（RAIL COFFEE ROASTERS）</small><em>★3.4<s> · 46</s></em><div class="ea"><button class="lnk" data-eat="2">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=17417051017398683909" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="cf"><span class="en2" style="background:#12857a">3</span><div class="eb"><b>Collector</b><small>Café · コレクター</small><em>★4.5<s> · 46</s></em><div class="ea"><button class="lnk" data-eat="3">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=7257811452454757924" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="cf"><span class="en2" style="background:#12857a">4</span><div class="eb"><b>Yame Saheho</b><small>Café · 八女サヘホ</small><em>★4.1<s> · 37</s></em><div class="ea"><button class="lnk" data-eat="4">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=2261037665274176491" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="cf"><span class="en2" style="background:#12857a">5</span><div class="eb"><b>168kupukupu</b><small>Café and goods · cafe&zakka 168kupukupu</small><em>★4.5<s> · 35</s></em><div class="ea"><button class="lnk" data-eat="5">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=5949428642685467407" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="cf"><span class="en2" style="background:#12857a">6</span><div class="eb"><b>Machiya Brot</b><small>Bakery · 町家ブロート</small><em>★4.5<s> · 32</s></em><div class="ea"><button class="lnk" data-eat="6">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=10354972891468498644" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="cf"><span class="en2" style="background:#12857a">7</span><div class="eb"><b>Atelier & Café Kajitsu</b><small>Café · アトリエ&カフェ 果実</small><em>★4.3<s> · 29</s></em><div class="ea"><button class="lnk" data-eat="7">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=11788517738092448950" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="cf"><span class="en2" style="background:#12857a">8</span><div class="eb"><b>Kissa Kanon</b><small>Café · 喫茶華暖(かのん)</small><em>★4.5<s> · 15</s></em><div class="ea"><button class="lnk" data-eat="8">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=2840437084728415610" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="cf"><span class="en2" style="background:#12857a">9</span><div class="eb"><b>Kyo no Kotowari</b><small>Coffee · きょうのことわり</small><em>★4.9<s> · 14</s></em><div class="ea"><button class="lnk" data-eat="9">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=7682090932087838163" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="cf"><span class="en2" style="background:#12857a">10</span><div class="eb"><b>Glee and Day's</b><small>Café · Glee and Day’s グリーアンドデイズ</small><em>★4.7<s> · 14</s></em><div class="ea"><button class="lnk" data-eat="10">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=12856046723345199512" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="cf"><span class="en2" style="background:#12857a">11</span><div class="eb"><b>Machiya Café Shioya</b><small>Café · 町家CAFE しおや</small><em>★4.2<s></s></em><div class="ea"><button class="lnk" data-eat="11">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=12017467600354345071" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="cf"><span class="en2" style="background:#12857a">12</span><div class="eb"><b>Adachi Coffee</b><small>Coffee · あだち珈琲八女店 一期一杯</small><em>★4.3<s></s></em><div class="ea"><button class="lnk" data-eat="12">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=5491866995403114468" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="jp"><span class="en2" style="background:#2F3AA8">13</span><div class="eb"><b>Sushi Tachibana</b><small>Sushi · 寿し割烹 立花</small><em>★4.2<s> · 237</s></em><div class="ea"><button class="lnk" data-eat="13">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=9990314845000994126" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="jp"><span class="en2" style="background:#2F3AA8">14</span><div class="eb"><b>Kuboyama</b><small>Kaiseki · くぼやま</small><em>★4.5<s> · 207</s></em><div class="ea"><button class="lnk" data-eat="14">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=15471955789164622569" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="jp"><span class="en2" style="background:#2F3AA8">15</span><div class="eb"><b>Okuno</b><small>Seafood · 海鮮料理茶家 おくの</small><em>★3.9<s> · 84</s></em><div class="ea"><button class="lnk" data-eat="15">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=8174342361008648388" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="jp"><span class="en2" style="background:#2F3AA8">16</span><div class="eb"><b>Wa Dining Umeya</b><small>Japanese · 和Diningうめや</small><em>★4.6<s> · 84</s></em><div class="ea"><button class="lnk" data-eat="16">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=13585407529645552832" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="jp"><span class="en2" style="background:#2F3AA8">17</span><div class="eb"><b>Kahoritsugu</b><small>Japanese · お料理かほり継</small><em>★4.4<s> · 82</s></em><div class="ea"><button class="lnk" data-eat="17">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=13991487232082367772" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="jp"><span class="en2" style="background:#2F3AA8">18</span><div class="eb"><b>Ginnoka</b><small>Japanese and sake · 酒邸 吟乃香</small><em>★4.0<s> · 82</s></em><div class="ea"><button class="lnk" data-eat="18">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=2063534324404706504" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="jp"><span class="en2" style="background:#2F3AA8">19</span><div class="eb"><b>Kappo Nakamura</b><small>Japanese · 旬彩割烹なかむら</small><em>★4.2<s> · 75</s></em><div class="ea"><button class="lnk" data-eat="19">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=13902424908709724992" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="jp"><span class="en2" style="background:#2F3AA8">20</span><div class="eb"><b>Kamogawa</b><small>Eel · 加茂川</small><em>★3.8<s> · 18</s></em><div class="ea"><button class="lnk" data-eat="20">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=1702674908189905567" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="jp"><span class="en2" style="background:#2F3AA8">21</span><div class="eb"><b>Salmon-tei</b><small>Japanese · サーモン亭</small><em>★4.2<s> · 9</s></em><div class="ea"><button class="lnk" data-eat="21">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=6363692428294813185" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="jp"><span class="en2" style="background:#2F3AA8">22</span><div class="eb"><b>Suzume</b><small>Sushi · すゞめ</small><em>★4.0<s></s></em><div class="ea"><button class="lnk" data-eat="22">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=3752102690138375874" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="nd"><span class="en2" style="background:#b7791f">23</span><div class="eb"><b>Tsuruya, main shop</b><small>Udon · うどん つるや 本店</small><em>★4.1<s> · 411</s></em><div class="ea"><button class="lnk" data-eat="23">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=13501886732941871619" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="nd"><span class="en2" style="background:#b7791f">24</span><div class="eb"><b>Shige</b><small>Udon · しげ</small><em>★4.2<s> · 347</s></em><div class="ea"><button class="lnk" data-eat="24">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=15211758153678980463" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="nd"><span class="en2" style="background:#b7791f">25</span><div class="eb"><b>Ashiya</b><small>Champon noodles · ちゃんぽん専門店 あしや</small><em>★3.9<s> · 258</s></em><div class="ea"><button class="lnk" data-eat="25">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=16262079785026804173" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="nd"><span class="en2" style="background:#b7791f">26</span><div class="eb"><b>Hanamurasaki</b><small>Udon · 花むらさき</small><em>★4.2<s> · 129</s></em><div class="ea"><button class="lnk" data-eat="26">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=8210169420346654402" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="nd"><span class="en2" style="background:#b7791f">27</span><div class="eb"><b>Mensho</b><small>Udon · 麺庄うどん</small><em>★3.2<s> · 15</s></em><div class="ea"><button class="lnk" data-eat="27">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=281878822141579933" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="nd"><span class="en2" style="background:#b7791f">28</span><div class="eb"><b>Tsuruya, City Hall</b><small>Udon · つるや 市役所前店</small><em>★4.0<s></s></em><div class="ea"><button class="lnk" data-eat="28">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=808249279888657977" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="nd"><span class="en2" style="background:#b7791f">29</span><div class="eb"><b>史蔵</b><small>Soba · 史蔵</small><em>★4.2<s></s></em><div class="ea"><button class="lnk" data-eat="29">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=3626884819074920529" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="wd"><span class="en2" style="background:#F26B1D">30</span><div class="eb"><b>Kandon</b><small>Korean rice bowls · 韓丼 八女店</small><em>★3.9<s> · 380</s></em><div class="ea"><button class="lnk" data-eat="30">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=10293914637745286808" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="wd"><span class="en2" style="background:#F26B1D">31</span><div class="eb"><b>Kuma to Taiyo</b><small>Restaurant · クマと太陽</small><em>★3.9<s> · 257</s></em><div class="ea"><button class="lnk" data-eat="31">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=3737980259293121950" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="wd"><span class="en2" style="background:#F26B1D">32</span><div class="eb"><b>Kazue</b><small>Meat dishes · 肉料理 かずえ</small><em>★4.1<s> · 233</s></em><div class="ea"><button class="lnk" data-eat="32">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=3002010637802962098" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="wd"><span class="en2" style="background:#F26B1D">33</span><div class="eb"><b>Yoshioka</b><small>Tonkatsu and wagyu · とんかつ・黒毛和牛専門店 吉岡</small><em>★4.6<s> · 177</s></em><div class="ea"><button class="lnk" data-eat="33">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=15487520845387493173" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="wd"><span class="en2" style="background:#F26B1D">34</span><div class="eb"><b>Umeno Shoten</b><small>Curry, café and bar · ウメノ商店</small><em>★4.3<s> · 166</s></em><div class="ea"><button class="lnk" data-eat="34">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=3888579531436230588" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="wd"><span class="en2" style="background:#F26B1D">35</span><div class="eb"><b>NONOKA Restaurant</b><small>French · NONOKA RESTAURANT</small><em>★4.6<s> · 78</s></em><div class="ea"><button class="lnk" data-eat="35">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=13365765802590719515" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="wd"><span class="en2" style="background:#F26B1D">36</span><div class="eb"><b>Bar & Kitchen SoL</b><small>Spanish · バル&キッチン SoL（ソル）</small><em>★4.4<s> · 78</s></em><div class="ea"><button class="lnk" data-eat="36">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=15062592185087108395" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="wd"><span class="en2" style="background:#F26B1D">37</span><div class="eb"><b>Tobikataya</b><small>Ham and sausages · 飛形家TOBIKATAYA</small><em>★4.5<s> · 43</s></em><div class="ea"><button class="lnk" data-eat="37">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=17684527928189874200" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="wd"><span class="en2" style="background:#F26B1D">38</span><div class="eb"><b>kumu</b><small>Taiwanese · 八女里山的台湾飯店 kumu</small><em>★4.0<s> · 31</s></em><div class="ea"><button class="lnk" data-eat="38">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=4749916657279498808" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="ot"><span class="en2" style="background:#7a5aa8">39</span><div class="eb"><b>Bengara-mura</b><small>Hot spring with restaurant · 八女市健康増進施設 べんがら村</small><em>★3.8<s> · 914</s></em><div class="ea"><button class="lnk" data-eat="39">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=9290461785538213345" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div><div class="ecard" data-c="ot"><span class="en2" style="background:#7a5aa8">40</span><div class="eb"><b>Sakaiya</b><small>Historic merchant house · 堺屋(旧木下家住宅)</small><em>★4.4<s> · 53</s></em><div class="ea"><button class="lnk" data-eat="40">Show on map</button><a class="lnk" href="https://maps.google.com/?cid=14428996513177050277" target="_blank" rel="noopener">Google Maps ↗</a></div></div></div></div>
+<p class="center"><a class="wbtn" href="https://maps.app.goo.gl/LEfbpJKp52LDCpbD6" target="_blank" rel="noopener">Open the whole list in Google Maps</a></p>
+<p class="small">★ Google rating and number of reviews, checked on Oct 10, 2026. Within each group, places with more reviews come first.</p></div></section><section class="wsec " id="pay"><div class="wrap"><div class="wh"><div class="wk">SUZUPAY</div><h2>Paying with SuzuPay</h2></div>
+<div class="szhead chk"><img loading="lazy" class="szlogo" src="yame-images/g/suzupay_logo.png"><div><p>SuzuPay is a QR payment service you use in your phone browser, with no app to install. Points are in yen: <b>1 pt = ¥1</b>. In this program it is how we leave a real trace in the local economy.</p></div></div>
+<div class="steps chk">
+<div class="st"><span class="sn bebas">1</span><b>Create an account</b><p>Open main.suzupay.com/login and sign up as "Customer" with your email and a password.</p></div>
+<div class="st"><span class="sn bebas">2</span><b>Verify your email</b><p>Open the link in the email, then enter a display name and phone number.</p></div>
+<div class="st"><span class="sn bebas">3</span><b>Enter your coupon</b><p>Staff will give you a code that starts with SZP-. It adds 5,000 pts after your email is verified. You can enter it at sign-up or later in Settings.</p></div>
+<div class="st"><span class="sn bebas">4</span><b>Pay by QR</b><p>Open "QR Payment", enter the amount and show your QR to the staff. Or scan the shop's QR and confirm the shop name.</p></div></div>
+<div class="szshots chk"><figure><img loading="lazy" src="yame-images/g/c1465774d1.jpg"><figcaption>Home: balance and shops</figcaption></figure>
+<figure><img loading="lazy" src="yame-images/g/c2f10e545e.jpg"><figcaption>Enter the amount</figcaption></figure>
+<figure><img loading="lazy" src="yame-images/g/0589cb1d59.jpg"><figcaption>Show your QR</figcaption></figure>
+<div class="szrules"><div class="lb">Good to know</div><ul>
+<li>Your QR expires after about 2 minutes. Tap "Refresh code" for a new one.</li>
+<li>Points are valid for 6 months.</li>
+<li>No refunds after payment. Check the amount first.</li>
+<li>Switch between English and Japanese at the top right of the screen.</li>
+<li>SuzuPay does not work at Unagi no Nedoko.</li></ul>
+<a class="wbtn" href="https://main.suzupay.com/login" target="_blank" rel="noopener">main.suzupay.com/login</a></div></div><h3 class="h3">Where to use it in Yame</h3>
+<p class="lead chk">Four registered shops in Yame are on our own route, so you can spend your points where you visit. Shop staff will show their QR, or ask for yours.</p>
+<div class="shops chk"><div class="shop"><div class="sph n2"><img loading="lazy" src="yame-images/g/2e1130c96d.jpg"><img loading="lazy" src="yame-images/g/9ac7192a9b.jpg"></div><div class="sbody"><div class="swhen">Option 4</div><h4>Chiyonoen Tea Farm</h4><p>A café with mountain dishes made from wild vegetables, tea sweets and tea grown on the farm.</p><div class="sad">6342 Kitaobuchi, Kurogi-machi</div></div></div><div class="shop"><div class="sph n1"><img loading="lazy" src="yame-images/g/03c4373d7d.jpg"></div><div class="sbody"><div class="swhen">Option 5</div><h4>Shimogawa Orimono</h4><p>Kurume Kasuri fabric, happi coats for the Hakata Gion Yamakasa festival, bags, shirts and samue workwear.</p><div class="sad">1111-2 Tsue</div></div></div><div class="shop"><div class="sph n2"><img loading="lazy" src="yame-images/g/54200d4c94.jpg"><img loading="lazy" src="yame-images/g/0d73cfd648.jpg"></div><div class="sbody"><div class="swhen">Option 6</div><h4>Takahashi Shoten</h4><p>Sake brewery founded in 1717. Its signature sake is Shigemasu.</p><div class="sad">2-22-1 Honmachi</div></div></div><div class="shop"><div class="sph n2"><img loading="lazy" src="yame-images/g/69e20db82f.jpg"><img loading="lazy" src="yame-images/g/e6d0e5c929.jpg"></div><div class="sbody"><div class="swhen">Day 2 town walk</div><h4>Konomi Honke</h4><p>Kyushu's oldest tea merchant, in a late Edo period town house. Seven of its buildings are Tangible Cultural Properties of Yame City.</p><div class="sad">126 Honmachi</div></div></div></div>
+<div class="src chk">Shop information and photos: SuzuPay. Questions about SuzuPay: GustoDevelopment Inc., info@gustodevelopment.com</div></div></section><section class="wsec " id="sites"><div class="wrap"><div class="wh"><div class="wk">VISIT SITES</div><h2>The places we visit</h2></div><article class="site chk"><div class="sh"><span class="tag a">DAY 1 · OPTION 1</span><h3>Satoyama Living: Everyday Lessons</h3><span class="en">Former Ouchi Residence / Odotani no Sato · Tachibana</span></div>
+<div class="sg"><div class="photos n2"><img loading="lazy" src="yame-images/g/1783ff225b.jpg"><img loading="lazy" src="yame-images/g/70e1bd47be.jpg"></div><div class="info"><div><b>When</b>Oct 11, 13:00 to 16:30</div><div><b>Capacity</b>Max 6</div><div><b>Getting there</b>Bus</div><div><b>Meal</b>Satoyama lunch included (has meat dishes)</div></div></div>
+<div class="sc"><div><div class="lb">About the place</div><p>A half day in the hills of Tachibana: a satoyama lunch cooked by local mothers, then konnyaku made the old way with wood ash. Lunch is at the Former Ouchi Residence, birthplace of Ouchi Chozo, a politician who worked for friendship between Japan and China from the Meiji to the early Showa era. A local preservation group restored the house and reopened it in April 2023.</p><div class="lb">What to see</div><ul><li>A satoyama lunch made from local seasonal food</li><li>Making konnyaku with Nakashima-san of Odotani no Sato, set with wood ash</li><li>The Former Ouchi Residence and the story of saving it</li></ul></div>
+<div><div class="lb why">Why it matters</div><p>Know-how around pickles, konnyaku, bamboo craft and mountain work is not reaching the next generation. Here, cooking for guests is a way to keep that culture alive.</p><div class="q"><span>QUESTION TO CARRY</span>How can a skill that is only used for guests come back into daily life?</div></div></div></article><article class="site chk"><div class="sh"><span class="tag b">DAY 1 · OPTION 2</span><h3>Baba Suishaba</h3><span class="en">Waterwheel incense mill · Joyo</span></div>
+<div class="sg"><div class="photos n2"><img loading="lazy" src="yame-images/g/9041cea5fd.jpg"><img loading="lazy" src="yame-images/g/8ada4d7be4.jpg"></div><div class="info"><div><b>When</b>Oct 11, leave 14:00, visit 14:30 to 15:30</div><div><b>Getting there</b>Yame City microbus (about 30 min)</div><div><b>Meal</b>13:00 team lunch in town</div></div></div>
+<div class="sc"><div><div class="lb">About the place</div><p>A working waterwheel mill that makes incense only from Yame cedar leaves and tabu leaves. A 5.5 m waterwheel drives 15 pestles that grind dried cedar leaves into powder over about 23 hours. Built in 1918 with money from 21 locals, bought by the Baba family in 1961, and rebuilt in 2008 by a father and son team of waterwheel carpenters from Kurume.</p><div class="lb">What to see</div><ul><li>Pestles moved only by water, and cedar leaves turning to powder</li><li>Cedar incense with no added scent or color</li><li>Baba-san calls himself "the forest's cleaner"</li></ul></div>
+<div><div class="lb why">Why it matters</div><p>About 60% of Yame is forest. At its peak the area had over 40 incense waterwheels, cut down by imports, electric power and a lack of successors.</p><div class="q"><span>QUESTION TO CARRY</span>What would a business look like if it started from what the forest leaves behind?</div></div></div></article><article class="site chk"><div class="sh"><span class="tag b">DAY 1 · OPTION 2</span><h3>Matsunobu Kogei</h3><span class="en">Wooden tub maker</span></div>
+<div class="sg"><div class="photos n2"><img loading="lazy" src="yame-images/g/a4d93ef86e.jpg"><img loading="lazy" src="yame-images/g/bef062f946.jpg"></div><div class="info"><div><b>When</b>Oct 11, 16:00 to 16:45</div><div><b>Getting there</b>30 min from the mill, 10 min back to town</div></div></div>
+<div class="sc"><div><div class="lb">About the place</div><p>A tub maker founded in 1959 and now in its third generation. Rice tubs, sushi tubs, bath pails and pickling barrels, all made by hand from wood and bamboo. The Chikugo area once had around 60 tub makers; only a few remain in Kyushu today.</p><div class="lb">What to see</div><ul><li>Hoops woven from Yame bamboo instead of metal</li><li>Boards of different widths matched by feel (about ten years to learn)</li><li>Ongoing demand from breweries, temples and taiko drum makers</li></ul></div>
+<div><div class="lb why">Why it matters</div><p>Yame grows both cedar and bamboo, so the craft kept local work circulating. Some sake breweries are going back to wooden tubs.</p><div class="q"><span>QUESTION TO CARRY</span>How could being close to your raw materials become a strength again?</div></div></div></article><article class="site chk"><div class="sh"><span class="tag a">DAY 2 · OPTION 3</span><h3>Aizome Kasuri Kobo</h3><span class="en">Kurume Kasuri indigo workshop · Hirokawa</span></div>
+<div class="sg"><div class="photos n2"><img loading="lazy" src="yame-images/g/e3c8c2e1e9.jpg"><img loading="lazy" src="yame-images/g/6309e303ca.jpg"></div><div class="info"><div><b>When</b>Oct 12, leave 9:30, visit 10:00 to 11:30</div><div><b>Capacity</b>Max 10</div><div><b>Lunch</b>12:00 in town, on your own</div></div></div>
+<div class="sc"><div><div class="lb">About the place</div><p>A Kurume Kasuri workshop founded in 1891. It keeps the traditional way of preparing indigo and dyes yarn more than 50 times to build its shades of blue. The fifth generation, Kensuke Yamamura, dyes; the fourth generation weaves.</p><div class="lb">What to see</div><ul><li>Indigo made ready by fermentation, called aidate</li><li>Lye from local oak ash, wheat bran and shell lime from the Ariake Sea</li><li>Cloth coming out of the vat brown and turning blue in the air</li></ul></div>
+<div><div class="lb why">Why it matters</div><p>Indigo is alive and needs care every day. Many trades in Yame depend on this kind of upkeep that visitors never see.</p><div class="q"><span>QUESTION TO CARRY</span>What else in Yame relies on daily care that visitors never see?</div></div></div></article><article class="site chk"><div class="sh"><span class="tag b">DAY 2 · OPTION 4</span><h3>Chiyonoen</h3><span class="en">Organic tea farm · Yabe</span></div>
+<div class="sg"><div class="photos n2"><img loading="lazy" src="yame-images/g/6c1efc97a6.jpg"><img loading="lazy" src="yame-images/g/2ebfc78ef1.jpg"></div><div class="info"><div><b>When</b>Oct 12, leave 8:45 (about 60 min), back 13:30</div><div><b>Capacity</b>Max 10</div><div><b>Lunch</b>Chiyonoen tea house, self-paid</div></div></div>
+<div class="sc"><div><div class="lb">About the place</div><p>An organic tea farm at 400 to 600 m in Yabe Village. Snow covers the fields in winter and new buds come late; the farm calls this "late-budding tea from the snowy mountain". It makes green tea, Japanese black tea and oolong, with JAS organic certification since 2015.</p><div class="lb">What to see</div><ul><li>Mountain tea fields and the tea factory</li><li>Lunch at the tea house</li><li>Fukuoka Design Award grand prize (2024); platinum at the Japanese Tea Award for its oolong (2023)</li></ul></div>
+<div><div class="lb why">Why it matters</div><p>A chance to hear the matcha crisis from a grower. Yabe residents say they want to grow from 800 people to 2,000.</p><div class="q"><span>QUESTION TO CARRY</span>How do you tell a story about "late" and "small" in a matcha market that rewards fast and big?</div></div></div></article><article class="site chk"><div class="sh"><span class="tag c">DAY 2 · EVERYONE</span><h3>Yame-Fukushima craft walk</h3><span class="en">Old town makers and merchant houses</span></div>
+<div class="sg"><div class="photos n3"><img loading="lazy" src="yame-images/g/4654d4e3c1.jpg"><img loading="lazy" src="yame-images/g/8602cb52a9.jpg"><img loading="lazy" src="yame-images/g/941b7f1583.jpg"></div><div class="info"><div><b>When</b>Oct 12, meet 13:30, until 17:15</div><div><b>Meeting point</b>Unagi no Nedoko, former Terasaki residence (327 Honmachi)</div><div><b>Guides</b>Rei Watanabe and Hirai-san</div></div></div>
+<div class="sc"><div><div class="lb">About the place</div><p>A walk through the white-walled old town. <b>Ogata Butsudan</b> does the final stage of Yame-Fukushima altars, lacquering, gilding and assembling. <b>Ito Gonjiro Shoten</b> makes Yame lanterns, first in Japan by volume. The <b>Former Yame District Office</b> was built in the Meiji era and restored by an NPO; part of it is <b>Asahiya Saketen</b>. <b>Konomi Honke</b> is Kyushu's oldest tea wholesaler, founded in the early 1700s, and gave "Yame tea" its name.</p><div class="lb">What to see</div><ul><li>13:30 Souvenir shopping at Unagi no Nedoko</li><li>15:00 Chakabuki (a tea tasting game) and matcha with Imamura-san</li><li>16:30 Re:crafted: a showcase of Yame crafts</li><li>17:00 Konomi Honke, a late Edo town house and its tea roasting room</li></ul></div>
+<div><div class="lb why">Why it matters</div><p>The white-walled streets and craft skills are what residents most want to keep. Here we meet the people who keep the town working.</p><div class="q"><span>QUESTION TO CARRY</span>What would it take to turn the old streets from a place to look at back into a place to work?</div></div></div></article><article class="site chk"><div class="sh"><span class="tag a">DAY 3 · OPTION 5</span><h3>Shimogawa Orimono</h3><span class="en">Kurume Kasuri weaver · open factory · Tsue</span></div>
+<div class="sg"><div class="photos n2"><img loading="lazy" src="yame-images/g/d90fc43044.jpg"><img loading="lazy" src="yame-images/g/7d2850e05c.jpg"></div><div class="info"><div><b>When</b>Oct 13, leave 9:15, visit 9:30 to 11:30</div><div><b>Capacity</b>About 7</div><div><b>Getting there</b>Yame City microbus (about 10 min)</div></div></div>
+<div class="sc"><div><div class="lb">About the place</div><p>Founded in 1948, the last Kurume Kasuri weaver in Yame City. Third generation Kyozo Shimogawa took over at 22 after university, and his son has now joined. The workshop often works with artists from Finland, Sweden and other countries.</p><div class="lb">What to see</div><ul><li>20 looms driven by belts from one motor in the ceiling</li><li>A talk by Kyozo-san on the future of Kurume Kasuri</li><li>The gallery, with fabric sold by the meter</li></ul></div>
+<div><div class="lb why">Why it matters</div><p>He keeps the old way while trying new sales channels and overseas projects. He also plans to join the Day 3 share-back.</p><div class="q"><span>QUESTION TO CARRY</span>Could opening a factory to visitors work for other makers in Yame?</div></div></div></article><article class="site chk"><div class="sh"><span class="tag b">DAY 3 · OPTION 6</span><h3>Takahashi Shoten (Shigemasu)</h3><span class="en">Sake brewery · in the old town</span></div>
+<div class="sg"><div class="photos n2"><img loading="lazy" src="yame-images/g/53f3658f01.jpg"><img loading="lazy" src="yame-images/g/602f6c4317.jpg"></div><div class="info"><div><b>When</b>Oct 13, leave 9:15 on foot, visit 9:30 to 11:30</div><div><b>Capacity</b>About 7</div><div><b>Program</b>Tour, tasting and talk</div></div></div>
+<div class="sc"><div><div class="lb">About the place</div><p>A sake brewery founded in Yame in 1717, now led by its 19th generation and known for the Shigemasu brand. It uses water from the underground flow of the Yabe River and Fukuoka rice, including Gin no Sato sake rice grown in Yame.</p><div class="lb">What to see</div><ul><li>The process from rice polishing to pressing</li><li>Koji trays tracked with QR codes next to traditional methods</li><li>JAS organic, a lens wind turbine, and sake brewed with wind and solar power</li></ul></div>
+<div><div class="lb why">Why it matters</div><p>A 300 year old brewery that records its work digitally and runs on renewable energy, and a member of Yame City's council for exporting local products.</p><div class="q"><span>QUESTION TO CARRY</span>Where else in Yame could old craft and new tools meet?</div></div></div></article><h3 class="h3" id="school">Former Kawasaki Elementary School and the Yame Local Venture School</h3>
+<div class="kw chk"><div class="kph"><img loading="lazy" src="yame-images/g/52001351f2.jpg"><div class="cap">Former Kawasaki Elementary School, Yamauchi, Yame</div></div>
+<div class="info big"><div><b>When</b>Oct 13, leave town 13:00, back 18:30</div><div><b>Getting there</b>Yame City microbus</div><div><b>Address</b>769 Yamauchi, Yame</div>
+<div><b>The afternoon</b>13:30 Introduction by Oki-san<br>14:00 Reflection workshop (Builders only)<br>16:00 Share-back to Yame<br>17:00 Dialogue over tea and sweets</div></div></div>
+<div class="two chk"><div>
+<div class="lb">A closed school, reopened for business</div>
+<p>The former Kawasaki Elementary School is being turned into a base for people who want to start businesses in Yame, with a shared office for entrepreneurs. It is our workspace for Day 3, and the place where we give our ideas back to Yame.</p>
+<div class="lb">The Yame Local Venture School</div>
+<p>Launched in June 2026, the school grows "seeds of business built on local resources, culture and tradition". Its idea is simple: Yame is rich in tea, food and crafts, but their value does not travel far enough. More people running real businesses, not volunteering, is how the town meets population decline.</p>
+<ul><li>A business contest and venture school: 8 teams selected, with mentoring, lectures and a final pitch in February 2027</li>
+<li>Kickoff on Oct 17, 2026, a few days after our visit</li>
+<li>Judges include Mayor Yutaro Minohara and Takahiro Shiramizu, founder of Unagi no Nedoko</li>
+<li>Discounted desks in the school's shared office for selected teams</li></ul>
+</div><div>
+<div class="lb">Six themes the school puts forward</div>
+<div class="themes">
+<div><b>Empty houses and renovation</b>Keep the old town and mountain homes in use</div>
+<div><b>Tea</b>Yame is known for gyokuro, but there are few places to drink it and few who tell its story</div>
+<div><b>Crafts and making</b>Raise the value of traditional crafts, factory tourism, new markets</div>
+<div><b>Food culture</b>Update local dishes, research local ingredients</div>
+<div><b>IT and work style</b>Software across industries, places to work, and welcoming long-stay digital nomads from abroad</div>
+<div><b>Design</b>Open factories, select shops, in-town designers</div></div>
+<div class="q" style="margin-top:3mm"><span>QUESTION TO CARRY</span>The school lists "welcoming long-stay digital nomads" as one of its themes. What would make you come back to Yame and stay?</div>
+</div></div>
+<div class="src chk">Source: Yame Local Venture School, ylvs.jp</div></div></section><section class="wsec " id="info"><div class="wrap"><div class="wh"><div class="wk">GOOD TO KNOW</div><h2>Practical information</h2></div>
 <div class="two chk"><div>
 <div class="lb">Meals</div><table class="goal"><tr><th></th><th>Meal</th><th>Details</th></tr>
 <tr><td>D1</td><td>Lunch, Option 1</td><td>Satoyama lunch included (has meat dishes)</td></tr>
@@ -447,98 +367,100 @@ main{max-width:1080px;margin:0 auto;padding:20px 12px 40px}
 <tr><td>·</td><td>Hirai-san (UNA Laboratories)</td><td>Guide for Option 4 and the town walk</td></tr>
 <tr><td>·</td><td>FM Yame team</td><td>Local radio, joining the programs</td></tr>
 <tr><td>·</td><td>Oki-san</td><td>Former Kawasaki Elementary School</td></tr></table>
-</div></div></div></section><section class="sec pfood" id="p07"><div class="ph"><div class="pn bebas">07</div><div><div class="pk">EAT</div><h2>Where to eat in town</h2></div></div>
-<div class="body">
-<div class="fmap chk"><img src="yame-images/g/c3234614e7.jpg"><svg viewBox="0 0 100 100" preserveAspectRatio="none" class="fsvg"><line x1="80.99" y1="7.57" x2="81.11" y2="9.62" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="80.99" cy="7.57" r="0.35" fill="#16194a"/><line x1="93.02" y1="32.93" x2="93.77" y2="32.62" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="93.02" cy="32.93" r="0.35" fill="#16194a"/><line x1="80.99" y1="7.55" x2="80.86" y2="5.50" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="80.99" cy="7.55" r="0.35" fill="#16194a"/><line x1="91.30" y1="33.65" x2="90.55" y2="33.97" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="91.30" cy="33.65" r="0.35" fill="#16194a"/><line x1="29.55" y1="57.91" x2="28.72" y2="57.61" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="29.55" cy="57.91" r="0.35" fill="#16194a"/><line x1="37.73" y1="55.47" x2="37.23" y2="53.78" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="37.73" cy="55.47" r="0.35" fill="#16194a"/><line x1="38.57" y1="59.77" x2="38.75" y2="61.77" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="38.57" cy="59.77" r="0.35" fill="#16194a"/><line x1="46.02" y1="57.83" x2="45.34" y2="59.82" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="46.02" cy="57.83" r="0.35" fill="#16194a"/><line x1="36.33" y1="59.31" x2="35.60" y2="60.14" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="36.33" cy="59.31" r="0.35" fill="#16194a"/><line x1="70.29" y1="59.21" x2="69.64" y2="60.23" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="70.29" cy="59.21" r="0.35" fill="#16194a"/><line x1="46.88" y1="53.87" x2="47.79" y2="52.31" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="46.88" cy="53.87" r="0.35" fill="#16194a"/><line x1="46.76" y1="61.94" x2="47.40" y2="63.16" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="46.76" cy="61.94" r="0.35" fill="#16194a"/><line x1="39.34" y1="58.27" x2="38.44" y2="57.65" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="39.34" cy="58.27" r="0.35" fill="#16194a"/><line x1="31.31" y1="58.48" x2="31.89" y2="59.03" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="31.31" cy="58.48" r="0.35" fill="#16194a"/><line x1="26.65" y1="45.03" x2="28.27" y2="45.62" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="26.65" cy="45.03" r="0.35" fill="#16194a"/><line x1="46.04" y1="57.42" x2="47.55" y2="56.63" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="46.04" cy="57.42" r="0.35" fill="#16194a"/><line x1="57.81" y1="56.43" x2="58.55" y2="55.72" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="57.81" cy="56.43" r="0.35" fill="#16194a"/><line x1="35.08" y1="57.40" x2="34.45" y2="56.24" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="35.08" cy="57.40" r="0.35" fill="#16194a"/><line x1="71.09" y1="57.95" x2="71.73" y2="56.93" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="71.09" cy="57.95" r="0.35" fill="#16194a"/><line x1="56.60" y1="57.58" x2="55.86" y2="58.28" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="56.60" cy="57.58" r="0.35" fill="#16194a"/><line x1="41.45" y1="58.60" x2="41.98" y2="60.50" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="41.45" cy="58.60" r="0.35" fill="#16194a"/><line x1="40.76" y1="57.66" x2="41.69" y2="56.36" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="40.76" cy="57.66" r="0.35" fill="#16194a"/><line x1="26.65" y1="45.03" x2="25.03" y2="44.44" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="26.65" cy="45.03" r="0.35" fill="#16194a"/><line x1="46.01" y1="55.13" x2="44.79" y2="54.23" stroke="#16194a" stroke-width="0.9" vector-effect="non-scaling-stroke"/><circle cx="46.01" cy="55.13" r="0.35" fill="#16194a"/></svg><div class="fd" style="left:53.15%;top:20.78%;background:#2F3AA8">22</div><div class="fd" style="left:75.61%;top:93.15%;background:#7a5aa8">39</div><div class="fd" style="left:81.11%;top:9.62%;background:#F26B1D">35</div><div class="fd" style="left:93.77%;top:32.62%;background:#F26B1D">30</div><div class="fd" style="left:80.86%;top:5.50%;background:#12857a">2</div><div class="fd" style="left:90.55%;top:33.97%;background:#2F3AA8">15</div><div class="fd" style="left:7.48%;top:21.90%;background:#2F3AA8">17</div><div class="fd" style="left:8.82%;top:32.43%;background:#b7791f">24</div><div class="fd" style="left:28.72%;top:57.61%;background:#12857a">6</div><div class="fd" style="left:37.23%;top:53.78%;background:#12857a">9</div><div class="fd" style="left:38.75%;top:61.77%;background:#F26B1D">34</div><div class="fd" style="left:56.92%;top:46.54%;background:#12857a">4</div><div class="fd" style="left:45.34%;top:59.82%;background:#F26B1D">38</div><div class="fd" style="left:53.81%;top:36.59%;background:#F26B1D">36</div><div class="fd" style="left:39.88%;top:46.19%;background:#12857a">10</div><div class="fd" style="left:35.60%;top:60.14%;background:#7a5aa8">40</div><div class="fd" style="left:65.47%;top:57.97%;background:#12857a">7</div><div class="fd" style="left:69.64%;top:60.23%;background:#12857a">3</div><div class="fd" style="left:47.79%;top:52.31%;background:#12857a">11</div><div class="fd" style="left:47.40%;top:63.16%;background:#12857a">8</div><div class="fd" style="left:38.44%;top:57.65%;background:#12857a">5</div><div class="fd" style="left:31.89%;top:59.03%;background:#12857a">1</div><div class="fd" style="left:28.27%;top:45.62%;background:#12857a">12</div><div class="fd" style="left:47.55%;top:56.63%;background:#F26B1D">37</div><div class="fd" style="left:58.55%;top:55.72%;background:#F26B1D">31</div><div class="fd" style="left:34.45%;top:56.24%;background:#F26B1D">33</div><div class="fd" style="left:25.36%;top:63.52%;background:#F26B1D">32</div><div class="fd" style="left:53.51%;top:46.71%;background:#2F3AA8">19</div><div class="fd" style="left:58.79%;top:61.10%;background:#2F3AA8">14</div><div class="fd" style="left:71.73%;top:56.93%;background:#2F3AA8">13</div><div class="fd" style="left:49.62%;top:37.90%;background:#2F3AA8">21</div><div class="fd" style="left:23.82%;top:36.07%;background:#2F3AA8">18</div><div class="fd" style="left:77.82%;top:27.84%;background:#2F3AA8">16</div><div class="fd" style="left:40.07%;top:51.50%;background:#2F3AA8">20</div><div class="fd" style="left:55.86%;top:58.28%;background:#b7791f">27</div><div class="fd" style="left:44.59%;top:47.04%;background:#b7791f">28</div><div class="fd" style="left:41.98%;top:60.50%;background:#b7791f">26</div><div class="fd" style="left:41.69%;top:56.36%;background:#b7791f">29</div><div class="fd" style="left:15.28%;top:63.32%;background:#b7791f">25</div><div class="fd" style="left:28.17%;top:37.31%;background:#b7791f">23</div><div class="fl" style="left:50.50%;top:49.53%">H</div><div class="fl" style="left:25.03%;top:44.44%">U</div><div class="fl" style="left:44.79%;top:54.23%">Y</div><div class="fl" style="left:44.12%;top:38.88%">C</div><div class="north">N ↑</div><div class="attr">© OpenStreetMap contributors</div></div>
-<div class="catleg chk"><span><i style="background:#12857a"></i>Cafés, coffee and bread</span><span><i style="background:#2F3AA8"></i>Japanese, sushi and seafood</span><span><i style="background:#b7791f"></i>Udon, soba and noodles</span><span><i style="background:#F26B1D"></i>Meat and world food</span><span><i style="background:#7a5aa8"></i>Also on the list</span><span><b class="fl2">H</b>Yame Green Hotel</span><span><b class="fl2">U</b>Unagi no Nedoko</span><span><b class="fl2">Y</b>Yokomachi Machiya Koryukan</span><span><b class="fl2">C</b>City Hall</span></div>
-<div class="fbot chk"><div><div class="lb">A list from people who live here</div>
-<p>These 40 places come from a Google Maps list made by Yuji Kiriake, our local coordinator. Most are within a 15 minute walk of the hotel. Numbers match the list on the next page.</p>
-<p class="small">Small places close on set weekdays and between lunch and dinner. Check the hours on Google Maps before you walk over.</p></div>
-<a class="wbtn" href="https://maps.app.goo.gl/LEfbpJKp52LDCpbD6" target="_blank" rel="noopener">Open the list in Google Maps</a></div></div></section><section class="sec pflist" id="p08"><div class="ph"><div class="pn bebas">08</div><div><div class="pk">EAT</div><h2>The restaurant list</h2></div></div>
-<div class="body"><div class="flist chk"><div class="fc"><div class="fh" style="border-color:#12857a;color:#12857a">Cafés, coffee and bread</div><div class="fr"><span class="fn" style="background:#12857a">1</span><div><b>Café MITOTE</b><small>Café · cafe MITOTE</small></div><em>★4.4<s> · 104</s></em></div><div class="fr"><span class="fn" style="background:#12857a">2</span><div><b>Rail Coffee Roasters</b><small>Coffee · レイル コーヒー ロースター（RAIL COFFEE ROASTERS）</small></div><em>★3.4<s> · 46</s></em></div><div class="fr"><span class="fn" style="background:#12857a">3</span><div><b>Collector</b><small>Café · コレクター</small></div><em>★4.5<s> · 46</s></em></div><div class="fr"><span class="fn" style="background:#12857a">4</span><div><b>Yame Saheho</b><small>Café · 八女サヘホ</small></div><em>★4.1<s> · 37</s></em></div><div class="fr"><span class="fn" style="background:#12857a">5</span><div><b>168kupukupu</b><small>Café and goods · cafe&zakka 168kupukupu</small></div><em>★4.5<s> · 35</s></em></div><div class="fr"><span class="fn" style="background:#12857a">6</span><div><b>Machiya Brot</b><small>Bakery · 町家ブロート</small></div><em>★4.5<s> · 32</s></em></div><div class="fr"><span class="fn" style="background:#12857a">7</span><div><b>Atelier & Café Kajitsu</b><small>Café · アトリエ&カフェ 果実</small></div><em>★4.3<s> · 29</s></em></div><div class="fr"><span class="fn" style="background:#12857a">8</span><div><b>Kissa Kanon</b><small>Café · 喫茶華暖(かのん)</small></div><em>★4.5<s> · 15</s></em></div><div class="fr"><span class="fn" style="background:#12857a">9</span><div><b>Kyo no Kotowari</b><small>Coffee · きょうのことわり</small></div><em>★4.9<s> · 14</s></em></div><div class="fr"><span class="fn" style="background:#12857a">10</span><div><b>Glee and Day's</b><small>Café · Glee and Day’s グリーアンドデイズ</small></div><em>★4.7<s> · 14</s></em></div><div class="fr"><span class="fn" style="background:#12857a">11</span><div><b>Machiya Café Shioya</b><small>Café · 町家CAFE しおや</small></div><em>★4.2<s></s></em></div><div class="fr"><span class="fn" style="background:#12857a">12</span><div><b>Adachi Coffee</b><small>Coffee · あだち珈琲八女店 一期一杯</small></div><em>★4.3<s></s></em></div></div><div class="fc"><div class="fh" style="border-color:#2F3AA8;color:#2F3AA8">Japanese, sushi and seafood</div><div class="fr"><span class="fn" style="background:#2F3AA8">13</span><div><b>Sushi Tachibana</b><small>Sushi · 寿し割烹 立花</small></div><em>★4.2<s> · 237</s></em></div><div class="fr"><span class="fn" style="background:#2F3AA8">14</span><div><b>Kuboyama</b><small>Kaiseki · くぼやま</small></div><em>★4.5<s> · 207</s></em></div><div class="fr"><span class="fn" style="background:#2F3AA8">15</span><div><b>Okuno</b><small>Seafood · 海鮮料理茶家 おくの</small></div><em>★3.9<s> · 84</s></em></div><div class="fr"><span class="fn" style="background:#2F3AA8">16</span><div><b>Wa Dining Umeya</b><small>Japanese · 和Diningうめや</small></div><em>★4.6<s> · 84</s></em></div><div class="fr"><span class="fn" style="background:#2F3AA8">17</span><div><b>Kahoritsugu</b><small>Japanese · お料理かほり継</small></div><em>★4.4<s> · 82</s></em></div><div class="fr"><span class="fn" style="background:#2F3AA8">18</span><div><b>Ginnoka</b><small>Japanese and sake · 酒邸 吟乃香</small></div><em>★4.0<s> · 82</s></em></div><div class="fr"><span class="fn" style="background:#2F3AA8">19</span><div><b>Kappo Nakamura</b><small>Japanese · 旬彩割烹なかむら</small></div><em>★4.2<s> · 75</s></em></div><div class="fr"><span class="fn" style="background:#2F3AA8">20</span><div><b>Kamogawa</b><small>Eel · 加茂川</small></div><em>★3.8<s> · 18</s></em></div><div class="fr"><span class="fn" style="background:#2F3AA8">21</span><div><b>Salmon-tei</b><small>Japanese · サーモン亭</small></div><em>★4.2<s> · 9</s></em></div><div class="fr"><span class="fn" style="background:#2F3AA8">22</span><div><b>Suzume</b><small>Sushi · すゞめ</small></div><em>★4.0<s></s></em></div></div><div class="fc"><div class="fh" style="border-color:#b7791f;color:#b7791f">Udon, soba and noodles</div><div class="fr"><span class="fn" style="background:#b7791f">23</span><div><b>Tsuruya, main shop</b><small>Udon · うどん つるや 本店</small></div><em>★4.1<s> · 411</s></em></div><div class="fr"><span class="fn" style="background:#b7791f">24</span><div><b>Shige</b><small>Udon · しげ</small></div><em>★4.2<s> · 347</s></em></div><div class="fr"><span class="fn" style="background:#b7791f">25</span><div><b>Ashiya</b><small>Champon noodles · ちゃんぽん専門店 あしや</small></div><em>★3.9<s> · 258</s></em></div><div class="fr"><span class="fn" style="background:#b7791f">26</span><div><b>Hanamurasaki</b><small>Udon · 花むらさき</small></div><em>★4.2<s> · 129</s></em></div><div class="fr"><span class="fn" style="background:#b7791f">27</span><div><b>Mensho</b><small>Udon · 麺庄うどん</small></div><em>★3.2<s> · 15</s></em></div><div class="fr"><span class="fn" style="background:#b7791f">28</span><div><b>Tsuruya, City Hall</b><small>Udon · つるや 市役所前店</small></div><em>★4.0<s></s></em></div><div class="fr"><span class="fn" style="background:#b7791f">29</span><div><b>史蔵</b><small>Soba · 史蔵</small></div><em>★4.2<s></s></em></div></div><div class="fc"><div class="fh" style="border-color:#F26B1D;color:#F26B1D">Meat and world food</div><div class="fr"><span class="fn" style="background:#F26B1D">30</span><div><b>Kandon</b><small>Korean rice bowls · 韓丼 八女店</small></div><em>★3.9<s> · 380</s></em></div><div class="fr"><span class="fn" style="background:#F26B1D">31</span><div><b>Kuma to Taiyo</b><small>Restaurant · クマと太陽</small></div><em>★3.9<s> · 257</s></em></div><div class="fr"><span class="fn" style="background:#F26B1D">32</span><div><b>Kazue</b><small>Meat dishes · 肉料理 かずえ</small></div><em>★4.1<s> · 233</s></em></div><div class="fr"><span class="fn" style="background:#F26B1D">33</span><div><b>Yoshioka</b><small>Tonkatsu and wagyu · とんかつ・黒毛和牛専門店 吉岡</small></div><em>★4.6<s> · 177</s></em></div><div class="fr"><span class="fn" style="background:#F26B1D">34</span><div><b>Umeno Shoten</b><small>Curry, café and bar · ウメノ商店</small></div><em>★4.3<s> · 166</s></em></div><div class="fr"><span class="fn" style="background:#F26B1D">35</span><div><b>NONOKA Restaurant</b><small>French · NONOKA RESTAURANT</small></div><em>★4.6<s> · 78</s></em></div><div class="fr"><span class="fn" style="background:#F26B1D">36</span><div><b>Bar & Kitchen SoL</b><small>Spanish · バル&キッチン SoL（ソル）</small></div><em>★4.4<s> · 78</s></em></div><div class="fr"><span class="fn" style="background:#F26B1D">37</span><div><b>Tobikataya</b><small>Ham and sausages · 飛形家TOBIKATAYA</small></div><em>★4.5<s> · 43</s></em></div><div class="fr"><span class="fn" style="background:#F26B1D">38</span><div><b>kumu</b><small>Taiwanese · 八女里山的台湾飯店 kumu</small></div><em>★4.0<s> · 31</s></em></div></div><div class="fc"><div class="fh" style="border-color:#7a5aa8;color:#7a5aa8">Also on the list</div><div class="fr"><span class="fn" style="background:#7a5aa8">39</span><div><b>Bengara-mura</b><small>Hot spring with restaurant · 八女市健康増進施設 べんがら村</small></div><em>★3.8<s> · 914</s></em></div><div class="fr"><span class="fn" style="background:#7a5aa8">40</span><div><b>Sakaiya</b><small>Historic merchant house · 堺屋(旧木下家住宅)</small></div><em>★4.4<s> · 53</s></em></div></div></div>
-<div class="src chk">★ Google rating and number of reviews, checked on Oct 10, 2026. Within each group, places with more reviews come first.</div></div></section><section class="sec psz" id="p09"><div class="ph"><div class="pn bebas">09</div><div><div class="pk">SUZUPAY</div><h2>Paying with SuzuPay</h2></div></div>
-<div class="body">
-<div class="szhead chk"><img class="szlogo" src="yame-images/g/suzupay_logo.png"><div><p>SuzuPay is a QR payment service you use in your phone browser, with no app to install. Points are in yen: <b>1 pt = ¥1</b>. In this program it is how we leave a real trace in the local economy.</p></div></div>
-<div class="steps chk">
-<div class="st"><span class="sn bebas">1</span><b>Create an account</b><p>Open main.suzupay.com/login and sign up as "Customer" with your email and a password.</p></div>
-<div class="st"><span class="sn bebas">2</span><b>Verify your email</b><p>Open the link in the email, then enter a display name and phone number.</p></div>
-<div class="st"><span class="sn bebas">3</span><b>Enter your coupon</b><p>Staff will give you a code that starts with SZP-. It adds 5,000 pts after your email is verified. You can enter it at sign-up or later in Settings.</p></div>
-<div class="st"><span class="sn bebas">4</span><b>Pay by QR</b><p>Open "QR Payment", enter the amount and show your QR to the staff. Or scan the shop's QR and confirm the shop name.</p></div></div>
-<div class="szshots chk"><figure><img src="yame-images/g/c1465774d1.jpg"><figcaption>Home: balance and shops</figcaption></figure>
-<figure><img src="yame-images/g/c2f10e545e.jpg"><figcaption>Enter the amount</figcaption></figure>
-<figure><img src="yame-images/g/0589cb1d59.jpg"><figcaption>Show your QR</figcaption></figure>
-<div class="szrules"><div class="lb">Good to know</div><ul>
-<li>Your QR expires after about 2 minutes. Tap "Refresh code" for a new one.</li>
-<li>Points are valid for 6 months.</li>
-<li>No refunds after payment. Check the amount first.</li>
-<li>Switch between English and Japanese at the top right of the screen.</li>
-<li>SuzuPay does not work at Unagi no Nedoko.</li></ul>
-<a class="wbtn" href="https://main.suzupay.com/login" target="_blank" rel="noopener">main.suzupay.com/login</a></div></div></div></section><section class="sec pshop" id="p10"><div class="ph"><div class="pn bebas">10</div><div><div class="pk">SUZUPAY</div><h2>Where to use SuzuPay in Yame</h2></div></div>
-<div class="body">
-<p class="lead chk">Four registered shops in Yame are on our own route, so you can spend your points where you visit. Shop staff will show their QR, or ask for yours.</p>
-<div class="shops chk"><div class="shop"><div class="sph n2"><img src="yame-images/g/2e1130c96d.jpg"><img src="yame-images/g/9ac7192a9b.jpg"></div><div class="sbody"><div class="swhen">Option 4</div><h4>Chiyonoen Tea Farm</h4><p>A café with mountain dishes made from wild vegetables, tea sweets and tea grown on the farm.</p><div class="sad">6342 Kitaobuchi, Kurogi-machi</div></div></div><div class="shop"><div class="sph n1"><img src="yame-images/g/03c4373d7d.jpg"></div><div class="sbody"><div class="swhen">Option 5</div><h4>Shimogawa Orimono</h4><p>Kurume Kasuri fabric, happi coats for the Hakata Gion Yamakasa festival, bags, shirts and samue workwear.</p><div class="sad">1111-2 Tsue</div></div></div><div class="shop"><div class="sph n2"><img src="yame-images/g/54200d4c94.jpg"><img src="yame-images/g/0d73cfd648.jpg"></div><div class="sbody"><div class="swhen">Option 6</div><h4>Takahashi Shoten</h4><p>Sake brewery founded in 1717. Its signature sake is Shigemasu.</p><div class="sad">2-22-1 Honmachi</div></div></div><div class="shop"><div class="sph n2"><img src="yame-images/g/69e20db82f.jpg"><img src="yame-images/g/e6d0e5c929.jpg"></div><div class="sbody"><div class="swhen">Day 2 town walk</div><h4>Konomi Honke</h4><p>Kyushu's oldest tea merchant, in a late Edo period town house. Seven of its buildings are Tangible Cultural Properties of Yame City.</p><div class="sad">126 Honmachi</div></div></div></div>
-<div class="src chk">Shop information and photos: SuzuPay. Questions about SuzuPay: GustoDevelopment Inc., info@gustodevelopment.com</div></div></section><section class="sec " id="p11"><div class="ph"><div class="pn bebas">11</div><div><div class="pk">VISIT SITES · DAY 1</div><h2>Site guide 1</h2></div></div>
-<div class="body"><article class="site chk"><div class="sh"><span class="tag a">DAY 1 · OPTION 1</span><h3>Satoyama Living: Everyday Lessons</h3><span class="en">Former Ouchi Residence / Odotani no Sato · Tachibana</span></div>
-<div class="sg"><div class="photos n2"><img src="yame-images/g/1783ff225b.jpg"><img src="yame-images/g/70e1bd47be.jpg"></div><div class="info"><div><b>When</b>Oct 11, 13:00 to 16:30</div><div><b>Capacity</b>Max 6</div><div><b>Getting there</b>Bus</div><div><b>Meal</b>Satoyama lunch included (has meat dishes)</div></div></div>
-<div class="sc"><div><div class="lb">About the place</div><p>A half day in the hills of Tachibana: a satoyama lunch cooked by local mothers, then konnyaku made the old way with wood ash. Lunch is at the Former Ouchi Residence, birthplace of Ouchi Chozo, a politician who worked for friendship between Japan and China from the Meiji to the early Showa era. A local preservation group restored the house and reopened it in April 2023.</p><div class="lb">What to see</div><ul><li>A satoyama lunch made from local seasonal food</li><li>Making konnyaku with Nakashima-san of Odotani no Sato, set with wood ash</li><li>The Former Ouchi Residence and the story of saving it</li></ul></div>
-<div><div class="lb why">Why it matters</div><p>Know-how around pickles, konnyaku, bamboo craft and mountain work is not reaching the next generation. Here, cooking for guests is a way to keep that culture alive.</p><div class="q"><span>QUESTION TO CARRY</span>How can a skill that is only used for guests come back into daily life?</div></div></div></article><article class="site chk"><div class="sh"><span class="tag b">DAY 1 · OPTION 2</span><h3>Baba Suishaba</h3><span class="en">Waterwheel incense mill · Joyo</span></div>
-<div class="sg"><div class="photos n2"><img src="yame-images/g/9041cea5fd.jpg"><img src="yame-images/g/8ada4d7be4.jpg"></div><div class="info"><div><b>When</b>Oct 11, leave 14:00, visit 14:30 to 15:30</div><div><b>Getting there</b>Yame City microbus (about 30 min)</div><div><b>Meal</b>13:00 team lunch in town</div></div></div>
-<div class="sc"><div><div class="lb">About the place</div><p>A working waterwheel mill that makes incense only from Yame cedar leaves and tabu leaves. A 5.5 m waterwheel drives 15 pestles that grind dried cedar leaves into powder over about 23 hours. Built in 1918 with money from 21 locals, bought by the Baba family in 1961, and rebuilt in 2008 by a father and son team of waterwheel carpenters from Kurume.</p><div class="lb">What to see</div><ul><li>Pestles moved only by water, and cedar leaves turning to powder</li><li>Cedar incense with no added scent or color</li><li>Baba-san calls himself "the forest's cleaner"</li></ul></div>
-<div><div class="lb why">Why it matters</div><p>About 60% of Yame is forest. At its peak the area had over 40 incense waterwheels, cut down by imports, electric power and a lack of successors.</p><div class="q"><span>QUESTION TO CARRY</span>What would a business look like if it started from what the forest leaves behind?</div></div></div></article></div></section><section class="sec " id="p12"><div class="ph"><div class="pn bebas">12</div><div><div class="pk">VISIT SITES · DAY 1 AND 2</div><h2>Site guide 2</h2></div></div>
-<div class="body"><article class="site chk"><div class="sh"><span class="tag b">DAY 1 · OPTION 2</span><h3>Matsunobu Kogei</h3><span class="en">Wooden tub maker</span></div>
-<div class="sg"><div class="photos n2"><img src="yame-images/g/a4d93ef86e.jpg"><img src="yame-images/g/bef062f946.jpg"></div><div class="info"><div><b>When</b>Oct 11, 16:00 to 16:45</div><div><b>Getting there</b>30 min from the mill, 10 min back to town</div></div></div>
-<div class="sc"><div><div class="lb">About the place</div><p>A tub maker founded in 1959 and now in its third generation. Rice tubs, sushi tubs, bath pails and pickling barrels, all made by hand from wood and bamboo. The Chikugo area once had around 60 tub makers; only a few remain in Kyushu today.</p><div class="lb">What to see</div><ul><li>Hoops woven from Yame bamboo instead of metal</li><li>Boards of different widths matched by feel (about ten years to learn)</li><li>Ongoing demand from breweries, temples and taiko drum makers</li></ul></div>
-<div><div class="lb why">Why it matters</div><p>Yame grows both cedar and bamboo, so the craft kept local work circulating. Some sake breweries are going back to wooden tubs.</p><div class="q"><span>QUESTION TO CARRY</span>How could being close to your raw materials become a strength again?</div></div></div></article><article class="site chk"><div class="sh"><span class="tag a">DAY 2 · OPTION 3</span><h3>Aizome Kasuri Kobo</h3><span class="en">Kurume Kasuri indigo workshop · Hirokawa</span></div>
-<div class="sg"><div class="photos n2"><img src="yame-images/g/e3c8c2e1e9.jpg"><img src="yame-images/g/6309e303ca.jpg"></div><div class="info"><div><b>When</b>Oct 12, leave 9:30, visit 10:00 to 11:30</div><div><b>Capacity</b>Max 10</div><div><b>Lunch</b>12:00 in town, on your own</div></div></div>
-<div class="sc"><div><div class="lb">About the place</div><p>A Kurume Kasuri workshop founded in 1891. It keeps the traditional way of preparing indigo and dyes yarn more than 50 times to build its shades of blue. The fifth generation, Kensuke Yamamura, dyes; the fourth generation weaves.</p><div class="lb">What to see</div><ul><li>Indigo made ready by fermentation, called aidate</li><li>Lye from local oak ash, wheat bran and shell lime from the Ariake Sea</li><li>Cloth coming out of the vat brown and turning blue in the air</li></ul></div>
-<div><div class="lb why">Why it matters</div><p>Indigo is alive and needs care every day. Many trades in Yame depend on this kind of upkeep that visitors never see.</p><div class="q"><span>QUESTION TO CARRY</span>What else in Yame relies on daily care that visitors never see?</div></div></div></article></div></section><section class="sec " id="p13"><div class="ph"><div class="pn bebas">13</div><div><div class="pk">VISIT SITES · DAY 2</div><h2>Site guide 3</h2></div></div>
-<div class="body"><article class="site chk"><div class="sh"><span class="tag b">DAY 2 · OPTION 4</span><h3>Chiyonoen</h3><span class="en">Organic tea farm · Yabe</span></div>
-<div class="sg"><div class="photos n2"><img src="yame-images/g/6c1efc97a6.jpg"><img src="yame-images/g/2ebfc78ef1.jpg"></div><div class="info"><div><b>When</b>Oct 12, leave 8:45 (about 60 min), back 13:30</div><div><b>Capacity</b>Max 10</div><div><b>Lunch</b>Chiyonoen tea house, self-paid</div></div></div>
-<div class="sc"><div><div class="lb">About the place</div><p>An organic tea farm at 400 to 600 m in Yabe Village. Snow covers the fields in winter and new buds come late; the farm calls this "late-budding tea from the snowy mountain". It makes green tea, Japanese black tea and oolong, with JAS organic certification since 2015.</p><div class="lb">What to see</div><ul><li>Mountain tea fields and the tea factory</li><li>Lunch at the tea house</li><li>Fukuoka Design Award grand prize (2024); platinum at the Japanese Tea Award for its oolong (2023)</li></ul></div>
-<div><div class="lb why">Why it matters</div><p>A chance to hear the matcha crisis from a grower. Yabe residents say they want to grow from 800 people to 2,000.</p><div class="q"><span>QUESTION TO CARRY</span>How do you tell a story about "late" and "small" in a matcha market that rewards fast and big?</div></div></div></article><article class="site chk"><div class="sh"><span class="tag c">DAY 2 · EVERYONE</span><h3>Yame-Fukushima craft walk</h3><span class="en">Old town makers and merchant houses</span></div>
-<div class="sg"><div class="photos n3"><img src="yame-images/g/4654d4e3c1.jpg"><img src="yame-images/g/8602cb52a9.jpg"><img src="yame-images/g/941b7f1583.jpg"></div><div class="info"><div><b>When</b>Oct 12, meet 13:30, until 17:15</div><div><b>Meeting point</b>Unagi no Nedoko, former Terasaki residence (327 Honmachi)</div><div><b>Guides</b>Rei Watanabe and Hirai-san</div></div></div>
-<div class="sc"><div><div class="lb">About the place</div><p>A walk through the white-walled old town. <b>Ogata Butsudan</b> does the final stage of Yame-Fukushima altars, lacquering, gilding and assembling. <b>Ito Gonjiro Shoten</b> makes Yame lanterns, first in Japan by volume. The <b>Former Yame District Office</b> was built in the Meiji era and restored by an NPO; part of it is <b>Asahiya Saketen</b>. <b>Konomi Honke</b> is Kyushu's oldest tea wholesaler, founded in the early 1700s, and gave "Yame tea" its name.</p><div class="lb">What to see</div><ul><li>13:30 Souvenir shopping at Unagi no Nedoko</li><li>15:00 Chakabuki (a tea tasting game) and matcha with Imamura-san</li><li>16:30 Re:crafted: a showcase of Yame crafts</li><li>17:00 Konomi Honke, a late Edo town house and its tea roasting room</li></ul></div>
-<div><div class="lb why">Why it matters</div><p>The white-walled streets and craft skills are what residents most want to keep. Here we meet the people who keep the town working.</p><div class="q"><span>QUESTION TO CARRY</span>What would it take to turn the old streets from a place to look at back into a place to work?</div></div></div></article></div></section><section class="sec " id="p14"><div class="ph"><div class="pn bebas">14</div><div><div class="pk">VISIT SITES · DAY 3</div><h2>Site guide 4</h2></div></div>
-<div class="body"><article class="site chk"><div class="sh"><span class="tag a">DAY 3 · OPTION 5</span><h3>Shimogawa Orimono</h3><span class="en">Kurume Kasuri weaver · open factory · Tsue</span></div>
-<div class="sg"><div class="photos n2"><img src="yame-images/g/d90fc43044.jpg"><img src="yame-images/g/7d2850e05c.jpg"></div><div class="info"><div><b>When</b>Oct 13, leave 9:15, visit 9:30 to 11:30</div><div><b>Capacity</b>About 7</div><div><b>Getting there</b>Yame City microbus (about 10 min)</div></div></div>
-<div class="sc"><div><div class="lb">About the place</div><p>Founded in 1948, the last Kurume Kasuri weaver in Yame City. Third generation Kyozo Shimogawa took over at 22 after university, and his son has now joined. The workshop often works with artists from Finland, Sweden and other countries.</p><div class="lb">What to see</div><ul><li>20 looms driven by belts from one motor in the ceiling</li><li>A talk by Kyozo-san on the future of Kurume Kasuri</li><li>The gallery, with fabric sold by the meter</li></ul></div>
-<div><div class="lb why">Why it matters</div><p>He keeps the old way while trying new sales channels and overseas projects. He also plans to join the Day 3 share-back.</p><div class="q"><span>QUESTION TO CARRY</span>Could opening a factory to visitors work for other makers in Yame?</div></div></div></article><article class="site chk"><div class="sh"><span class="tag b">DAY 3 · OPTION 6</span><h3>Takahashi Shoten (Shigemasu)</h3><span class="en">Sake brewery · in the old town</span></div>
-<div class="sg"><div class="photos n2"><img src="yame-images/g/53f3658f01.jpg"><img src="yame-images/g/602f6c4317.jpg"></div><div class="info"><div><b>When</b>Oct 13, leave 9:15 on foot, visit 9:30 to 11:30</div><div><b>Capacity</b>About 7</div><div><b>Program</b>Tour, tasting and talk</div></div></div>
-<div class="sc"><div><div class="lb">About the place</div><p>A sake brewery founded in Yame in 1717, now led by its 19th generation and known for the Shigemasu brand. It uses water from the underground flow of the Yabe River and Fukuoka rice, including Gin no Sato sake rice grown in Yame.</p><div class="lb">What to see</div><ul><li>The process from rice polishing to pressing</li><li>Koji trays tracked with QR codes next to traditional methods</li><li>JAS organic, a lens wind turbine, and sake brewed with wind and solar power</li></ul></div>
-<div><div class="lb why">Why it matters</div><p>A 300 year old brewery that records its work digitally and runs on renewable energy, and a member of Yame City's council for exporting local products.</p><div class="q"><span>QUESTION TO CARRY</span>Where else in Yame could old craft and new tools meet?</div></div></div></article></div></section><section class="sec pkw" id="p15"><div class="ph"><div class="pn bebas">15</div><div><div class="pk">VISIT SITES · DAY 3 AFTERNOON</div><h2>Former Kawasaki Elementary School and the Yame Local Venture School</h2></div></div>
-<div class="body">
-<div class="kw chk"><div class="kph"><img src="yame-images/g/52001351f2.jpg"><div class="cap">Former Kawasaki Elementary School, Yamauchi, Yame</div></div>
-<div class="info big"><div><b>When</b>Oct 13, leave town 13:00, back 18:30</div><div><b>Getting there</b>Yame City microbus</div><div><b>Address</b>769 Yamauchi, Yame</div>
-<div><b>The afternoon</b>13:30 Introduction by Oki-san<br>14:00 Reflection workshop (Builders only)<br>16:00 Share-back to Yame<br>17:00 Dialogue over tea and sweets</div></div></div>
+</div></div></div></section><section class="wsec " id="access"><div class="wrap"><div class="wh"><div class="wk">GETTING THERE</div><h2>From Fukuoka to Yame</h2></div><div class="acc"><div class="mapbox sm"><div id="regionmap"></div><button class="tapcover" type="button">Tap to move the map</button></div><div class="gfs"><div class="gf2"><div class="gn2">44 km</div><p>South of Hakata Station in a straight line. Yame sits at the edge of the Chikugo plain, where the hills begin.</p></div><div class="gf2"><div class="gn2">About 1 hour</div><p>By car on the Kyushu Expressway, which runs past Dazaifu, Tosu and Kurume to Yame IC.</p></div><div class="gf2"><div class="gn2">9:00</div><p>Day 1: our bus leaves Fukuoka city. The orientation in Yame starts at 11:00.</p></div><div class="gf2"><div class="gn2">13:00</div><p>Day 4: the bus leaves Yame for Fukuoka. Drop-off points are confirmed on Day 3.</p></div></div></div></div></section><section class="wsec " id="town"><div class="wrap"><div class="wh"><div class="wk">WELCOME</div><h2>Yame, the town</h2></div>
+<div class="duo chk"><div class="ph1"><img loading="lazy" src="yame-images/g/4ae53656be.jpg"><div class="cap">Tea fields of Yame</div></div>
+<div class="ph1"><img loading="lazy" src="yame-images/g/7d64beaa80.jpg"><div class="cap">The white-walled old town of Yame-Fukushima after dark</div></div></div>
+<div class="stats chk">
+<div><div class="num bebas">60,608</div><div class="lab">Population, 2020 census</div></div>
+<div><div class="num bebas">42,366</div><div class="lab">Projected population in 2040</div></div>
+<div><div class="num bebas">482</div><div class="lab">km². Second largest city area in Fukuoka</div></div>
+<div><div class="num bebas">6</div><div class="lab">Districts: Yame, Joyo, Kurogi, Tachibana, Yabe, Hoshino</div></div></div>
 <div class="two chk"><div>
-<div class="lb">A closed school, reopened for business</div>
-<p>The former Kawasaki Elementary School is being turned into a base for people who want to start businesses in Yame, with a shared office for entrepreneurs. It is our workspace for Day 3, and the place where we give our ideas back to Yame.</p>
-<div class="lb">The Yame Local Venture School</div>
-<p>Launched in June 2026, the school grows "seeds of business built on local resources, culture and tradition". Its idea is simple: Yame is rich in tea, food and crafts, but their value does not travel far enough. More people running real businesses, not volunteering, is how the town meets population decline.</p>
-<ul><li>A business contest and venture school: 8 teams selected, with mentoring, lectures and a final pitch in February 2027</li>
-<li>Kickoff on Oct 17, 2026, a few days after our visit</li>
-<li>Judges include Mayor Yutaro Minohara and Takahiro Shiramizu, founder of Unagi no Nedoko</li>
-<li>Discounted desks in the school's shared office for selected teams</li></ul>
+<div class="lb">One city, six districts</div><p>Yame took in Joyo Town in 2006, then Kurogi, Tachibana, Yabe and Hoshino in 2010. From the old merchant town of Yame-Fukushima on the plain to the source of the Yabe River in the mountains, altitude, work and daily life all change. Many people feel pride in their own district first.</p>
+<div class="lb">More than a tea town</div><p>Next to Yame tea (first in Japan for gyokuro by production value), the town makes Yame lanterns (first in Japan by volume), Yame-Fukushima Buddhist altars, Yame washi paper, stone lanterns, cedar timber, Onokoyaki pottery, sake and fruit. From outside, people often see only "Yame = tea".</p>
 </div><div>
-<div class="lb">Six themes the school puts forward</div>
-<div class="themes">
-<div><b>Empty houses and renovation</b>Keep the old town and mountain homes in use</div>
-<div><b>Tea</b>Yame is known for gyokuro, but there are few places to drink it and few who tell its story</div>
-<div><b>Crafts and making</b>Raise the value of traditional crafts, factory tourism, new markets</div>
-<div><b>Food culture</b>Update local dishes, research local ingredients</div>
-<div><b>IT and work style</b>Software across industries, places to work, and welcoming long-stay digital nomads from abroad</div>
-<div><b>Design</b>Open factories, select shops, in-town designers</div></div>
-<div class="q" style="margin-top:3mm"><span>QUESTION TO CARRY</span>The school lists "welcoming long-stay digital nomads" as one of its themes. What would make you come back to Yame and stay?</div>
+<div class="lb">The matcha crisis: three structural problems</div><ol class="num">
+<li><b>The gains do not reach farmers.</b> Wholesalers sit in between, so many tea farmers sell at the old price while world prices rise.</li>
+<li><b>Gyokuro or matcha.</b> Moving to matcha makes economic sense, but the gyokuro tradition could be lost.</li>
+<li><b>Matcha no longer means Japan.</b> Chinese production leads the world market, and matcha lattes of unknown quality sell for more than coffee.</li></ol>
+<div class="lb">Yame 2040 Vision</div><p>Yame City is drafting a vision for 2040 together with its residents, through dialogue sessions that began in July 2026. Residents have named what they want to keep. The next question is how to keep it.</p>
 </div></div>
-<div class="src chk">Source: Yame Local Venture School, ylvs.jp</div></div></section><section class="sec pbase" id="p16"><div class="ph"><div class="pn bebas">16</div><div><div class="pk">BASE</div><h2>Where we stay, eat and spend the evenings</h2></div></div>
-<div class="body">
-<div class="night chk"><img src="yame-images/g/65c68a95d9.jpg"><div class="cap">Lanterns along the old merchant street of Yame-Fukushima</div></div>
+<div class="src chk">Sources: Yame City Population Vision (revised March 2021), Yame City census page, Yame 2040 Vision website. The 2040 figure is a projection from 2021. Night photo: Crossroad Fukuoka.</div><h3 class="h3">Our mission in Yame</h3>
+<div class="mission chk"><div class="mk">MISSION</div>
+<div class="mt">Learn with the people of Yame, and offer an outside view they can use to decide what to keep and how.</div></div>
+<div class="two chk"><div>
+<div class="lb">How we work here</div><ul>
+<li>We are not here as tourists. This program, an official pilot of the Japan Tourism Agency, exists to bring new economic and social possibilities to the region.</li>
+<li>No product is expected. What matters is dialogue with the people of Yame and the ideas that come out of it.</li>
+<li>Ask about the problems people live with, not only the craft. Listen before you suggest.</li>
+<li>Leave relationships and ideas that continue after Oct 14.</li></ul>
+<div class="lb">How the four days work</div>
+<div class="flow"><div><b>Immerse</b>Day 1 to 2<br>Walk the sites</div><div><b>Listen</b>Day 1 to 3<br>Hear the makers</div><div><b>Ideate</b>Day 3, 14:00<br>Reflection workshop</div><div><b>Share</b>Day 3, 16:00<br>Share-back to Yame</div></div>
+</div><div>
+<div class="lb">What we aim for together</div>
+<table class="goal"><tr><th>#</th><th>Goal</th><th>Your part</th></tr>
+<tr><td>1</td><td>Understand what Yame's makers are proud of and what they struggle with</td><td>Ask, listen, take notes</td></tr>
+<tr><td>2</td><td>Connect what the two groups saw into one picture of Yame</td><td>Swap notes over dinner and in free time</td></tr>
+<tr><td>3</td><td>Turn three days of notes into ideas Yame can use</td><td>Join the Day 3 reflection workshop</td></tr>
+<tr><td>4</td><td>Share those ideas with the people who hosted us, and talk them through</td><td>Present and listen at the share-back</td></tr>
+<tr><td>5</td><td>Leave a real trace in the local economy</td><td>Use your SuzuPay points at local shops</td></tr>
+<tr><td>6</td><td>Help improve this pilot for future visitors</td><td>Complete the survey on Day 4 (about 15 min)</td></tr></table>
+<div class="lb">Why we see six worlds</div><p>Each day the group splits in two and goes to different places. Food, forest and water, color, tea, thread and fermentation, seen side by side, show how these trades grow from the same mountains and the same water.</p>
+</div></div>
+<div class="qbig chk"><span>THE BIG QUESTION</span>Yame's tea, wood, indigo, cloth, food and sake come from the same mountains and the same water. What could they become if we saw them as one system?</div></div></section><section class="wsec " id="stay"><div class="wrap"><div class="wh"><div class="wk">STAY</div><h2>Where we stay, eat and spend the evenings</h2></div>
+<div class="night chk"><img loading="lazy" src="yame-images/g/65c68a95d9.jpg"><div class="cap">Lanterns along the old merchant street of Yame-Fukushima</div></div>
 <div class="tri chk">
-<div class="bx"><img src="yame-images/g/ebd49c9409.jpg"><h4>Yame Green Hotel</h4><p>In the middle of the old town. Simple single rooms, Wi-Fi and a hot spring bath. Konomi Honke tea house is right behind it.</p></div>
-<div class="bx"><img src="yame-images/g/2e0891b90f.jpg"><h4>Yokomachi Machiya Koryukan</h4><p>A merchant house used as a community venue. Our orientation on Day 1 and the chakabuki tea program on Day 2 take place here.</p></div>
-<div class="bx"><img src="yame-images/g/ed463d23fc.jpg"><h4>Evenings in the old town</h4><p>Day 1 dinner is at Nongyo, the izakaya next to the hotel (order and pay your own), with optional karaoke after. Days 2 and 3 are free. Ask Kiriake-san for local bars and places to meet people from Yame.</p></div></div>
+<div class="bx"><img loading="lazy" src="yame-images/g/ebd49c9409.jpg"><h4>Yame Green Hotel</h4><p>In the middle of the old town. Simple single rooms, Wi-Fi and a hot spring bath. Konomi Honke tea house is right behind it.</p></div>
+<div class="bx"><img loading="lazy" src="yame-images/g/2e0891b90f.jpg"><h4>Yokomachi Machiya Koryukan</h4><p>A merchant house used as a community venue. Our orientation on Day 1 and the chakabuki tea program on Day 2 take place here.</p></div>
+<div class="bx"><img loading="lazy" src="yame-images/g/ed463d23fc.jpg"><h4>Evenings in the old town</h4><p>Day 1 dinner is at Nongyo, the izakaya next to the hotel (order and pay your own), with optional karaoke after. Days 2 and 3 are free. Ask Kiriake-san for local bars and places to meet people from Yame.</p></div></div>
 <div class="two chk"><div><div class="lb">Make the most of the nights</div><p>Evenings are when the two groups swap what they saw. The ideas get sharper when the two halves meet. A short walk through the lit-up streets after dinner is one of the best ways to feel how the town lives.</p></div>
 <div><div class="q"><span>QUESTION TO CARRY</span>What did the other group see today?</div></div></div>
-<div class="src chk">Photos: Crossroad Fukuoka, Yame Fukushima Tourism Association, Yame Green Hotel</div></div></section></main>
-<div class="wfoot">Colive Fukuoka · An official pilot of the Japan Tourism Agency · <a href="/">builders.colivefukuoka.com</a></div>
+<div class="src chk">Photos: Crossroad Fukuoka, Yame Fukushima Tourism Association, Yame Green Hotel</div></div></section>
+<footer><div class="wrap">Colive Fukuoka · An official pilot of the Japan Tourism Agency · <a href="/">builders.colivefukuoka.com</a><br>Map data © OpenStreetMap contributors. Photos: Crossroad Fukuoka, Yame Fukushima Tourism Association, Yame Green Hotel, SuzuPay and the hosts.</div></footer>
+<script>window.__D={"sites": [{"n": "1", "name": "Yame-Fukushima old town", "sub": "Hotel, orientation, town walk, Takahashi Shoten", "cls": "c", "lat": 33.2105575, "lon": 130.55973849999998, "url": "https://www.google.com/maps/search/?api=1&query=33.210558,130.559738"}, {"n": "2", "name": "Former Ouchi Residence / Odotani no Sato", "sub": "Option 1 · Tachibana", "cls": "a", "lat": 33.1403665, "lon": 130.56499349999999, "url": "https://www.google.com/maps/search/?api=1&query=33.140366,130.564993"}, {"n": "3", "name": "Baba Suishaba", "sub": "Option 2 · Joyo", "cls": "b", "lat": 33.2608193, "lon": 130.6694029, "url": "https://www.google.com/maps/search/?api=1&query=33.260819,130.669403"}, {"n": "4", "name": "Matsunobu Kogei", "sub": "Option 2", "cls": "b", "lat": 33.2205109, "lon": 130.5353926, "url": "https://www.google.com/maps/search/?api=1&query=33.220511,130.535393"}, {"n": "5", "name": "Aizome Kasuri Kobo", "sub": "Option 3 · Hirokawa", "cls": "a", "lat": 33.2514718, "lon": 130.5686812, "url": "https://www.google.com/maps/search/?api=1&query=33.251472,130.568681"}, {"n": "6", "name": "Chiyonoen tea fields", "sub": "Option 4 · Yabe", "cls": "b", "lat": 33.1626, "lon": 130.836, "url": "https://www.google.com/maps/search/?api=1&query=33.162600,130.836000"}, {"n": "7", "name": "Chiyonoen tea house", "sub": "Option 4 · Kurogi", "cls": "b", "lat": 33.1808726, "lon": 130.7411892, "url": "https://www.google.com/maps/search/?api=1&query=33.180873,130.741189"}, {"n": "8", "name": "Shimogawa Orimono", "sub": "Option 5 · Tsue", "cls": "a", "lat": 33.2103849, "lon": 130.5796224, "url": "https://www.google.com/maps/search/?api=1&query=33.210385,130.579622"}, {"n": "9", "name": "Former Kawasaki Elementary School", "sub": "Day 3 afternoon · Yamauchi", "cls": "c", "lat": 33.221348, "lon": 130.613984, "url": "https://www.google.com/maps/search/?api=1&query=33.221348,130.613984"}], "eat": [{"n": 1, "name": "Café MITOTE", "jp": "cafe MITOTE", "ty": "Café", "ck": "cf", "col": "#12857a", "lat": 33.2089741, "lon": 130.5547356, "rating": 4.4, "reviews": 104, "url": "https://maps.google.com/?cid=5023417519173109498"}, {"n": 2, "name": "Rail Coffee Roasters", "jp": "レイル コーヒー ロースター（RAIL COFFEE ROASTERS）", "ty": "Coffee", "ck": "cf", "col": "#12857a", "lat": 33.218140999999996, "lon": 130.56779989999998, "rating": 3.4, "reviews": 46, "url": "https://maps.google.com/?cid=17417051017398683909"}, {"n": 3, "name": "Collector", "jp": "コレクター", "ty": "Café", "ck": "cf", "col": "#12857a", "lat": 33.2088435, "lon": 130.56498639999998, "rating": 4.5, "reviews": 46, "url": "https://maps.google.com/?cid=7257811452454757924"}, {"n": 4, "name": "Yame Saheho", "jp": "八女サヘホ", "ty": "Café", "ck": "cf", "col": "#12857a", "lat": 33.2111193, "lon": 130.56135, "rating": 4.1, "reviews": 37, "url": "https://maps.google.com/?cid=2261037665274176491"}, {"n": 5, "name": "168kupukupu", "jp": "cafe&zakka 168kupukupu", "ty": "Café and goods", "ck": "cf", "col": "#12857a", "lat": 33.2090119, "lon": 130.55684739999998, "rating": 4.5, "reviews": 35, "url": "https://maps.google.com/?cid=5949428642685467407"}, {"n": 6, "name": "Machiya Brot", "jp": "町家ブロート", "ty": "Bakery", "ck": "cf", "col": "#12857a", "lat": 33.2090775, "lon": 130.5542728, "rating": 4.5, "reviews": 32, "url": "https://maps.google.com/?cid=10354972891468498644"}, {"n": 7, "name": "Atelier & Café Kajitsu", "jp": "アトリエ&カフェ 果実", "ty": "Café", "ck": "cf", "col": "#12857a", "lat": 33.2090661, "lon": 130.56371769999998, "rating": 4.3, "reviews": 29, "url": "https://maps.google.com/?cid=11788517738092448950"}, {"n": 8, "name": "Kissa Kanon", "jp": "喫茶華暖(かのん)", "ty": "Café", "ck": "cf", "col": "#12857a", "lat": 33.208351199999996, "lon": 130.5587979, "rating": 4.5, "reviews": 15, "url": "https://maps.google.com/?cid=2840437084728415610"}, {"n": 9, "name": "Kyo no Kotowari", "jp": "きょうのことわり", "ty": "Coffee", "ck": "cf", "col": "#12857a", "lat": 33.2095151, "lon": 130.5564243, "rating": 4.9, "reviews": 14, "url": "https://maps.google.com/?cid=7682090932087838163"}, {"n": 10, "name": "Glee and Day's", "jp": "Glee and Day’s グリーアンドデイズ", "ty": "Café", "ck": "cf", "col": "#12857a", "lat": 33.211186399999995, "lon": 130.556988, "rating": 4.7, "reviews": 14, "url": "https://maps.google.com/?cid=12856046723345199512"}, {"n": 11, "name": "Machiya Café Shioya", "jp": "町家CAFE しおや", "ty": "Café", "ck": "cf", "col": "#12857a", "lat": 33.209803799999996, "lon": 130.55883, "rating": 4.2, "reviews": 0, "url": "https://maps.google.com/?cid=12017467600354345071"}, {"n": 12, "name": "Adachi Coffee", "jp": "あだち珈琲八女店 一期一杯", "ty": "Coffee", "ck": "cf", "col": "#12857a", "lat": 33.211394999999996, "lon": 130.553509, "rating": 4.3, "reviews": 0, "url": "https://maps.google.com/?cid=5491866995403114468"}, {"n": 13, "name": "Sushi Tachibana", "jp": "寿し割烹 立花", "ty": "Sushi", "ck": "jp", "col": "#2F3AA8", "lat": 33.2090697, "lon": 130.5651957, "rating": 4.2, "reviews": 237, "url": "https://maps.google.com/?cid=9990314845000994126"}, {"n": 14, "name": "Kuboyama", "jp": "くぼやま", "ty": "Kaiseki", "ck": "jp", "col": "#2F3AA8", "lat": 33.208501999999996, "lon": 130.5619614, "rating": 4.5, "reviews": 207, "url": "https://maps.google.com/?cid=15471955789164622569"}, {"n": 15, "name": "Okuno", "jp": "海鮮料理茶家 おくの", "ty": "Seafood", "ck": "jp", "col": "#2F3AA8", "lat": 33.2134429, "lon": 130.5705122, "rating": 3.9, "reviews": 84, "url": "https://maps.google.com/?cid=8174342361008648388"}, {"n": 16, "name": "Wa Dining Umeya", "jp": "和Diningうめや", "ty": "Japanese", "ck": "jp", "col": "#2F3AA8", "lat": 33.2144893, "lon": 130.5669661, "rating": 4.6, "reviews": 84, "url": "https://maps.google.com/?cid=13585407529645552832"}, {"n": 17, "name": "Kahoritsugu", "jp": "お料理かほり継", "ty": "Japanese", "ck": "jp", "col": "#2F3AA8", "lat": 33.215558099999996, "lon": 130.54846659999998, "rating": 4.4, "reviews": 82, "url": "https://maps.google.com/?cid=13991487232082367772"}, {"n": 18, "name": "Ginnoka", "jp": "酒邸 吟乃香", "ty": "Japanese and sake", "ck": "jp", "col": "#2F3AA8", "lat": 33.213007499999996, "lon": 130.5527646, "rating": 4, "reviews": 82, "url": "https://maps.google.com/?cid=2063534324404706504"}, {"n": 19, "name": "Kappo Nakamura", "jp": "旬彩割烹なかむら", "ty": "Japanese", "ck": "jp", "col": "#2F3AA8", "lat": 33.2110967, "lon": 130.56069349999999, "rating": 4.2, "reviews": 75, "url": "https://maps.google.com/?cid=13902424908709724992"}, {"n": 20, "name": "Kamogawa", "jp": "加茂川", "ty": "Eel", "ck": "jp", "col": "#2F3AA8", "lat": 33.2102259, "lon": 130.5570282, "rating": 3.8, "reviews": 18, "url": "https://maps.google.com/?cid=1702674908189905567"}, {"n": 21, "name": "Salmon-tei", "jp": "サーモン亭", "ty": "Japanese", "ck": "jp", "col": "#2F3AA8", "lat": 33.212679099999995, "lon": 130.559549, "rating": 4.2, "reviews": 9, "url": "https://maps.google.com/?cid=6363692428294813185"}, {"n": 22, "name": "Suzume", "jp": "すゞめ", "ty": "Sushi", "ck": "jp", "col": "#2F3AA8", "lat": 33.2157601, "lon": 130.5604793, "rating": 4, "reviews": 0, "url": "https://maps.google.com/?cid=3752102690138375874"}, {"n": 23, "name": "Tsuruya, main shop", "jp": "うどん つるや 本店", "ty": "Udon", "ck": "nd", "col": "#b7791f", "lat": 33.212785499999995, "lon": 130.5539096, "rating": 4.1, "reviews": 411, "url": "https://maps.google.com/?cid=13501886732941871619"}, {"n": 24, "name": "Shige", "jp": "しげ", "ty": "Udon", "ck": "nd", "col": "#b7791f", "lat": 33.2136633, "lon": 130.5488193, "rating": 4.2, "reviews": 347, "url": "https://maps.google.com/?cid=15211758153678980463"}, {"n": 25, "name": "Ashiya", "jp": "ちゃんぽん専門店 あしや", "ty": "Champon noodles", "ck": "nd", "col": "#b7791f", "lat": 33.2081035, "lon": 130.55051799999998, "rating": 3.9, "reviews": 258, "url": "https://maps.google.com/?cid=16262079785026804173"}, {"n": 26, "name": "Hanamurasaki", "jp": "花むらさき", "ty": "Udon", "ck": "nd", "col": "#b7791f", "lat": 33.208951899999995, "lon": 130.55740079999998, "rating": 4.2, "reviews": 129, "url": "https://maps.google.com/?cid=8210169420346654402"}, {"n": 27, "name": "Mensho", "jp": "麺庄うどん", "ty": "Udon", "ck": "nd", "col": "#b7791f", "lat": 33.2091366, "lon": 130.56138529999998, "rating": 3.2, "reviews": 15, "url": "https://maps.google.com/?cid=281878822141579933"}, {"n": 28, "name": "Tsuruya, City Hall", "jp": "つるや 市役所前店", "ty": "Udon", "ck": "nd", "col": "#b7791f", "lat": 33.2110341, "lon": 130.5582272, "rating": 4, "reviews": 0, "url": "https://maps.google.com/?cid=808249279888657977"}, {"n": 29, "name": "史蔵", "jp": "史蔵", "ty": "Soba", "ck": "nd", "col": "#b7791f", "lat": 33.2091224, "lon": 130.55721889999998, "rating": 4.2, "reviews": 0, "url": "https://maps.google.com/?cid=3626884819074920529"}, {"n": 30, "name": "Kandon", "jp": "韓丼 八女店", "ty": "Korean rice bowls", "ck": "wd", "col": "#F26B1D", "lat": 33.2135725, "lon": 130.5709638, "rating": 3.9, "reviews": 380, "url": "https://maps.google.com/?cid=10293914637745286808"}, {"n": 31, "name": "Kuma to Taiyo", "jp": "クマと太陽", "ty": "Restaurant", "ck": "wd", "col": "#F26B1D", "lat": 33.209343499999996, "lon": 130.56170369999998, "rating": 3.9, "reviews": 257, "url": "https://maps.google.com/?cid=3737980259293121950"}, {"n": 32, "name": "Kazue", "jp": "肉料理 かずえ", "ty": "Meat dishes", "ck": "wd", "col": "#F26B1D", "lat": 33.2080676, "lon": 130.5531691, "rating": 4.1, "reviews": 233, "url": "https://maps.google.com/?cid=3002010637802962098"}, {"n": 33, "name": "Yoshioka", "jp": "とんかつ・黒毛和牛専門店 吉岡", "ty": "Tonkatsu and wagyu", "ck": "wd", "col": "#F26B1D", "lat": 33.2091686, "lon": 130.5557265, "rating": 4.6, "reviews": 177, "url": "https://maps.google.com/?cid=15487520845387493173"}, {"n": 34, "name": "Umeno Shoten", "jp": "ウメノ商店", "ty": "Curry, café and bar", "ck": "wd", "col": "#F26B1D", "lat": 33.208742, "lon": 130.5566428, "rating": 4.3, "reviews": 166, "url": "https://maps.google.com/?cid=3888579531436230588"}, {"n": 35, "name": "NONOKA Restaurant", "jp": "NONOKA RESTAURANT", "ty": "French", "ck": "wd", "col": "#F26B1D", "lat": 33.2181376, "lon": 130.5678002, "rating": 4.6, "reviews": 78, "url": "https://maps.google.com/?cid=13365765802590719515"}, {"n": 36, "name": "Bar & Kitchen SoL", "jp": "バル&キッチン SoL（ソル）", "ty": "Spanish", "ck": "wd", "col": "#F26B1D", "lat": 33.2129134, "lon": 130.56065279999999, "rating": 4.4, "reviews": 78, "url": "https://maps.google.com/?cid=15062592185087108395"}, {"n": 37, "name": "Tobikataya", "jp": "飛形家TOBIKATAYA", "ty": "Ham and sausages", "ck": "wd", "col": "#F26B1D", "lat": 33.2091649, "lon": 130.5586094, "rating": 4.5, "reviews": 43, "url": "https://maps.google.com/?cid=17684527928189874200"}, {"n": 38, "name": "kumu", "jp": "八女里山的台湾飯店 kumu", "ty": "Taiwanese", "ck": "wd", "col": "#F26B1D", "lat": 33.2090915, "lon": 130.558602, "rating": 4, "reviews": 31, "url": "https://maps.google.com/?cid=4749916657279498808"}, {"n": 39, "name": "Bengara-mura", "jp": "八女市健康増進施設 べんがら村", "ty": "Hot spring with restaurant", "ck": "ot", "col": "#7a5aa8", "lat": 33.2027326, "lon": 130.5663859, "rating": 3.8, "reviews": 914, "url": "https://maps.google.com/?cid=9290461785538213345"}, {"n": 40, "name": "Sakaiya", "jp": "堺屋(旧木下家住宅)", "ty": "Historic merchant house", "ck": "ot", "col": "#7a5aa8", "lat": 33.208824299999996, "lon": 130.5560543, "rating": 4.4, "reviews": 53, "url": "https://maps.google.com/?cid=14428996513177050277"}], "pay": [{"name": "Chiyonoen Tea Farm", "sub": "Option 4", "lat": 33.1808726, "lon": 130.7411892, "url": "https://www.google.com/maps/search/?api=1&query=33.180873,130.741189"}, {"name": "Shimogawa Orimono", "sub": "Option 5", "lat": 33.2103849, "lon": 130.5796224, "url": "https://www.google.com/maps/search/?api=1&query=33.210385,130.579622"}, {"name": "Takahashi Shoten", "sub": "Option 6", "lat": 33.209534, "lon": 130.56300199999998, "url": "https://www.google.com/maps/search/?api=1&query=33.209534,130.563002"}, {"name": "Konomi Honke", "sub": "Day 2 town walk", "lat": 33.209195, "lon": 130.5582834, "url": "https://www.google.com/maps/search/?api=1&query=33.209195,130.558283"}], "base": [{"l": "H", "name": "Yame Green Hotel", "lat": 33.2105575, "lon": 130.55973849999998, "url": "https://www.google.com/maps/search/?api=1&query=33.210558,130.559738"}, {"l": "U", "name": "Unagi no Nedoko", "lat": 33.2113951, "lon": 130.5535086, "url": "https://www.google.com/maps/search/?api=1&query=33.211395,130.553509"}, {"l": "Y", "name": "Yokomachi Machiya Koryukan", "lat": 33.209576999999996, "lon": 130.55860049999998, "url": "https://www.google.com/maps/search/?api=1&query=33.209577,130.558600"}, {"l": "C", "name": "Yame City Hall", "lat": 33.2125027, "lon": 130.5581023, "url": "https://www.google.com/maps/search/?api=1&query=33.212503,130.558102"}], "region": {"hakata": [33.589727499999995, 130.4207274], "kurume": [33.320473199999995, 130.5012836], "yame": [33.2105575, 130.55973849999998], "ic": [33.210938, 130.52321999999998], "dist": 44}, "s": {"open": "Open in Google Maps", "tap": "Tap to move the map", "hakata": "Hakata Station", "kurume": "Kurume", "yame": "Yame-Fukushima (our base)", "ic": "Yame IC", "km": "about 44 km", "pay": "SuzuPay shop"}};</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+const D=window.__D;
+const touch=('ontouchstart' in window)||navigator.maxTouchPoints>0; if(touch)document.documentElement.classList.add('touch');
+function mk(html,cls,size){size=size||28;return L.divIcon({className:'',html:'<div class="pin2 '+cls+'" style="width:'+size+'px;height:'+size+'px">'+html+'</div>',iconSize:[size,size],iconAnchor:[size/2,size/2],popupAnchor:[0,-size/2]})}
+function pop(b,s,u){return '<b>'+b+'</b>'+(s?'<small>'+s+'</small><br>':'')+'<a href="'+u+'" target="_blank" rel="noopener">'+D.s.open+' ↗</a>'}
+function tiles(m){L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'}).addTo(m)}
+function guard(m,box){ if(!touch)return; m.dragging.disable(); m.touchZoom.disable(); box.querySelector('.tapcover').addEventListener('click',()=>{box.classList.add('live');m.dragging.enable();m.touchZoom.enable()}); }
+// main map
+const map=L.map('mainmap',{scrollWheelZoom:false,zoomControl:true}); tiles(map);
+const G={sites:L.featureGroup(),base:L.featureGroup(),pay:L.featureGroup(),eat:L.featureGroup()};
+const SM={},EM={};
+D.sites.forEach(x=>{SM[x.n]=L.marker([x.lat,x.lon],{icon:mk(x.n,x.cls,32),zIndexOffset:500}).bindPopup(pop(x.name,x.sub,x.url)).addTo(G.sites)});
+D.base.forEach(x=>{L.marker([x.lat,x.lon],{icon:mk(x.l,'sq',26),zIndexOffset:400}).bindPopup(pop(x.name,'',x.url)).addTo(G.base)});
+D.pay.forEach(x=>{L.marker([x.lat,x.lon],{icon:mk('¥','p',26),zIndexOffset:300}).bindPopup(pop(x.name,D.s.pay+' · '+x.sub,x.url)).addTo(G.pay)});
+D.eat.forEach(x=>{EM[x.n]=L.marker([x.lat,x.lon],{icon:L.divIcon({className:'',html:'<div class="pin2" style="width:24px;height:24px;font-size:11px;background:'+x.col+'">'+x.n+'</div>',iconSize:[24,24],iconAnchor:[12,12],popupAnchor:[0,-12]})}).bindPopup(pop(x.name,x.ty+(x.rating?' · ★'+x.rating.toFixed(1):''),x.url)).addTo(G.eat)});
+['sites','base','pay'].forEach(k=>G[k].addTo(map));
+function fit(){const b=L.latLngBounds([]);Object.keys(G).forEach(k=>{if(map.hasLayer(G[k]))b.extend(G[k].getBounds())});if(b.isValid())map.fitBounds(b,{padding:[30,30],maxZoom:16})}
+fit(); guard(map,document.querySelector('#map .mapbox'));
+document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{const k=c.dataset.l;c.classList.toggle('is-on');if(map.hasLayer(G[k]))map.removeLayer(G[k]);else G[k].addTo(map);fit()}));
+function toMap(){document.getElementById('map').scrollIntoView({behavior:'smooth'})}
+document.querySelectorAll('.sl').forEach(b=>b.addEventListener('click',()=>{const m=SM[b.dataset.site];if(!map.hasLayer(G.sites)){G.sites.addTo(map);document.querySelector('.chip[data-l=sites]').classList.add('is-on')}map.setView(m.getLatLng(),14);m.openPopup()}));
+document.querySelectorAll('[data-eat]').forEach(b=>b.addEventListener('click',()=>{const m=EM[b.dataset.eat];if(!map.hasLayer(G.eat)){G.eat.addTo(map);document.querySelector('.chip[data-l=eat]').classList.add('is-on')}toMap();setTimeout(()=>{map.setView(m.getLatLng(),17);m.openPopup()},450)}));
+// region map
+const rm=L.map('regionmap',{scrollWheelZoom:false}); tiles(rm);
+const R=D.region;
+L.polyline([R.hakata,R.yame],{color:'#F26B1D',weight:4,dashArray:'8 8'}).addTo(rm);
+L.marker(R.hakata,{icon:mk('','a',18)}).bindTooltip(D.s.hakata,{permanent:true,direction:'right',offset:[10,0]}).addTo(rm);
+L.marker(R.kurume,{icon:mk('','a',14)}).bindTooltip(D.s.kurume,{permanent:true,direction:'right',offset:[8,0]}).addTo(rm);
+L.marker(R.yame,{icon:mk('','b',20)}).bindTooltip(D.s.yame,{permanent:true,direction:'right',offset:[12,0]}).addTo(rm);
+L.marker([(R.hakata[0]+R.yame[0])/2,(R.hakata[1]+R.yame[1])/2],{icon:L.divIcon({className:'',html:'<span class="rlab">'+D.s.km+'</span>',iconSize:[0,0]})}).addTo(rm);
+rm.fitBounds(L.latLngBounds([R.hakata,R.yame]),{padding:[50,50]}); guard(rm,document.querySelector('#access .mapbox'));
+// eat filter
+document.querySelectorAll('.fchip').forEach(c=>c.addEventListener('click',()=>{document.querySelectorAll('.fchip').forEach(x=>x.classList.remove('is-on'));c.classList.add('is-on');const k=c.dataset.c;document.querySelectorAll('.ecard').forEach(e=>e.classList.toggle('hide',k!=='all'&&e.dataset.c!==k))}));
+// schedule tabs
+const days=document.querySelectorAll('.itin .day'),tbs=document.querySelectorAll('.dtab');
+function showDay(i){days.forEach((d,j)=>d.classList.toggle('is-on',j==i));tbs.forEach((b,j)=>b.classList.toggle('is-on',j==i))}
+tbs.forEach(b=>b.addEventListener('click',()=>showDay(+b.dataset.d)));
+let di=0;try{const d=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/Tokyo'}));if(d.getFullYear()==2026&&d.getMonth()==9&&d.getDate()>=11&&d.getDate()<=14)di=d.getDate()-11}catch(e){}
+showDay(di);
+// nav highlight
+const links=[...document.querySelectorAll('.navr a')];const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('act',a.getAttribute('href')=='#'+e.target.id));const a=links.find(a=>a.classList.contains('act'));if(a)a.scrollIntoView({block:'nearest',inline:'center'})}})},{rootMargin:'-45% 0px -50% 0px'});
+secs.forEach(s=>s&&io.observe(s));
+</script>
 </body></html>
