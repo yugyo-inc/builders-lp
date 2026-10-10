@@ -38,7 +38,7 @@ button{font:inherit;cursor:pointer}
 html[lang=ja] .tb .ttl{font-weight:700;font-size:17px}
 .lang{flex:none;font-size:13px;font-weight:700;text-decoration:none;color:#fff;background:var(--indigo);padding:6px 14px;border-radius:20px}
 .navr{border-top:1px solid var(--line)}
-.navr nav{max-width:1100px;margin:0 auto;padding:0 12px;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.navr nav{position:relative;max-width:1100px;margin:0 auto;padding:0 12px;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
 .navr nav::-webkit-scrollbar{display:none}
 .navr a{flex:none;text-decoration:none;color:var(--ink);font-size:14px;font-weight:600;padding:10px 12px;border-bottom:3px solid transparent}
 .navr a.act{color:var(--orange);border-color:var(--orange)}
@@ -460,7 +460,7 @@ let di=0;try{const d=new Date(new Date().toLocaleString('en-US',{timeZone:'Asia/
 showDay(di);
 // nav highlight
 const links=[...document.querySelectorAll('.navr a')];const secs=links.map(a=>document.querySelector(a.getAttribute('href')));
-const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('act',a.getAttribute('href')=='#'+e.target.id));const a=links.find(a=>a.classList.contains('act'));if(a)a.scrollIntoView({block:'nearest',inline:'center'})}})},{rootMargin:'-45% 0px -50% 0px'});
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('act',a.getAttribute('href')=='#'+e.target.id));const a=links.find(a=>a.classList.contains('act'));if(a){const nv=a.parentElement;nv.scrollTo({left:a.offsetLeft-(nv.clientWidth-a.offsetWidth)/2,behavior:'smooth'})}}})},{rootMargin:'-45% 0px -50% 0px'});
 secs.forEach(s=>s&&io.observe(s));
 </script>
 </body></html>
